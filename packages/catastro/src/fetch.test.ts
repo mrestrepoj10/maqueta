@@ -93,3 +93,44 @@ describe("mercatorToLonLat", () => {
     expect(mercatorToLonLat(0, 0)).toEqual([0, 0]);
   });
 });
+
+describe("addMeshFeatures", () => {
+  it("adds a property table and keeps the GLB well formed", async () => {
+    const { addMeshFeatures } = await import("./glb.js");
+    const json = new TextEncoder().encode(
+      JSON.stringify({
+        asset: { version: "2.0" },
+        buffers: [{ byteLength: 8 }],
+        bufferViews: [{ buffer: 0, byteOffset: 0, byteLength: 8 }],
+        meshes: [{ primitives: [{ attributes: {} }] }],
+      }),
+    );
+    const padded = new Uint8Array(Math.ceil(json.length / 4) * 4).fill(0x20);
+    padded.set(json);
+    const glb = new Uint8Array(28 + padded.length + 8);
+    const v = new DataView(glb.buffer);
+    v.setUint32(0, 0x46546c67, true);
+    v.setUint32(4, 2, true);
+    v.setUint32(8, glb.length, true);
+    v.setUint32(12, padded.length, true);
+    v.setUint32(16, 0x4e4f534a, true);
+    glb.set(padded, 20);
+    v.setUint32(20 + padded.length, 8, true);
+    v.setUint32(24 + padded.length, 0x004e4942, true);
+    const out = addMeshFeatures(glb, [
+      { code: "a", floors: 2, height: 6.5, roofForm: "Flat" },
+      { code: "bb", floors: 10, height: 30, roofForm: "Gable" },
+    ]);
+    const ov = new DataView(out.buffer);
+    const len = ov.getUint32(12, true);
+    const parsed = JSON.parse(new TextDecoder().decode(out.subarray(20, 20 + len)));
+    expect(parsed.extensionsUsed).toContain("EXT_structural_metadata");
+    expect(parsed.extensions.EXT_structural_metadata.propertyTables[0].count).toBe(2);
+    expect(
+      parsed.meshes[0].primitives[0].extensions.EXT_mesh_features.featureIds[0].propertyTable,
+    ).toBe(0);
+    expect(parsed.bufferViews).toHaveLength(7);
+    expect(ov.getUint32(8, true)).toBe(out.length);
+    expect(ov.getUint32(20 + len, true)).toBe(parsed.buffers[0].byteLength);
+  });
+});

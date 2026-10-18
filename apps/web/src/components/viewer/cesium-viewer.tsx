@@ -5,6 +5,7 @@ import "cesium/Build/Cesium/Widgets/widgets.css";
 import {
   Cartesian3,
   Cartographic,
+  Cesium3DTileFeature,
   Cesium3DTileStyle,
   Cesium3DTileset,
   Math as CesiumMath,
@@ -18,6 +19,9 @@ import {
   Ion,
   JulianDate,
   PolygonHierarchy,
+  PolylineDashMaterialProperty,
+  ScreenSpaceEventHandler,
+  ScreenSpaceEventType,
   ShadowMode,
   sampleTerrainMostDetailed,
   Terrain,
@@ -26,6 +30,7 @@ import {
   Viewer,
 } from "cesium";
 import { useEffect, useRef } from "react";
+import type { BuildingInfo } from "@/lib/buildings";
 import type { Proposal, Site } from "@/lib/site";
 
 Ion.defaultAccessToken = process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN ?? "";
@@ -38,10 +43,12 @@ export type ViewerProps = {
   hour: number;
   /** "default": satellite imagery and coloured options. "maquette": white paper-model look. */
   variant?: "default" | "maquette";
+  /** Called when the viewer clicks an existing building, or empty space (null). */
+  onSelectBuilding?: (info: BuildingInfo | null) => void;
 };
 
 /** Pale-yellow massing, as in a physical maquette. */
-const MAQUETTE_PROPOSAL = "#f2dd6e";
+const MAQUETTE_PROPOSAL = "#f5e38a";
 
 type Handles = {
   viewer: Viewer;
@@ -49,13 +56,22 @@ type Handles = {
   terrain: Promise<TerrainProvider>;
   /** Existing-city tileset, once loaded. */
   context: Cesium3DTileset | null;
+  pickHandler?: ScreenSpaceEventHandler;
 };
 
-export function CesiumViewer({ site, activeProposals, hour, variant = "default" }: ViewerProps) {
+export function CesiumViewer({
+  site,
+  activeProposals,
+  hour,
+  variant = "default",
+  onSelectBuilding,
+}: ViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const handlesRef = useRef<Handles | null>(null);
   const activeRef = useRef(activeProposals);
   activeRef.current = activeProposals;
+  const onSelectRef = useRef(onSelectBuilding);
+  onSelectRef.current = onSelectBuilding;
 
   // Create the viewer once per site.
   useEffect(() => {
@@ -98,6 +114,8 @@ export function CesiumViewer({ site, activeProposals, hour, variant = "default" 
     });
     viewer.scene.globe.depthTestAgainstTerrain = true;
     viewer.shadowMap.softShadows = true;
+    viewer.shadowMap.size = 4096;
+    viewer.shadowMap.maximumDistance = 3000;
     if (maquette) {
       // Paper-model look: white sky, no atmosphere or fog, soft shadows.
       if (viewer.scene.skyAtmosphere) viewer.scene.skyAtmosphere.show = false;
@@ -177,10 +195,38 @@ export function CesiumViewer({ site, activeProposals, hour, variant = "default" 
       handles.context = tileset;
       applyClipping(tileset, site.proposals, activeRef.current);
       viewer.scene.requestRender();
+
+      // Click to select a building: highlight it and report its metadata properties.
+      const highlight = Color.fromCssColorString(maquette ? "#ffb547" : "#60a5fa");
+      let selected: Cesium3DTileFeature | null = null;
+      const handler = new ScreenSpaceEventHandler(viewer.scene.canvas);
+      handles.pickHandler = handler;
+      handler.setInputAction((e: ScreenSpaceEventHandler.PositionedEvent) => {
+        const picked = viewer.scene.pick(e.position);
+        if (selected && !selected.tileset.isDestroyed()) {
+          selected.color = Color.WHITE;
+        }
+        selected = null;
+        if (picked instanceof Cesium3DTileFeature && picked.tileset === tileset) {
+          selected = picked;
+          picked.color = highlight;
+          onSelectRef.current?.({
+            featureId: picked.featureId,
+            id: String(picked.getProperty("code") ?? picked.featureId),
+            floors: picked.getProperty("floors") as number | undefined,
+            height: picked.getProperty("height") as number | undefined,
+            roofForm: picked.getProperty("roofForm") as string | undefined,
+          });
+        } else {
+          onSelectRef.current?.(null);
+        }
+        viewer.scene.requestRender();
+      }, ScreenSpaceEventType.LEFT_CLICK);
     })();
 
     return () => {
       cancelled = true;
+      handles.pickHandler?.destroy();
       viewer.destroy();
       handlesRef.current = null;
     };
@@ -211,6 +257,11 @@ export function CesiumViewer({ site, activeProposals, hour, variant = "default" 
         cursor += p.footprint.length;
         const lo = p.baseElevation ?? (hs.length ? Math.min(...hs) : site.baseElevation);
         const hi = p.baseElevation ?? (hs.length ? Math.max(...hs) : site.baseElevation);
+        const fill = Color.fromCssColorString(
+          variant === "maquette" ? MAQUETTE_PROPOSAL : (p.color ?? "#2563eb"),
+        );
+        const edge = variant === "maquette" ? Color.fromCssColorString("#9c8a1c") : Color.WHITE;
+        const ring = [...p.footprint, p.footprint[0]].flat();
         viewer.entities.add({
           id: `proposal:${p.id}`,
           name: p.name,
@@ -219,16 +270,38 @@ export function CesiumViewer({ site, activeProposals, hour, variant = "default" 
             height: lo - 0.5,
             extrudedHeight: hi + p.height,
             heightReference: HeightReference.NONE,
-            material: Color.fromCssColorString(
-              variant === "maquette" ? MAQUETTE_PROPOSAL : (p.color ?? "#2563eb"),
-            ).withAlpha(variant === "maquette" ? 1 : 0.9),
+            material: fill.withAlpha(variant === "maquette" ? 1 : 0.92),
             outline: true,
-            outlineColor:
-              variant === "maquette"
-                ? Color.fromCssColorString("#8a7a1f")
-                : Color.WHITE.withAlpha(0.6),
-            // Entity roofs show shadow acne under the paper lighting, so only cast there.
-            shadows: variant === "maquette" ? ShadowMode.CAST_ONLY : ShadowMode.ENABLED,
+            outlineColor: edge.withAlpha(0.9),
+            // Receiving shadows on the flat roof produces acne at most sun angles; cast only.
+            shadows: ShadowMode.CAST_ONLY,
+          },
+        });
+        // Roof edge, drawn as a line so it reads at any zoom.
+        viewer.entities.add({
+          id: `proposal-edge:${p.id}`,
+          polyline: {
+            positions: Cartesian3.fromDegreesArrayHeights(
+              ring.flatMap((v, i) => (i % 2 === 1 ? [v, hi + p.height] : [v])),
+            ),
+            width: 1.5,
+            material: edge.withAlpha(0.9),
+          },
+        });
+        // Lot boundary just above the ground, dashed, as a physical model would mark the plot.
+        // Not clamped: clamped lines also drape onto neighbouring 3D Tiles walls.
+        const ringHeights = [...hs, hs[0]].map((h) => (h ?? lo) + 0.4);
+        viewer.entities.add({
+          id: `proposal-lot:${p.id}`,
+          polyline: {
+            positions: Cartesian3.fromDegreesArrayHeights(
+              ring.flatMap((v, i) => (i % 2 === 1 ? [v, ringHeights[(i - 1) / 2]] : [v])),
+            ),
+            width: 4,
+            material: new PolylineDashMaterialProperty({
+              color: variant === "maquette" ? Color.fromCssColorString("#e3c400") : fill,
+              dashLength: 12,
+            }),
           },
         });
       }

@@ -52,7 +52,9 @@ Put the printed asset id in `sites/chapinero.json` as `context.terrain` and pass
 
 ## Regenerate the Chapinero context
 
-Pulls IDECA's "Volumetría 2025" LiDAR building models (an ArcGIS multipatch layer: the query is made with `multipatchOption=stripMaterials` and the zlib-compressed shape buffer is decoded into triangles), samples the site terrain at each building to convert orthometric heights to the ellipsoid, and writes a single-tile 3D Tiles 1.1 tileset.
+Pulls IDECA's "Volumetría 2025" LiDAR building models and writes them as one centred glTF (float32 vertices relative to the tile centre, so there is no jitter at Earth-radius magnitudes) with a feature id per building and an `EXT_structural_metadata` table (code, floors, height, roof form), so buildings can be clicked in the viewer.
+
+It pulls (an ArcGIS multipatch layer: the query is made with `multipatchOption=stripMaterials` and the zlib-compressed shape buffer is decoded into triangles), samples the site terrain at each building to convert orthometric heights to the ellipsoid, and writes a single-tile 3D Tiles 1.1 tileset.
 
 ```bash
 set -a; . apps/web/.env.local; set +a

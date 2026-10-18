@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import type { BuildingInfo } from "@/lib/buildings";
 import type { Site } from "@/lib/site";
 
 const CesiumViewer = dynamic(() => import("./cesium-viewer").then((m) => m.CesiumViewer), {
@@ -17,10 +18,16 @@ const CesiumViewer = dynamic(() => import("./cesium-viewer").then((m) => m.Cesiu
 export function SiteView({ site }: { site: Site }) {
   const [active, setActive] = useState<string[]>([site.proposals[0].id]);
   const [hour, setHour] = useState(10);
+  const [selected, setSelected] = useState<BuildingInfo | null>(null);
 
   return (
     <div className="relative h-dvh w-full overflow-hidden">
-      <CesiumViewer site={site} activeProposals={active} hour={hour} />
+      <CesiumViewer
+        site={site}
+        activeProposals={active}
+        hour={hour}
+        onSelectBuilding={setSelected}
+      />
 
       <Card className="absolute left-4 top-4 w-80 bg-background/90 backdrop-blur">
         <CardHeader className="pb-2">
@@ -101,6 +108,26 @@ export function SiteView({ site }: { site: Site }) {
           </div>
         </CardContent>
       </Card>
+
+      {selected && (
+        <Card className="absolute bottom-16 left-4 w-72 bg-background/90 backdrop-blur">
+          <CardHeader className="pb-1">
+            <CardTitle className="text-sm">Existing building</CardTitle>
+          </CardHeader>
+          <CardContent className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5 text-xs">
+            <span className="text-muted-foreground">Code</span>
+            <span className="truncate font-mono" title={selected.id}>
+              {selected.id}
+            </span>
+            <span className="text-muted-foreground">Floors</span>
+            <span>{selected.floors ?? "—"}</span>
+            <span className="text-muted-foreground">Height</span>
+            <span>{selected.height !== undefined ? `${selected.height.toFixed(1)} m` : "—"}</span>
+            <span className="text-muted-foreground">Roof</span>
+            <span>{selected.roofForm ?? "—"}</span>
+          </CardContent>
+        </Card>
+      )}
 
       {site.context.buildings?.attribution && (
         <p className="absolute bottom-2 left-4 text-[10px] text-white/70 drop-shadow">

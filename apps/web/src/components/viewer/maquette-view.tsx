@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useState } from "react";
+import type { BuildingInfo } from "@/lib/buildings";
 import type { Site } from "@/lib/site";
 
 const CesiumViewer = dynamic(() => import("./cesium-viewer").then((m) => m.CesiumViewer), {
@@ -16,13 +17,20 @@ const CesiumViewer = dynamic(() => import("./cesium-viewer").then((m) => m.Cesiu
 export function MaquetteView({ site }: { site: Site }) {
   const [active, setActive] = useState<string[]>([site.proposals[0].id]);
   const [hour, setHour] = useState(10);
+  const [selected, setSelected] = useState<BuildingInfo | null>(null);
 
   const toggle = (id: string) =>
     setActive((a) => (a.includes(id) ? a.filter((x) => x !== id) : [...a, id]));
 
   return (
     <div className="relative h-dvh w-full overflow-hidden bg-[#f3f2ee] text-neutral-900">
-      <CesiumViewer site={site} activeProposals={active} hour={hour} variant="maquette" />
+      <CesiumViewer
+        site={site}
+        activeProposals={active}
+        hour={hour}
+        variant="maquette"
+        onSelectBuilding={setSelected}
+      />
 
       {/* Brand card */}
       <div className="absolute left-4 top-4 w-56 rounded-2xl border border-black/10 bg-white p-4 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
@@ -34,6 +42,50 @@ export function MaquetteView({ site }: { site: Site }) {
           </div>
         </div>
       </div>
+
+      {/* Selected building, PublicTwin-style plot card */}
+      {selected && (
+        <div className="absolute left-4 top-28 w-56">
+          <Panel>
+            <Pill tone="yellow" className="w-full justify-center font-semibold">
+              Edificio existente
+            </Pill>
+            <div
+              className="mt-3 flex aspect-[4/3] items-center justify-center rounded-xl bg-neutral-100 text-[11px] text-neutral-400"
+              aria-label="Foto del edificio, próximamente"
+            >
+              foto · próximamente
+            </div>
+            <h3 className="mt-3 text-center text-[12px] font-semibold text-neutral-700">
+              <span className="text-[#c9ad00]">• </span>información
+              <span className="text-[#c9ad00]"> •</span>
+            </h3>
+            <dl className="mt-1 grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5 text-[11px]">
+              <dt className="text-neutral-500">código</dt>
+              <dd className="truncate font-mono text-neutral-800" title={selected.id}>
+                {selected.id}
+              </dd>
+              <dt className="text-neutral-500">pisos</dt>
+              <dd className="text-neutral-800">{selected.floors ?? "—"}</dd>
+              <dt className="text-neutral-500">altura</dt>
+              <dd className="text-neutral-800">
+                {selected.height !== undefined ? `${selected.height.toFixed(1)} m` : "—"}
+              </dd>
+              <dt className="text-neutral-500">cubierta</dt>
+              <dd className="text-neutral-800">{selected.roofForm ?? "—"}</dd>
+              <dt className="text-neutral-500">fuente</dt>
+              <dd className="text-neutral-800">IDECA LiDAR 2025</dd>
+            </dl>
+            <Pill
+              tone="grey"
+              className="mt-3 w-full justify-center"
+              onClick={() => setSelected(null)}
+            >
+              cerrar
+            </Pill>
+          </Panel>
+        </div>
+      )}
 
       {/* Control column */}
       <div className="absolute right-4 top-4 flex max-h-[calc(100dvh-2rem)] w-72 flex-col gap-3 overflow-y-auto [scrollbar-width:none]">
