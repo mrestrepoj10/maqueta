@@ -48,3 +48,11 @@ pnpm --filter @maqueta/catastro build -- --bbox=-74.060,4.651,-74.049,4.660 --ou
 ## License
 
 MIT
+
+## Screenshots
+
+| Option A on the lot | Option B at 16:00 |
+|---|---|
+| ![](docs/option-a.png) | ![](docs/option-b-16h.png) |
+
+Live: https://maqueta-ecru.vercel.app/chapinero
