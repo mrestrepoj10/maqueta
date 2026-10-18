@@ -117,9 +117,20 @@ describe("addMeshFeatures", () => {
     glb.set(padded, 20);
     v.setUint32(20 + padded.length, 8, true);
     v.setUint32(24 + padded.length, 0x004e4942, true);
+    const base = {
+      address: "KR 7 72 41",
+      barrio: "Porciuncula",
+      estrato: "Estrato 4",
+      destino: "Comercio",
+      uso: "Hoteles",
+      vetustez: 2008,
+      ph: "NPH",
+      predios: 1,
+      areaConstruida: 21754.9,
+    };
     const out = addMeshFeatures(glb, [
-      { code: "a", floors: 2, height: 6.5, roofForm: "Flat" },
-      { code: "bb", floors: 10, height: 30, roofForm: "Gable" },
+      { code: "a", floors: 2, height: 6.5, roofForm: "Flat", ...base },
+      { code: "bb", floors: 10, height: 30, roofForm: "Gable", ...base },
     ]);
     const ov = new DataView(out.buffer);
     const len = ov.getUint32(12, true);
@@ -129,7 +140,7 @@ describe("addMeshFeatures", () => {
     expect(
       parsed.meshes[0].primitives[0].extensions.EXT_mesh_features.featureIds[0].propertyTable,
     ).toBe(0);
-    expect(parsed.bufferViews).toHaveLength(7);
+    expect(parsed.bufferViews).toHaveLength(1 + 2 * 8 + 5);
     expect(ov.getUint32(8, true)).toBe(out.length);
     expect(ov.getUint32(20 + len, true)).toBe(parsed.buffers[0].byteLength);
   });

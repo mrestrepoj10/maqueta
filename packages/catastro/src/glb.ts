@@ -8,11 +8,13 @@
 import { Document, NodeIO } from "@gltf-transform/core";
 import type { Building } from "./fetch.js";
 import { type Ecef, lonLatHeightToEcef } from "./geo.js";
+import { type LotInfo, lotCode } from "./lotes.js";
 
 export type Bounds = { min: Ecef; max: Ecef };
 
 export async function buildGlb(
   buildings: Building[],
+  lots: Map<string, LotInfo> = new Map(),
 ): Promise<{ glb: Uint8Array; bounds: Bounds }> {
   const positions: number[] = [];
   const normals: number[] = [];
@@ -107,18 +109,44 @@ export async function buildGlb(
 
   const glb = addMeshFeatures(
     await new NodeIO().writeBinary(doc),
-    buildings.map((b) => ({
-      code: b.id,
-      floors: b.floors,
-      height: Math.round(b.height * 10) / 10,
-      roofForm: b.roofForm,
-    })),
+    buildings.map((b) => {
+      const lot = lots.get(lotCode(b.id));
+      return {
+        code: b.id,
+        floors: b.floors,
+        height: Math.round(b.height * 10) / 10,
+        roofForm: b.roofForm,
+        address: lot?.address ?? "",
+        barrio: lot?.barrio ?? "",
+        estrato: lot?.estrato ?? "",
+        destino: lot?.destino ?? "",
+        uso: lot?.uso ?? "",
+        vetustez: lot?.vetustez ?? 0,
+        ph: lot?.ph ?? "",
+        predios: lot?.predios ?? 0,
+        areaConstruida: lot?.areaConstruida ?? 0,
+      };
+    }),
   );
   return { glb, bounds: { min: min as Ecef, max: max as Ecef } };
 }
 
 /** Per-building attributes written into the GLB as an EXT_structural_metadata property table. */
-export type FeatureProps = { code: string; floors: number; height: number; roofForm: string };
+export type FeatureProps = {
+  code: string;
+  floors: number;
+  height: number;
+  roofForm: string;
+  address: string;
+  barrio: string;
+  estrato: string;
+  destino: string;
+  uso: string;
+  vetustez: number;
+  ph: string;
+  predios: number;
+  areaConstruida: number;
+};
 
 /**
  * Patches the GLB so each building is a pickable feature: EXT_mesh_features on the primitive,
@@ -134,21 +162,8 @@ export function addMeshFeatures(glb: Uint8Array, props: FeatureProps[]): Uint8Ar
   const binLength = view.getUint32(20 + jsonLength, true);
   const bin = glb.subarray(binStart, binStart + binLength);
 
-  // Columns.
+  // Columns: strings as UTF-8 + UINT32 offsets, numbers as typed arrays.
   const enc = new TextEncoder();
-  const codes = props.map((p) => enc.encode(p.code));
-  const codeOffsets = new Uint32Array(props.length + 1);
-  for (let i = 0; i < codes.length; i++) codeOffsets[i + 1] = codeOffsets[i] + codes[i].length;
-  const codeBytes = new Uint8Array(codeOffsets[props.length]);
-  codes.forEach((c, i) => codeBytes.set(c, codeOffsets[i]));
-  const roofs = props.map((p) => enc.encode(p.roofForm));
-  const roofOffsets = new Uint32Array(props.length + 1);
-  for (let i = 0; i < roofs.length; i++) roofOffsets[i + 1] = roofOffsets[i] + roofs[i].length;
-  const roofBytes = new Uint8Array(roofOffsets[props.length]);
-  roofs.forEach((c, i) => roofBytes.set(c, roofOffsets[i]));
-  const floors = new Int32Array(props.map((p) => p.floors));
-  const heights = new Float32Array(props.map((p) => p.height));
-
   const chunks: Uint8Array[] = [];
   const bufferViews: { byteOffset: number; byteLength: number }[] = [];
   let cursor = bin.length;
@@ -164,12 +179,35 @@ export function addMeshFeatures(glb: Uint8Array, props: FeatureProps[]): Uint8Ar
     return json.bufferViews.length + bufferViews.length - 1;
   };
   const u8 = (a: ArrayBufferView) => new Uint8Array(a.buffer, a.byteOffset, a.byteLength);
-  const bvCode = addView(codeBytes);
-  const bvCodeOff = addView(u8(codeOffsets));
-  const bvRoof = addView(roofBytes);
-  const bvRoofOff = addView(u8(roofOffsets));
-  const bvFloors = addView(u8(floors));
-  const bvHeights = addView(u8(heights));
+  const stringColumn = (get: (p: FeatureProps) => string) => {
+    const parts = props.map((p) => enc.encode(get(p)));
+    const offsets = new Uint32Array(props.length + 1);
+    for (let i = 0; i < parts.length; i++) offsets[i + 1] = offsets[i] + parts[i].length;
+    const bytes = new Uint8Array(offsets[props.length]);
+    parts.forEach((c, i) => bytes.set(c, offsets[i]));
+    return { values: addView(bytes), stringOffsets: addView(u8(offsets)) };
+  };
+  const int32Column = (get: (p: FeatureProps) => number) => ({
+    values: addView(u8(new Int32Array(props.map((p) => Math.round(get(p) || 0))))),
+  });
+  const float32Column = (get: (p: FeatureProps) => number) => ({
+    values: addView(u8(new Float32Array(props.map((p) => get(p) || 0)))),
+  });
+  const columns = {
+    code: stringColumn((p) => p.code),
+    floors: int32Column((p) => p.floors),
+    height: float32Column((p) => p.height),
+    roofForm: stringColumn((p) => p.roofForm),
+    address: stringColumn((p) => p.address),
+    barrio: stringColumn((p) => p.barrio),
+    estrato: stringColumn((p) => p.estrato),
+    destino: stringColumn((p) => p.destino),
+    uso: stringColumn((p) => p.uso),
+    vetustez: int32Column((p) => p.vetustez),
+    ph: stringColumn((p) => p.ph),
+    predios: int32Column((p) => p.predios),
+    areaConstruida: float32Column((p) => p.areaConstruida),
+  };
   const tail = (8 - (cursor % 8)) % 8;
   if (tail) chunks.push(new Uint8Array(tail));
 
@@ -189,6 +227,15 @@ export function addMeshFeatures(glb: Uint8Array, props: FeatureProps[]): Uint8Ar
               floors: { type: "SCALAR", componentType: "INT32" },
               height: { type: "SCALAR", componentType: "FLOAT32", description: "metres, LiDAR" },
               roofForm: { type: "STRING" },
+              address: { type: "STRING", description: "Dirección oficial" },
+              barrio: { type: "STRING" },
+              estrato: { type: "STRING" },
+              destino: { type: "STRING", description: "Destino económico" },
+              uso: { type: "STRING", description: "Uso principal por área" },
+              vetustez: { type: "SCALAR", componentType: "INT32", description: "Año" },
+              ph: { type: "STRING", description: "PH / NPH" },
+              predios: { type: "SCALAR", componentType: "INT32" },
+              areaConstruida: { type: "SCALAR", componentType: "FLOAT32", description: "m²" },
             },
           },
         },
@@ -198,12 +245,7 @@ export function addMeshFeatures(glb: Uint8Array, props: FeatureProps[]): Uint8Ar
           name: "buildings",
           class: "building",
           count: props.length,
-          properties: {
-            code: { values: bvCode, stringOffsets: bvCodeOff },
-            floors: { values: bvFloors },
-            height: { values: bvHeights },
-            roofForm: { values: bvRoof, stringOffsets: bvRoofOff },
-          },
+          properties: columns,
         },
       ],
     },

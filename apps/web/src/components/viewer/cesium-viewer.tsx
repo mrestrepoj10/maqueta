@@ -30,7 +30,7 @@ import {
   Viewer,
 } from "cesium";
 import { useEffect, useRef } from "react";
-import type { BuildingInfo } from "@/lib/buildings";
+import { type BuildingInfo, readBuildingInfo } from "@/lib/buildings";
 import type { Proposal, Site } from "@/lib/site";
 
 Ion.defaultAccessToken = process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN ?? "";
@@ -210,13 +210,9 @@ export function CesiumViewer({
         if (picked instanceof Cesium3DTileFeature && picked.tileset === tileset) {
           selected = picked;
           picked.color = highlight;
-          onSelectRef.current?.({
-            featureId: picked.featureId,
-            id: String(picked.getProperty("code") ?? picked.featureId),
-            floors: picked.getProperty("floors") as number | undefined,
-            height: picked.getProperty("height") as number | undefined,
-            roofForm: picked.getProperty("roofForm") as string | undefined,
-          });
+          onSelectRef.current?.(
+            readBuildingInfo(picked.featureId, (name) => picked.getProperty(name)),
+          );
         } else {
           onSelectRef.current?.(null);
         }

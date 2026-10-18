@@ -8,6 +8,7 @@ import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { fetchBuildings } from "./fetch.js";
 import { buildGlb } from "./glb.js";
+import { fetchLots, lotCode } from "./lotes.js";
 import { sampleHeightOffsets } from "./terrain.js";
 import { tilesetJson } from "./tileset.js";
 
@@ -43,7 +44,11 @@ console.log(
   `height offset (ellipsoid − orthometric): median ${median.toFixed(1)} m, range ${sorted[0].toFixed(1)}–${sorted[sorted.length - 1].toFixed(1)} m`,
 );
 
-const { glb, bounds } = await buildGlb(buildings);
+const lots = await fetchLots(buildings.map((b) => lotCode(b.id)));
+const withAddress = [...lots.values()].filter((l) => l.address).length;
+console.log(`lot data for ${withAddress}/${lots.size} lots`);
+
+const { glb, bounds } = await buildGlb(buildings, lots);
 mkdirSync(values.out, { recursive: true });
 writeFileSync(join(values.out, "buildings.glb"), glb);
 writeFileSync(
