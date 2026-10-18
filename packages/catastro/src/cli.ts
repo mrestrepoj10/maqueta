@@ -1,51 +1,49 @@
-// Builds a 3D Tiles tileset of Catastro Bogotá buildings for a bounding box.
+// Builds a 3D Tiles tileset of IDECA's LiDAR building models for a bounding box.
 //
-//   pnpm --filter @maqueta/catastro build -- --bbox=-74.058,4.652,-74.050,4.659 --terrain 6048414 --out ../../apps/web/public/tilesets/chapinero
+//   pnpm --filter @maqueta/catastro build -- --bbox=-74.060,4.651,-74.049,4.660 --terrain 6048414 --out ../../apps/web/public/tilesets/chapinero
 //
-// Source: UAECD "Construcción" layer (CC BY 4.0), ArcGIS REST, EPSG:4686 (MAGNA-SIRGAS, treated as WGS84).
+// Source: "Volumetría 2025" multipatch feature layer, IDECA / UAECD, Datos Abiertos Bogotá.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { fetchBuildings } from "./fetch.js";
 import { buildGlb } from "./glb.js";
-import { sampleGroundHeights } from "./terrain.js";
+import { sampleHeightOffsets } from "./terrain.js";
 import { tilesetJson } from "./tileset.js";
 
 const { values } = parseArgs({
   options: {
     bbox: { type: "string" },
     out: { type: "string" },
-    "base-elevation": { type: "string", default: "2600" },
-    terrain: {
-      type: "string",
-      description: "Cesium ion terrain asset id; defaults to World Terrain",
-    },
+    terrain: { type: "string" },
   },
 });
 
 if (!values.bbox || !values.out) {
-  console.error("usage: --bbox west,south,east,north --out <dir> [--base-elevation 2600]");
+  console.error("usage: --bbox=west,south,east,north --out <dir> [--terrain <ion asset id>]");
   process.exit(1);
 }
 
 const bbox = values.bbox.split(",").map(Number) as [number, number, number, number];
-const baseElevation = Number(values["base-elevation"]);
 
 const buildings = await fetchBuildings(bbox);
-console.log(`fetched ${buildings.length} buildings`);
-const ground = await sampleGroundHeights(
+const tris = buildings.reduce((n, b) => n + b.triangles.length / 3, 0);
+console.log(`fetched ${buildings.length} buildings, ${tris} triangles`);
+
+const offsets = await sampleHeightOffsets(
   buildings,
   values.terrain ? Number(values.terrain) : undefined,
 );
 buildings.forEach((b, i) => {
-  b.ground = ground[i];
+  b.heightOffset = offsets[i];
 });
-const lo = Math.min(...ground.map((g) => g.min));
-const hi = Math.max(...ground.map((g) => g.max));
-const vertices = buildings.reduce((n, b) => n + b.ring.length, 0);
-console.log(`sampled terrain at ${vertices} vertices: ${lo.toFixed(0)}–${hi.toFixed(0)} m`);
+const sorted = [...offsets].sort((a, b) => a - b);
+const median = sorted[Math.floor(sorted.length / 2)];
+console.log(
+  `height offset (ellipsoid − orthometric): median ${median.toFixed(1)} m, range ${sorted[0].toFixed(1)}–${sorted[sorted.length - 1].toFixed(1)} m`,
+);
 
-const { glb, bounds } = await buildGlb(buildings, { baseElevation });
+const { glb, bounds } = await buildGlb(buildings);
 mkdirSync(values.out, { recursive: true });
 writeFileSync(join(values.out, "buildings.glb"), glb);
 writeFileSync(

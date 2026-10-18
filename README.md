@@ -6,7 +6,7 @@ A *maqueta* is the physical model shown at every public hearing. This is the dig
 
 ## Status
 
-First milestone: a Bogotá demo with Catastro building footprints extruded over Cesium World Terrain, three illustrative massing options on a lot in Chapinero, and a sun slider.
+First milestone: a Bogotá demo with IDECA's LiDAR 3D building models on the city's own terrain, three illustrative massing options on a lot in Chapinero, and a sun slider.
 
 ## Stack
 
@@ -20,7 +20,7 @@ First milestone: a Bogotá demo with Catastro building footprints extruded over 
 apps/web            Next.js app. One route per site: /[site]
   sites/*.json      Site definition: camera, context sources, proposals
   public/tilesets   Generated 3D Tiles (committed for the demo)
-packages/catastro   Catastro Bogotá → 3D Tiles pipeline
+packages/catastro   IDECA / Catastro Bogotá → 3D Tiles pipeline (buildings and terrain)
 ```
 
 ## Run
@@ -52,7 +52,7 @@ Put the printed asset id in `sites/chapinero.json` as `context.terrain` and pass
 
 ## Regenerate the Chapinero context
 
-Pulls building footprints from the UAECD "Construcción" layer (CC BY 4.0), samples Cesium World Terrain at each building, extrudes by floor count, and writes a single-tile 3D Tiles 1.1 tileset.
+Pulls IDECA's "Volumetría 2025" LiDAR building models (an ArcGIS multipatch layer: the query is made with `multipatchOption=stripMaterials` and the zlib-compressed shape buffer is decoded into triangles), samples the site terrain at each building to convert orthometric heights to the ellipsoid, and writes a single-tile 3D Tiles 1.1 tileset.
 
 ```bash
 set -a; . apps/web/.env.local; set +a
@@ -61,7 +61,7 @@ pnpm --filter @maqueta/catastro build -- --bbox=-74.060,4.651,-74.049,4.660 --te
 
 ## Data
 
-- Construcciones: Unidad Administrativa Especial de Catastro Distrital / IDECA, via [Datos Abiertos Bogotá](https://datosabiertos.bogota.gov.co/dataset/construccion), CC BY 4.0. `CONALTURA` and `CONELEVACI` are unpopulated, so heights are `CONNPISOS × 3 m`.
+- Buildings: "Volumetría 2025", IDECA / UAECD LiDAR 3D models with measured heights and roof forms, public feature service in IDECA's ArcGIS Online org (`services1.arcgis.com/J5ltM0ovtzXUbp7B/…/Volumetría_2025/FeatureServer/16`). The matching scene services are Web Mercator, which CesiumJS's I3S loader does not accept, hence the conversion. The older approach (Catastro "Construcción" footprints × 3 m per floor) is gone.
 - Terrain: Catastro Bogotá / EAAB urban DTM (Datos Abiertos Bogotá, CC BY-NC-SA 4.0) for Chapinero, Cesium World Terrain elsewhere. Imagery: Cesium ion (default theme), Esri World Light Gray (maquette theme).
 
 ## License

@@ -102,9 +102,9 @@ export function SiteView({ site }: { site: Site }) {
         </CardContent>
       </Card>
 
-      {site.context.catastro?.attribution && (
+      {site.context.buildings?.attribution && (
         <p className="absolute bottom-2 left-4 text-[10px] text-white/70 drop-shadow">
-          {site.context.catastro.attribution}
+          {site.context.buildings.attribution}
         </p>
       )}
     </div>

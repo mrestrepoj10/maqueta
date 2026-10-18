@@ -2,7 +2,7 @@
   "slug": "chapinero",
   "name": "Carrera 7 con Calle 70",
   "city": "Bogotá",
-  "description": "Demo site: an existing 15-floor lot on the Séptima in Chapinero, replaced by three illustrative massing options. Context buildings come from Catastro Bogotá; this is not a real project.",
+  "description": "Demo site: an existing 15-floor lot on the Séptima in Chapinero, replaced by three illustrative massing options. Buildings are IDECA's LiDAR 3D model; this is not a real project.",
   "baseElevation": 2600,
   "home": {
     "position": [-74.0549, 4.654, 2840],
@@ -11,11 +11,11 @@
   },
   "context": {
     "google3d": false,
-    "catastro": {
+    "terrain": 6048414,
+    "buildings": {
       "tileset": "/tilesets/chapinero/tileset.json",
-      "attribution": "Construcciones: UAECD / IDECA, Datos Abiertos Bogotá (CC BY 4.0)"
-    },
-    "terrain": 6048414
+      "attribution": "Edificaciones 3D: Volumetría 2025, IDECA / UAECD (LiDAR) · Datos Abiertos Bogotá"
+    }
   },
   "proposals": [
     {

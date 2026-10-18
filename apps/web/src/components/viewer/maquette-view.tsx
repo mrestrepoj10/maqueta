@@ -100,9 +100,9 @@ export function MaquetteView({ site }: { site: Site }) {
         </Panel>
       </div>
 
-      {site.context.catastro?.attribution && (
+      {site.context.buildings?.attribution && (
         <p className="absolute bottom-2 left-4 text-[10px] text-neutral-500">
-          {site.context.catastro.attribution} · Basemap © Esri
+          {site.context.buildings.attribution} · Basemap © Esri
         </p>
       )}
     </div>

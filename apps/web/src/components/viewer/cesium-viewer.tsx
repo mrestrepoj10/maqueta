@@ -151,18 +151,18 @@ export function CesiumViewer({ site, activeProposals, hour, variant = "default" 
           console.warn("Google 3D Tiles unavailable, falling back", err);
         }
       }
-      const catastro = site.context.catastro;
-      if (!catastro) return;
+      const buildings = site.context.buildings;
+      if (!buildings) return;
       const tileset =
-        typeof catastro.tileset === "number"
-          ? await Cesium3DTileset.fromIonAssetId(catastro.tileset)
-          : await Cesium3DTileset.fromUrl(catastro.tileset);
+        typeof buildings.tileset === "number"
+          ? await Cesium3DTileset.fromIonAssetId(buildings.tileset)
+          : await Cesium3DTileset.fromUrl(buildings.tileset);
       if (cancelled) return;
       tileset.style = new Cesium3DTileStyle({
         color: maquette ? "color('#ffffff')" : "color('#e7e5e4')",
       });
-      // Cast shadows onto the ground and proposals, but skip receiving them: the flat
-      // Catastro roofs show shadow acne at low sun angles.
+      // Cast shadows onto the ground and proposals, but skip receiving them: flat roofs show
+      // shadow acne at low sun angles.
       tileset.shadows = ShadowMode.CAST_ONLY;
       if (maquette) {
         // Uniform ambient light (only the L00 spherical-harmonic term) so walls facing away from
