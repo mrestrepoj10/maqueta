@@ -13,14 +13,19 @@ export async function buildGlb(
 ): Promise<{ glb: Uint8Array; bounds: Bounds }> {
   const positions: number[] = [];
   const normals: number[] = [];
+  // Vertex colours: roofs white, walls a touch darker, so edges read even under flat lighting.
+  const colors: number[] = [];
+  const ROOF = [1, 1, 1];
+  const WALL = [0.8, 0.8, 0.79];
   const indices: number[] = [];
   const min = [Infinity, Infinity, Infinity];
   const max = [-Infinity, -Infinity, -Infinity];
 
   // 3D Tiles applies a y-up to z-up rotation to glTF content, so ECEF (x, y, z) is stored as (x, z, -y).
-  const push = (p: Ecef, n: Ecef) => {
+  const push = (p: Ecef, n: Ecef, c: number[] = WALL) => {
     positions.push(p[0], p[2], -p[1]);
     normals.push(n[0], n[2], -n[1]);
+    colors.push(c[0], c[1], c[2]);
     for (let i = 0; i < 3; i++) {
       if (p[i] < min[i]) min[i] = p[i];
       if (p[i] > max[i]) max[i] = p[i];
@@ -41,7 +46,7 @@ export async function buildGlb(
     const tri = earcut(flat);
     const up = upVector(ring[0]);
     const roofStart = positions.length / 3;
-    for (const [lon, lat] of ring) push(lonLatHeightToEcef(lon, lat, top), up);
+    for (const [lon, lat] of ring) push(lonLatHeightToEcef(lon, lat, top), up, ROOF);
     // earcut returns CCW for CCW input; Catastro rings are usually CW, so flip to face up.
     const ccw = signedArea(ring) > 0;
     for (let i = 0; i < tri.length; i += 3) {
@@ -81,6 +86,11 @@ export async function buildGlb(
     .setType("VEC3")
     .setArray(new Float32Array(normals))
     .setBuffer(buffer);
+  const col = doc
+    .createAccessor()
+    .setType("VEC3")
+    .setArray(new Float32Array(colors))
+    .setBuffer(buffer);
   const idx = doc
     .createAccessor()
     .setType("SCALAR")
@@ -95,6 +105,7 @@ export async function buildGlb(
     .createPrimitive()
     .setAttribute("POSITION", pos)
     .setAttribute("NORMAL", nor)
+    .setAttribute("COLOR_0", col)
     .setIndices(idx)
     .setMaterial(material);
   const mesh = doc.createMesh("buildings").addPrimitive(prim);

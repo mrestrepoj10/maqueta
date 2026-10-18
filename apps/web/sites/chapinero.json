@@ -14,7 +14,8 @@
     "catastro": {
       "tileset": "/tilesets/chapinero/tileset.json",
       "attribution": "Construcciones: UAECD / IDECA, Datos Abiertos Bogotá (CC BY 4.0)"
-    }
+    },
+    "terrain": 6048414
   },
   "proposals": [
     {

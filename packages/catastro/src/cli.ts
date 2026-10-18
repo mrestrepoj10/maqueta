@@ -1,6 +1,6 @@
 // Builds a 3D Tiles tileset of Catastro Bogotá buildings for a bounding box.
 //
-//   pnpm --filter @maqueta/catastro build -- --bbox=-74.058,4.652,-74.050,4.659 --out ../../apps/web/public/tilesets/chapinero
+//   pnpm --filter @maqueta/catastro build -- --bbox=-74.058,4.652,-74.050,4.659 --terrain 6048414 --out ../../apps/web/public/tilesets/chapinero
 //
 // Source: UAECD "Construcción" layer (CC BY 4.0), ArcGIS REST, EPSG:4686 (MAGNA-SIRGAS, treated as WGS84).
 import { mkdirSync, writeFileSync } from "node:fs";
@@ -16,6 +16,10 @@ const { values } = parseArgs({
     bbox: { type: "string" },
     out: { type: "string" },
     "base-elevation": { type: "string", default: "2600" },
+    terrain: {
+      type: "string",
+      description: "Cesium ion terrain asset id; defaults to World Terrain",
+    },
   },
 });
 
@@ -29,7 +33,10 @@ const baseElevation = Number(values["base-elevation"]);
 
 const buildings = await fetchBuildings(bbox);
 console.log(`fetched ${buildings.length} buildings`);
-const ground = await sampleGroundHeights(buildings);
+const ground = await sampleGroundHeights(
+  buildings,
+  values.terrain ? Number(values.terrain) : undefined,
+);
 buildings.forEach((b, i) => {
   b.ground = ground[i];
 });

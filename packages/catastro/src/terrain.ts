@@ -1,6 +1,12 @@
 // Samples Cesium World Terrain (ellipsoidal heights) at each building so the extrusion sits on the
 // same terrain the viewer renders. Needs CESIUM_ION_TOKEN (or NEXT_PUBLIC_CESIUM_ION_TOKEN) in env.
-import { Cartographic, createWorldTerrainAsync, Ion, sampleTerrainMostDetailed } from "cesium";
+import {
+  Cartographic,
+  CesiumTerrainProvider,
+  createWorldTerrainAsync,
+  Ion,
+  sampleTerrainMostDetailed,
+} from "cesium";
 import type { Building } from "./fetch.js";
 
 /**
@@ -9,11 +15,14 @@ import type { Building } from "./fetch.js";
  */
 export async function sampleGroundHeights(
   buildings: Building[],
+  terrainAssetId?: number,
 ): Promise<{ min: number; max: number }[]> {
   const token = process.env.CESIUM_ION_TOKEN ?? process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN;
   if (!token) throw new Error("CESIUM_ION_TOKEN is not set");
   Ion.defaultAccessToken = token;
-  const terrain = await createWorldTerrainAsync();
+  const terrain = terrainAssetId
+    ? await CesiumTerrainProvider.fromIonAssetId(terrainAssetId)
+    : await createWorldTerrainAsync();
   const points: Cartographic[] = [];
   const owner: number[] = [];
   buildings.forEach((b, i) => {

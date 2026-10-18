@@ -31,19 +31,38 @@ cp apps/web/.env.example apps/web/.env.local   # add NEXT_PUBLIC_CESIUM_ION_TOKE
 pnpm --filter @maqueta/web dev
 ```
 
+## Routes
+
+- `/chapinero` – satellite imagery, coloured options (default theme)
+- `/chapinero/maquette` – paper-model theme inspired by PublicTwin: white buildings, pale-yellow options, pill controls. Temporary alternative while we pick one.
+
+## Terrain
+
+Cesium World Terrain has building-shaped mounds in Bogotá (it is derived from surface data), so each site can point `context.terrain` at a Cesium ion terrain asset built from the city's own DTM. For Chapinero the pipeline is:
+
+```bash
+cd packages/catastro
+python3 -m venv .venv && .venv/bin/pip install numpy scipy rasterio boto3
+set -a; . ../../apps/web/.env.local; set +a
+.venv/bin/python src/dtm_sample.py --bbox=-74.062,4.649,-74.047,4.662 --step 8 --out data/chapinero-dtm.tif   # samples the Catastro 0.5 m DTM via ArcGIS identify
+.venv/bin/python src/ion_upload.py data/chapinero-dtm.tif --name "Bogotá Chapinero DTM (IDECA)"                # ion asset merged onto World Terrain
+```
+
+Put the printed asset id in `sites/chapinero.json` as `context.terrain` and pass it to the tiler with `--terrain`.
+
 ## Regenerate the Chapinero context
 
 Pulls building footprints from the UAECD "Construcción" layer (CC BY 4.0), samples Cesium World Terrain at each building, extrudes by floor count, and writes a single-tile 3D Tiles 1.1 tileset.
 
 ```bash
 set -a; . apps/web/.env.local; set +a
-pnpm --filter @maqueta/catastro build -- --bbox=-74.060,4.651,-74.049,4.660 --out ../../apps/web/public/tilesets/chapinero
+pnpm --filter @maqueta/catastro build -- --bbox=-74.060,4.651,-74.049,4.660 --terrain 6048414 --out ../../apps/web/public/tilesets/chapinero
 ```
 
 ## Data
 
 - Construcciones: Unidad Administrativa Especial de Catastro Distrital / IDECA, via [Datos Abiertos Bogotá](https://datosabiertos.bogota.gov.co/dataset/construccion), CC BY 4.0. `CONALTURA` and `CONELEVACI` are unpopulated, so heights are `CONNPISOS × 3 m`.
-- Terrain and imagery: Cesium ion.
+- Terrain: Catastro Bogotá / EAAB urban DTM (Datos Abiertos Bogotá, CC BY-NC-SA 4.0) for Chapinero, Cesium World Terrain elsewhere. Imagery: Cesium ion (default theme), Esri World Light Gray (maquette theme).
 
 ## License
 

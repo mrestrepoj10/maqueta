@@ -8,11 +8,13 @@ import {
   Cesium3DTileStyle,
   Cesium3DTileset,
   Math as CesiumMath,
+  CesiumTerrainProvider,
   ClippingPolygon,
   ClippingPolygonCollection,
   Color,
   createGooglePhotorealistic3DTileset,
   HeightReference,
+  ImageryLayer,
   Ion,
   JulianDate,
   PolygonHierarchy,
@@ -20,6 +22,7 @@ import {
   sampleTerrainMostDetailed,
   Terrain,
   type TerrainProvider,
+  UrlTemplateImageryProvider,
   Viewer,
 } from "cesium";
 import { useEffect, useRef } from "react";
@@ -33,7 +36,12 @@ export type ViewerProps = {
   activeProposals: string[];
   /** Hours since midnight, local solar time, for the sun position. */
   hour: number;
+  /** "default": satellite imagery and coloured options. "maquette": white paper-model look. */
+  variant?: "default" | "maquette";
 };
+
+/** Pale-yellow massing, as in a physical maquette. */
+const MAQUETTE_PROPOSAL = "#f2dd6e";
 
 type Handles = {
   viewer: Viewer;
@@ -43,7 +51,7 @@ type Handles = {
   context: Cesium3DTileset | null;
 };
 
-export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
+export function CesiumViewer({ site, activeProposals, hour, variant = "default" }: ViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const handlesRef = useRef<Handles | null>(null);
   const activeRef = useRef(activeProposals);
@@ -53,13 +61,29 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
   useEffect(() => {
     if (!containerRef.current || handlesRef.current) return;
 
-    const terrain = Terrain.fromWorldTerrain();
+    // Per-site terrain (a Cesium ion asset built from the city's own DTM) or World Terrain.
+    const terrain =
+      site.context.terrain !== undefined
+        ? new Terrain(CesiumTerrainProvider.fromIonAssetId(site.context.terrain))
+        : Terrain.fromWorldTerrain();
     const terrainReady = new Promise<TerrainProvider>((resolve) => {
       terrain.readyEvent.addEventListener((provider) => resolve(provider));
     });
 
+    const maquette = variant === "maquette";
     const viewer = new Viewer(containerRef.current, {
       terrain,
+      ...(maquette
+        ? {
+            baseLayer: new ImageryLayer(
+              new UrlTemplateImageryProvider({
+                url: "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+                credit: "Basemap © Esri, HERE, Garmin, OpenStreetMap contributors",
+                maximumLevel: 16,
+              }),
+            ),
+          }
+        : {}),
       animation: false,
       timeline: false,
       baseLayerPicker: false,
@@ -74,6 +98,24 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
     });
     viewer.scene.globe.depthTestAgainstTerrain = true;
     viewer.shadowMap.softShadows = true;
+    if (maquette) {
+      // Paper-model look: white sky, no atmosphere or fog, soft shadows.
+      if (viewer.scene.skyAtmosphere) viewer.scene.skyAtmosphere.show = false;
+      if (viewer.scene.skyBox) viewer.scene.skyBox.show = false;
+      if (viewer.scene.sun) viewer.scene.sun.show = false;
+      viewer.scene.fog.enabled = false;
+      viewer.scene.backgroundColor = Color.fromCssColorString("#f3f2ee");
+      viewer.scene.globe.baseColor = Color.fromCssColorString("#f3f2ee");
+      viewer.scene.globe.showGroundAtmosphere = false;
+      viewer.scene.highDynamicRange = false;
+      viewer.shadowMap.darkness = 0.6;
+      viewer.scene.light.intensity = 1.6;
+      const base = viewer.imageryLayers.get(0);
+      if (base) {
+        base.brightness = 1.04;
+        base.saturation = 0.5;
+      }
+    }
     viewer.scene.renderError.addEventListener((_scene, error) => {
       console.error("cesium render error", error);
     });
@@ -116,10 +158,21 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
           ? await Cesium3DTileset.fromIonAssetId(catastro.tileset)
           : await Cesium3DTileset.fromUrl(catastro.tileset);
       if (cancelled) return;
-      tileset.style = new Cesium3DTileStyle({ color: "color('#e7e5e4')" });
+      tileset.style = new Cesium3DTileStyle({
+        color: maquette ? "color('#ffffff')" : "color('#e7e5e4')",
+      });
       // Cast shadows onto the ground and proposals, but skip receiving them: the flat
       // Catastro roofs show shadow acne at low sun angles.
       tileset.shadows = ShadowMode.CAST_ONLY;
+      if (maquette) {
+        // Uniform ambient light (only the L00 spherical-harmonic term) so walls facing away from
+        // the sun read as light grey instead of black, like a card model under studio light.
+        const ambient = 0.62;
+        tileset.imageBasedLighting.sphericalHarmonicCoefficients = [
+          new Cartesian3(ambient, ambient, ambient),
+          ...Array.from({ length: 8 }, () => Cartesian3.ZERO),
+        ];
+      }
       viewer.scene.primitives.add(tileset);
       handles.context = tileset;
       applyClipping(tileset, site.proposals, activeRef.current);
@@ -131,7 +184,7 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
       viewer.destroy();
       handlesRef.current = null;
     };
-  }, [site]);
+  }, [site, variant]);
 
   // Sync proposals: extrude the active ones and cut their footprints out of the existing city.
   useEffect(() => {
@@ -166,10 +219,16 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
             height: lo - 0.5,
             extrudedHeight: hi + p.height,
             heightReference: HeightReference.NONE,
-            material: Color.fromCssColorString(p.color ?? "#2563eb").withAlpha(0.9),
+            material: Color.fromCssColorString(
+              variant === "maquette" ? MAQUETTE_PROPOSAL : (p.color ?? "#2563eb"),
+            ).withAlpha(variant === "maquette" ? 1 : 0.9),
             outline: true,
-            outlineColor: Color.WHITE.withAlpha(0.6),
-            shadows: ShadowMode.ENABLED,
+            outlineColor:
+              variant === "maquette"
+                ? Color.fromCssColorString("#8a7a1f")
+                : Color.WHITE.withAlpha(0.6),
+            // Entity roofs show shadow acne under the paper lighting, so only cast there.
+            shadows: variant === "maquette" ? ShadowMode.CAST_ONLY : ShadowMode.ENABLED,
           },
         });
       }
@@ -179,7 +238,7 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
     return () => {
       cancelled = true;
     };
-  }, [site, activeProposals]);
+  }, [site, activeProposals, variant]);
 
   // Sun position from the hour slider. Bogotá is UTC-5; the date is the March equinox.
   useEffect(() => {

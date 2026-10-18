@@ -44,6 +44,8 @@ export const Site = z.object({
     google3d: z.boolean().default(false),
     /** Extruded Catastro buildings for cities without Google 3D (Bogotá). */
     catastro: Context.optional(),
+    /** Cesium ion terrain asset id built from the city's own DTM. Defaults to World Terrain. */
+    terrain: z.number().optional(),
   }),
   proposals: z.array(Proposal).min(1),
 });
