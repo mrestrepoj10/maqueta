@@ -1,0 +1,24 @@
+{
+  "name": "@maqueta/catastro",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pulls Catastro Bogotá building footprints and writes a 3D Tiles tileset",
+  "scripts": {
+    "build": "tsx src/cli.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@gltf-transform/core": "^4.1.0",
+    "@gltf-transform/extensions": "^4.1.0",
+    "@gltf-transform/functions": "^4.1.0",
+    "cesium": "^1.146.0",
+    "earcut": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/earcut": "^3.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5",
+    "vitest": "^3.2.0"
+  }
+}

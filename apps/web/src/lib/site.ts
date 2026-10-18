@@ -1,0 +1,55 @@
+import { z } from "zod";
+
+/** [lon, lat] in WGS84 degrees. */
+export const LonLat = z.tuple([z.number(), z.number()]);
+
+export const Proposal = z.object({
+  id: z.string(),
+  name: z.string(),
+  summary: z.string().optional(),
+  /** Closed ring, first point not repeated. */
+  footprint: z.array(LonLat).min(3),
+  /** Metres above the base elevation. */
+  height: z.number().positive(),
+  /** Metres above the ellipsoid. Defaults to the site base elevation. */
+  baseElevation: z.number().optional(),
+  /** CSS colour. */
+  color: z.string().optional(),
+});
+export type Proposal = z.infer<typeof Proposal>;
+
+export const Context = z.object({
+  /** Path to a 3D Tiles tileset.json served from /public, or a Cesium ion asset id. */
+  tileset: z.union([z.string(), z.number()]),
+  /** Only meaningful when the tileset is a local path. */
+  attribution: z.string().optional(),
+});
+
+export const Site = z.object({
+  slug: z.string(),
+  name: z.string(),
+  city: z.string(),
+  description: z.string().optional(),
+  /** Metres above the ellipsoid at the site. Bogotá sits at ~2,600 m. */
+  baseElevation: z.number(),
+  /** Camera home: [lon, lat, height] and heading/pitch in degrees. */
+  home: z.object({
+    position: z.tuple([z.number(), z.number(), z.number()]),
+    heading: z.number(),
+    pitch: z.number(),
+  }),
+  /** Where the real-world context comes from. */
+  context: z.object({
+    /** Use Google Photorealistic 3D Tiles when the city has coverage. */
+    google3d: z.boolean().default(false),
+    /** Extruded Catastro buildings for cities without Google 3D (Bogotá). */
+    catastro: Context.optional(),
+  }),
+  proposals: z.array(Proposal).min(1),
+});
+export type Site = z.infer<typeof Site>;
+
+export async function loadSite(slug: string): Promise<Site> {
+  const mod = await import(`../../sites/${slug}.json`);
+  return Site.parse(mod.default);
+}

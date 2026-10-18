@@ -1,0 +1,73 @@
+{
+  "slug": "chapinero",
+  "name": "Carrera 7 con Calle 70",
+  "city": "Bogotá",
+  "description": "Demo site: an existing 15-floor lot on the Séptima in Chapinero, replaced by three illustrative massing options. Context buildings come from Catastro Bogotá; this is not a real project.",
+  "baseElevation": 2600,
+  "home": {
+    "position": [-74.0549, 4.654, 2840],
+    "heading": 335,
+    "pitch": -36
+  },
+  "context": {
+    "google3d": false,
+    "catastro": {
+      "tileset": "/tilesets/chapinero/tileset.json",
+      "attribution": "Construcciones: UAECD / IDECA, Datos Abiertos Bogotá (CC BY 4.0)"
+    }
+  },
+  "proposals": [
+    {
+      "id": "a",
+      "name": "Option A · Low block",
+      "summary": "6 floors across the whole lot.",
+      "footprint": [
+        [-74.055784, 4.655982],
+        [-74.055769, 4.655771],
+        [-74.055517, 4.655596],
+        [-74.055415, 4.655526],
+        [-74.055358, 4.655609],
+        [-74.055209, 4.655828],
+        [-74.055672, 4.656146]
+      ],
+      "height": 18,
+      "color": "#2563eb"
+    },
+    {
+      "id": "b",
+      "name": "Option B · Slim tower",
+      "summary": "18 floors on the existing tower footprint, podium kept.",
+      "footprint": [
+        [-74.055451, 4.655994],
+        [-74.055497, 4.655926],
+        [-74.055608, 4.656003],
+        [-74.055673, 4.655906],
+        [-74.055579, 4.655841],
+        [-74.055627, 4.655771],
+        [-74.055418, 4.655628],
+        [-74.055358, 4.655609],
+        [-74.055278, 4.655727],
+        [-74.055209, 4.655828],
+        [-74.055448, 4.655992]
+      ],
+      "height": 54,
+      "color": "#16a34a"
+    },
+    {
+      "id": "c",
+      "name": "Option C · Mid-rise",
+      "summary": "9 floors across the whole lot.",
+      "footprint": [
+        [-74.055784, 4.655982],
+        [-74.055769, 4.655771],
+        [-74.055517, 4.655596],
+        [-74.055415, 4.655526],
+        [-74.055358, 4.655609],
+        [-74.055209, 4.655828],
+        [-74.055672, 4.656146]
+      ],
+      "height": 27,
+      "color": "#ea580c"
+    }
+  ]
+}
