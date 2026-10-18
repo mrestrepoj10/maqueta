@@ -29,13 +29,14 @@ const baseElevation = Number(values["base-elevation"]);
 
 const buildings = await fetchBuildings(bbox);
 console.log(`fetched ${buildings.length} buildings`);
-const heights = await sampleGroundHeights(buildings);
+const ground = await sampleGroundHeights(buildings);
 buildings.forEach((b, i) => {
-  b.groundHeight = heights[i];
+  b.ground = ground[i];
 });
-console.log(
-  `sampled terrain: ${Math.min(...heights).toFixed(0)}–${Math.max(...heights).toFixed(0)} m`,
-);
+const lo = Math.min(...ground.map((g) => g.min));
+const hi = Math.max(...ground.map((g) => g.max));
+const vertices = buildings.reduce((n, b) => n + b.ring.length, 0);
+console.log(`sampled terrain at ${vertices} vertices: ${lo.toFixed(0)}–${hi.toFixed(0)} m`);
 
 const { glb, bounds } = await buildGlb(buildings, { baseElevation });
 mkdirSync(values.out, { recursive: true });

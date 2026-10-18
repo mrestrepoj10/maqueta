@@ -144,19 +144,27 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
     let cancelled = false;
     (async () => {
       const provider = await handles.terrain;
-      const centroids = active.map((p) => Cartographic.fromDegrees(...centroid(p.footprint)));
-      const sampled = centroids.length ? await sampleTerrainMostDetailed(provider, centroids) : [];
+      // Sample every footprint vertex: walls start at the lowest ground point, the roof sits
+      // `height` above the highest, so the massing neither floats nor sinks on a slope.
+      const points = active.flatMap((p) =>
+        p.footprint.map(([lon, lat]) => Cartographic.fromDegrees(lon, lat)),
+      );
+      const sampled = points.length ? await sampleTerrainMostDetailed(provider, points) : [];
       if (cancelled || viewer.isDestroyed()) return;
       viewer.entities.removeAll();
-      active.forEach((p, i) => {
-        const base = p.baseElevation ?? sampled[i]?.height ?? site.baseElevation;
+      let cursor = 0;
+      for (const p of active) {
+        const hs = sampled.slice(cursor, cursor + p.footprint.length).map((c) => c.height);
+        cursor += p.footprint.length;
+        const lo = p.baseElevation ?? (hs.length ? Math.min(...hs) : site.baseElevation);
+        const hi = p.baseElevation ?? (hs.length ? Math.max(...hs) : site.baseElevation);
         viewer.entities.add({
           id: `proposal:${p.id}`,
           name: p.name,
           polygon: {
             hierarchy: new PolygonHierarchy(Cartesian3.fromDegreesArray(p.footprint.flat())),
-            height: base,
-            extrudedHeight: base + p.height,
+            height: lo - 0.5,
+            extrudedHeight: hi + p.height,
             heightReference: HeightReference.NONE,
             material: Color.fromCssColorString(p.color ?? "#2563eb").withAlpha(0.9),
             outline: true,
@@ -164,7 +172,7 @@ export function CesiumViewer({ site, activeProposals, hour }: ViewerProps) {
             shadows: ShadowMode.ENABLED,
           },
         });
-      });
+      }
       viewer.scene.requestRender();
     })().catch((err) => console.error("proposal sync failed", err));
 
@@ -193,9 +201,4 @@ function applyClipping(tileset: Cesium3DTileset, proposals: Proposal[], activeId
       (p) => new ClippingPolygon({ positions: Cartesian3.fromDegreesArray(p.footprint.flat()) }),
     );
   tileset.clippingPolygons = new ClippingPolygonCollection({ polygons });
-}
-
-function centroid(ring: [number, number][]): [number, number] {
-  const n = ring.length;
-  return [ring.reduce((a, [x]) => a + x, 0) / n, ring.reduce((a, [, y]) => a + y, 0) / n];
 }

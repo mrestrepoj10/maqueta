@@ -3,22 +3,37 @@
 import { Cartographic, createWorldTerrainAsync, Ion, sampleTerrainMostDetailed } from "cesium";
 import type { Building } from "./fetch.js";
 
-export async function sampleGroundHeights(buildings: Building[]): Promise<number[]> {
+/**
+ * Samples terrain at every footprint vertex. Returns, per building, the lowest and highest ground
+ * height under its outline, so walls can extend to the downhill side on slopes.
+ */
+export async function sampleGroundHeights(
+  buildings: Building[],
+): Promise<{ min: number; max: number }[]> {
   const token = process.env.CESIUM_ION_TOKEN ?? process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN;
   if (!token) throw new Error("CESIUM_ION_TOKEN is not set");
   Ion.defaultAccessToken = token;
   const terrain = await createWorldTerrainAsync();
-  const points = buildings.map((b) => {
-    const [lon, lat] = centroid(b.ring);
-    return Cartographic.fromDegrees(lon, lat);
+  const points: Cartographic[] = [];
+  const owner: number[] = [];
+  buildings.forEach((b, i) => {
+    for (const [lon, lat] of b.ring) {
+      points.push(Cartographic.fromDegrees(lon, lat));
+      owner.push(i);
+    }
   });
-  const out: number[] = [];
-  const BATCH = 500;
+  const heights: number[] = [];
+  const BATCH = 1000;
   for (let i = 0; i < points.length; i += BATCH) {
-    const chunk = points.slice(i, i + BATCH);
-    const sampled = await sampleTerrainMostDetailed(terrain, chunk);
-    for (const c of sampled) out.push(c.height);
+    const sampled = await sampleTerrainMostDetailed(terrain, points.slice(i, i + BATCH));
+    for (const c of sampled) heights.push(c.height);
   }
+  const out = buildings.map(() => ({ min: Infinity, max: -Infinity }));
+  heights.forEach((h, i) => {
+    const o = out[owner[i]];
+    if (h < o.min) o.min = h;
+    if (h > o.max) o.max = h;
+  });
   return out;
 }
 

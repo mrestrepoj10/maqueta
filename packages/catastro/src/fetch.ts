@@ -5,8 +5,8 @@ export type Building = {
   floors: number;
   /** Metres. Catastro's CONALTURA is unpopulated in practice, so this is floors * 3. */
   height: number;
-  /** Ground height above the ellipsoid, filled in by terrain sampling. */
-  groundHeight?: number;
+  /** Lowest and highest terrain height (ellipsoidal) under the footprint, from terrain sampling. */
+  ground?: { min: number; max: number };
 };
 
 const LAYER =

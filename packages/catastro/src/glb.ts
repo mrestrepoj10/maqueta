@@ -29,8 +29,10 @@ export async function buildGlb(
   };
 
   for (const b of buildings) {
-    const base = b.groundHeight ?? opts.baseElevation;
-    const top = base + b.height;
+    // Walls start at the lowest ground point so nothing floats on a slope; the roof sits
+    // `height` above the highest ground point so the building keeps its storey count uphill.
+    const base = (b.ground?.min ?? opts.baseElevation) - 0.5;
+    const top = (b.ground?.max ?? opts.baseElevation) + b.height;
     const ring = b.ring;
     const n = ring.length;
 
