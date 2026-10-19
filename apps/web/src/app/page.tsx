@@ -11,7 +11,12 @@ export default function Home() {
           side by side, in the browser.
         </p>
       </div>
-      <Button render={<Link href="/chapinero" />}>Open the Chapinero demo</Button>
+      <div className="flex flex-wrap justify-center gap-2">
+        <Button render={<Link href="/calle-72/maquette" />}>Actuación Estratégica Calle 72</Button>
+        <Button variant="outline" render={<Link href="/chapinero/maquette" />}>
+          Chapinero options demo
+        </Button>
+      </div>
     </main>
   );
 }

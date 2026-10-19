@@ -29,8 +29,20 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--bbox", required=True)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--clip", help="GeoJSON polygon: keep trees inside it or within --buffer metres")
+    ap.add_argument("--buffer", type=float, default=0)
     a = ap.parse_args()
     w, s, e, n = map(float, a.bbox.split(","))
+    keep = lambda x, y: True  # noqa: E731
+    if a.clip:
+        from pyproj import Transformer
+        from shapely.geometry import Point, shape
+        from shapely.ops import transform, unary_union
+        to_m = Transformer.from_crs("EPSG:4326", "EPSG:6247", always_xy=True).transform
+        with open(a.clip) as f:
+            area = unary_union([shape(ft["geometry"]) for ft in json.load(f)["features"]])
+        zone = transform(to_m, area).buffer(a.buffer)
+        keep = lambda x, y: zone.contains(Point(*to_m(x, y)))  # noqa: E731
     r = shapefile.Reader(shp_path())
     names = [f[0] for f in r.fields[1:]]
     out = []
@@ -38,7 +50,7 @@ def main():
         if not sr.shape.points:
             continue
         x, y = sr.shape.points[0]
-        if not (w <= x <= e and s <= y <= n):
+        if not (w <= x <= e and s <= y <= n) or not keep(x, y):
             continue
         rec = dict(zip(names, sr.record))
         h = rec.get("Altura_Tot")

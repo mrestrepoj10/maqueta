@@ -31,6 +31,11 @@ cp apps/web/.env.example apps/web/.env.local   # add NEXT_PUBLIC_CESIUM_ION_TOKE
 pnpm --filter @maqueta/web dev
 ```
 
+## Sites
+
+- **Actuación Estratégica Calle 72** (`/calle-72`, `/calle-72/maquette`): a masterplan simulation of AE24 in Barrios Unidos (Decreto 242 de 2026, led by RenoBo). The plan boundary and Metro Line 1 and Line 2 stations are official open data. The six plots and their massing are illustrative, built on real city blocks near the Metro, the Canal Salitre and Alcázares. Buildings are IDECA LiDAR east of about lon -74.0775 and extruded Catastro footprints west of it.
+- **Chapinero** (`/chapinero`, `/chapinero/maquette`): three options for one lot on the Séptima.
+
 ## Routes
 
 - `/chapinero` – satellite imagery, coloured options (default theme)
@@ -66,6 +71,23 @@ cd packages/catastro
 pnpm exec tsx src/trees.ts --in data/chapinero-trees.json --terrain 6048414 --out ../../apps/web/public/tilesets/chapinero-trees
 pnpm exec tsx src/overlays.ts --bbox=-74.060,4.651,-74.049,4.660 --lot 008306022019 --out ../../apps/web/public/tilesets/chapinero-overlays
 ```
+
+## Build the Calle 72 site
+
+```bash
+cd packages/catastro
+set -a; . ../../apps/web/.env.local; set +a
+# Plan boundary from Datos Abiertos (actuacionestrategica.json, Bogotá grid EPSG:6247) reprojected to data/ae24-calle72.geojson
+.venv/bin/python -I src/dtm_sample.py --bbox=-74.0875,4.6565,-74.0600,4.6800 --step 10 --workers 48 --out data/calle72-dtm.tif
+.venv/bin/python -I src/ion_upload.py data/calle72-dtm.tif --name "Bogotá Calle 72 DTM (IDECA)"
+pnpm exec tsx src/cli.ts --bbox=-74.0875,4.6565,-74.0600,4.6800 --clip data/ae24-calle72.geojson --buffer 150 --terrain <asset id> --out ../../apps/web/public/tilesets/calle72
+.venv/bin/python -I src/trees_extract.py --bbox=-74.0875,4.6565,-74.0600,4.6800 --clip data/ae24-calle72.geojson --buffer 150 --out data/calle72-trees.json
+pnpm exec tsx src/trees.ts --in data/calle72-trees.json --terrain <asset id> --out ../../apps/web/public/tilesets/calle72-trees
+pnpm exec tsx src/overlays.ts --bbox=-74.0875,4.6565,-74.0600,4.6800 --boundary data/ae24-calle72.geojson --clip data/ae24-calle72.geojson --buffer 150 --metro --out ../../apps/web/public/tilesets/calle72-overlays
+.venv/bin/python -I src/plots_calle72.py > data/calle72-plots.json
+```
+
+Large areas are split into a grid of tiles (`--cell`, degrees). Meshes are quantized (`KHR_mesh_quantization`).
 
 ## Regenerate the Chapinero context
 

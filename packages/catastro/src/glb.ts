@@ -6,6 +6,8 @@
 // reads node transforms in double precision. Each building gets a feature ID (EXT_mesh_features)
 // so it can be picked and highlighted in the viewer.
 import { Document, NodeIO } from "@gltf-transform/core";
+import { KHRMeshQuantization } from "@gltf-transform/extensions";
+import { quantize } from "@gltf-transform/functions";
 import type { Building } from "./fetch.js";
 import { type Ecef, lonLatHeightToEcef } from "./geo.js";
 import { type LotInfo, lotCode } from "./lotes.js";
@@ -109,8 +111,18 @@ export async function buildGlb(
         .setTranslation([centreYUp[0], centreYUp[1], centreYUp[2]]),
     );
 
+  // Quantize positions, normals and colours (KHR_mesh_quantization); feature ids stay float.
+  doc.createExtension(KHRMeshQuantization).setRequired(true);
+  await doc.transform(
+    quantize({
+      pattern: /^(POSITION|NORMAL|COLOR_0)$/,
+      quantizePosition: 14,
+      quantizeNormal: 8,
+      quantizeColor: 8,
+    }),
+  );
   const glb = addMeshFeatures(
-    await new NodeIO().writeBinary(doc),
+    await new NodeIO().registerExtensions([KHRMeshQuantization]).writeBinary(doc),
     buildings.map((b) => {
       const lot = lots.get(lotCode(b.id));
       return {

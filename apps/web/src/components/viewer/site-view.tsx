@@ -16,7 +16,11 @@ const CesiumViewer = dynamic(() => import("./cesium-viewer").then((m) => m.Cesiu
 });
 
 export function SiteView({ site }: { site: Site }) {
-  const [active, setActive] = useState<string[]>([site.proposals[0].id]);
+  const [active, setActive] = useState<string[]>(
+    site.kind === "masterplan" ? site.proposals.map((p) => p.id) : [site.proposals[0].id],
+  );
+  const [plotId, setPlotId] = useState<string | null>(null);
+  const plot = plotId ? site.proposals.find((p) => p.id === plotId) : undefined;
   const [hour, setHour] = useState(10);
   const [selected, setSelected] = useState<BuildingInfo | null>(null);
   const [layers, setLayers] = useState<string[]>(["boundary", "trees", "parks", "lots"]);
@@ -27,7 +31,14 @@ export function SiteView({ site }: { site: Site }) {
         site={site}
         activeProposals={active}
         hour={hour}
-        onSelectBuilding={setSelected}
+        onSelectBuilding={(b) => {
+          setSelected(b);
+          if (b) setPlotId(null);
+        }}
+        onSelectPlot={(id) => {
+          setSelected(null);
+          setPlotId(id);
+        }}
         layers={{
           boundary: layers.includes("boundary"),
           trees: layers.includes("trees"),
@@ -135,7 +146,38 @@ export function SiteView({ site }: { site: Site }) {
         </CardContent>
       </Card>
 
-      {selected && (
+      {plot && (
+        <Card className="absolute bottom-16 left-4 w-72 bg-background/90 backdrop-blur">
+          <CardHeader className="pb-1">
+            <CardTitle className="text-sm">{plot.name}</CardTitle>
+            {plot.summary && <p className="text-xs text-muted-foreground">{plot.summary}</p>}
+          </CardHeader>
+          <CardContent className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-0.5 text-xs">
+            {(
+              [
+                ["Barrio", plot.barrio],
+                ["Stage", plot.stage],
+                ["Homes", plot.homes?.toLocaleString("en")],
+                [
+                  "Social housing",
+                  plot.visShare !== undefined ? `${Math.round(plot.visShare * 100)}%` : undefined,
+                ],
+                ["Uses", plot.uses],
+                ["Floors", plot.floors?.toString()],
+              ] as [string, string | undefined][]
+            )
+              .filter(([, v]) => v)
+              .map(([k, v]) => (
+                <Fragment key={k}>
+                  <span className="text-muted-foreground">{k}</span>
+                  <span>{v}</span>
+                </Fragment>
+              ))}
+          </CardContent>
+        </Card>
+      )}
+
+      {selected && !plot && (
         <Card className="absolute bottom-16 left-4 w-72 bg-background/90 backdrop-blur">
           <CardHeader className="pb-1">
             <CardTitle className="text-sm">{selected.address ?? "Existing building"}</CardTitle>

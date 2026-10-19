@@ -15,6 +15,28 @@ export const Proposal = z.object({
   baseElevation: z.number().optional(),
   /** CSS colour. */
   color: z.string().optional(),
+  /**
+   * Massing as one or more extruded volumes, each from the ground. Defaults to the footprint
+   * extruded by `height`. `holes` cut courtyards.
+   */
+  volumes: z
+    .array(
+      z.object({
+        footprint: z.array(LonLat).min(3),
+        holes: z.array(z.array(LonLat).min(3)).optional(),
+        height: z.number().positive(),
+      }),
+    )
+    .optional(),
+  // Masterplan plot metadata (all optional, shown in the plot card when present).
+  barrio: z.string().optional(),
+  manzana: z.string().optional(),
+  stage: z.enum(["propuesta", "formulación", "adoptado", "construcción"]).optional(),
+  homes: z.number().optional(),
+  /** 0–1 share of social housing (VIS/VIP). */
+  visShare: z.number().optional(),
+  uses: z.string().optional(),
+  floors: z.number().optional(),
 });
 export type Proposal = z.infer<typeof Proposal>;
 
@@ -27,6 +49,14 @@ export const Buildings = z.object({
 
 export const Site = z.object({
   slug: z.string(),
+  /** "options": compare alternatives for one lot. "masterplan": many plots in a plan area. */
+  kind: z.enum(["options", "masterplan"]).default("options"),
+  /** Who runs the real project, shown as context. */
+  promoter: z.string().optional(),
+  /** Legal act or reference for the real project. */
+  reference: z.string().optional(),
+  /** Headline figures for the plan, shown in the site card. */
+  facts: z.array(z.tuple([z.string(), z.string()])).optional(),
   name: z.string(),
   city: z.string(),
   description: z.string().optional(),
@@ -55,6 +85,9 @@ export const Site = z.object({
         lots: z.string().optional(),
         /** Project area outline, drawn as a wide yellow band on the ground. */
         boundary: z.string().optional(),
+        water: z.string().optional(),
+        /** Metro stations (polygons) and alignments (lines), with `line` and `kind` properties. */
+        metro: z.string().optional(),
       })
       .optional(),
   }),

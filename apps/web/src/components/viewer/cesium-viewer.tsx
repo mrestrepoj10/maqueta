@@ -3,6 +3,7 @@
 import "./cesium-base-url";
 import "cesium/Build/Cesium/Widgets/widgets.css";
 import {
+  BoundingSphere,
   Cartesian3,
   Cartographic,
   Cesium3DTileFeature,
@@ -22,6 +23,7 @@ import {
   GroundPolylineGeometry,
   GroundPolylinePrimitive,
   GroundPrimitive,
+  HeadingPitchRange,
   HeightReference,
   ImageryLayer,
   Ion,
@@ -31,6 +33,7 @@ import {
   PolygonHierarchy,
   PolylineColorAppearance,
   PolylineDashMaterialProperty,
+  PrimitiveCollection,
   ScreenSpaceEventHandler,
   ScreenSpaceEventType,
   ShadowMode,
@@ -58,9 +61,15 @@ export type ViewerProps = {
   onSelectBuilding?: (info: BuildingInfo | null) => void;
   /** Which context layers are visible. Missing keys are visible. */
   layers?: Partial<Record<LayerId, boolean>>;
+  /** Called when the viewer clicks a proposal or plot. */
+  onSelectPlot?: (id: string) => void;
+  /** Plot highlighted in the maquette theme. */
+  selectedPlot?: string | null;
+  /** Fly the camera to this plot whenever the value changes. */
+  focusPlot?: { id: string; at: number } | null;
 };
 
-export type LayerId = "trees" | "parks" | "lots" | "boundary";
+export type LayerId = "trees" | "parks" | "lots" | "boundary" | "water" | "metro";
 
 /** Pale-yellow massing, as in a physical maquette. */
 const MAQUETTE_PROPOSAL = "#f5e38a";
@@ -83,6 +92,9 @@ export function CesiumViewer({
   variant = "default",
   onSelectBuilding,
   layers,
+  onSelectPlot,
+  selectedPlot = null,
+  focusPlot = null,
 }: ViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const handlesRef = useRef<Handles | null>(null);
@@ -92,6 +104,10 @@ export function CesiumViewer({
   onSelectRef.current = onSelectBuilding;
   const layersRef = useRef(layers);
   layersRef.current = layers;
+  const onSelectPlotRef = useRef(onSelectPlot);
+  onSelectPlotRef.current = onSelectPlot;
+  const selectedPlotRef = useRef(selectedPlot);
+  selectedPlotRef.current = selectedPlot;
 
   // Create the viewer once per site.
   useEffect(() => {
@@ -230,7 +246,11 @@ export function CesiumViewer({
           selected.color = Color.WHITE;
         }
         selected = null;
-        if (picked instanceof Cesium3DTileFeature && picked.tileset === tileset) {
+        const entityId: unknown = (picked as { id?: { id?: unknown } } | undefined)?.id?.id;
+        if (typeof entityId === "string" && entityId.startsWith("proposal")) {
+          onSelectRef.current?.(null);
+          onSelectPlotRef.current?.(entityId.split(":")[1]);
+        } else if (picked instanceof Cesium3DTileFeature && picked.tileset === tileset) {
           selected = picked;
           picked.color = highlight;
           onSelectRef.current?.(
@@ -276,36 +296,57 @@ export function CesiumViewer({
         cursor += p.footprint.length;
         const lo = p.baseElevation ?? (hs.length ? Math.min(...hs) : site.baseElevation);
         const hi = p.baseElevation ?? (hs.length ? Math.max(...hs) : site.baseElevation);
+        const selectedPlot = selectedPlotRef.current;
+        const isSelected = selectedPlot === p.id;
         const fill = Color.fromCssColorString(
-          variant === "maquette" ? MAQUETTE_PROPOSAL : (p.color ?? "#2563eb"),
+          variant === "maquette"
+            ? isSelected || !selectedPlot
+              ? MAQUETTE_PROPOSAL
+              : "#fbf3c4"
+            : (p.color ?? "#2563eb"),
         );
         const edge = variant === "maquette" ? Color.fromCssColorString("#9c8a1c") : Color.WHITE;
         const ring = [...p.footprint, p.footprint[0]].flat();
-        viewer.entities.add({
-          id: `proposal:${p.id}`,
-          name: p.name,
-          polygon: {
-            hierarchy: new PolygonHierarchy(Cartesian3.fromDegreesArray(p.footprint.flat())),
-            height: lo - 0.5,
-            extrudedHeight: hi + p.height,
-            heightReference: HeightReference.NONE,
-            material: fill.withAlpha(variant === "maquette" ? 1 : 0.92),
-            outline: true,
-            outlineColor: edge.withAlpha(0.9),
-            // Receiving shadows on the flat roof produces acne at most sun angles; cast only.
-            shadows: ShadowMode.CAST_ONLY,
-          },
-        });
-        // Roof edge, drawn as a line so it reads at any zoom.
-        viewer.entities.add({
-          id: `proposal-edge:${p.id}`,
-          polyline: {
-            positions: Cartesian3.fromDegreesArrayHeights(
-              ring.flatMap((v, i) => (i % 2 === 1 ? [v, hi + p.height] : [v])),
-            ),
-            width: 1.5,
-            material: edge.withAlpha(0.9),
-          },
+        const volumes = p.volumes ?? [{ footprint: p.footprint, height: p.height }];
+        volumes.forEach((v, vi) => {
+          const top = hi + v.height;
+          viewer.entities.add({
+            id: `proposal:${p.id}:${vi}`,
+            name: p.name,
+            polygon: {
+              hierarchy: new PolygonHierarchy(
+                Cartesian3.fromDegreesArray(v.footprint.flat()),
+                (("holes" in v && v.holes) || []).map(
+                  (h) => new PolygonHierarchy(Cartesian3.fromDegreesArray(h.flat())),
+                ),
+              ),
+              height: lo - 0.5,
+              extrudedHeight: top,
+              heightReference: HeightReference.NONE,
+              material: (isSelected && variant === "maquette"
+                ? Color.fromCssColorString("#ffd60a")
+                : fill
+              ).withAlpha(variant === "maquette" ? 1 : 0.92),
+              outline: true,
+              outlineColor: edge.withAlpha(0.9),
+              // Receiving shadows on the flat roof produces acne at most sun angles; cast only.
+              shadows: ShadowMode.CAST_ONLY,
+            },
+          });
+          // Roof edges, drawn as lines so they read at any zoom.
+          for (const [ri, r] of [v.footprint, ...(("holes" in v && v.holes) || [])].entries()) {
+            const rr = [...r, r[0]].flat();
+            viewer.entities.add({
+              id: `proposal-edge:${p.id}:${vi}:${ri}`,
+              polyline: {
+                positions: Cartesian3.fromDegreesArrayHeights(
+                  rr.flatMap((x, i) => (i % 2 === 1 ? [x, top] : [x])),
+                ),
+                width: 1.5,
+                material: edge.withAlpha(0.9),
+              },
+            });
+          }
         });
         // Lot boundary just above the ground, dashed, as a physical model would mark the plot.
         // Not clamped: clamped lines also drape onto neighbouring 3D Tiles walls.
@@ -330,7 +371,26 @@ export function CesiumViewer({
     return () => {
       cancelled = true;
     };
-  }, [site, activeProposals, variant]);
+  }, [site, activeProposals, variant, selectedPlot]);
+
+  // Fly to a plot.
+  useEffect(() => {
+    const viewer = handlesRef.current?.viewer;
+    if (!viewer || !focusPlot) return;
+    const p = site.proposals.find((x) => x.id === focusPlot.id);
+    if (!p) return;
+    const n = p.footprint.length;
+    const lon = p.footprint.reduce((a, [x]) => a + x, 0) / n;
+    const lat = p.footprint.reduce((a, [, y]) => a + y, 0) / n;
+    const range = Math.max(320, p.height * 5);
+    viewer.camera.flyToBoundingSphere(
+      new BoundingSphere(Cartesian3.fromDegrees(lon, lat, site.baseElevation), 60),
+      {
+        offset: new HeadingPitchRange(viewer.camera.heading, CesiumMath.toRadians(-35), range),
+        duration: 1.4,
+      },
+    );
+  }, [focusPlot, site]);
 
   // Context layer visibility.
   useEffect(() => {
@@ -497,6 +557,112 @@ async function loadContextLayers(
         });
         viewer.scene.primitives.add(prim);
         register("boundary", prim);
+      })(),
+    );
+  }
+  if (overlays.water) {
+    const url = overlays.water;
+    tasks.push(
+      (async () => {
+        const fc = await fetchJson(url);
+        if (isCancelled() || viewer.isDestroyed()) return;
+        const color = Color.fromCssColorString(maquette ? "#b9dbe8" : "#5aa9d6").withAlpha(
+          maquette ? 1 : 0.6,
+        );
+        const instances = outerRings(fc).map(
+          (ring) =>
+            new GeometryInstance({
+              geometry: new PolygonGeometry({
+                polygonHierarchy: new PolygonHierarchy(Cartesian3.fromDegreesArray(ring.flat())),
+              }),
+              attributes: { color: ColorGeometryInstanceAttribute.fromColor(color) },
+            }),
+        );
+        if (instances.length === 0) return;
+        const prim = new GroundPrimitive({
+          geometryInstances: instances,
+          classificationType: ClassificationType.TERRAIN,
+          appearance: new PerInstanceColorAppearance({ flat: true, translucent: !maquette }),
+        });
+        viewer.scene.primitives.add(prim);
+        register("water", prim);
+      })(),
+    );
+  }
+  if (overlays.metro) {
+    const url = overlays.metro;
+    tasks.push(
+      (async () => {
+        const fc = (await fetchJson(url)) as GeoJsonFc & {
+          features: { properties?: { line?: string; kind?: string } }[];
+        };
+        if (isCancelled() || viewer.isDestroyed()) return;
+        // Line 1 (elevated, red) and Line 2 (underground, blue) as in the Metro de Bogotá maps.
+        const colorOf = (line?: string) =>
+          Color.fromCssColorString(line === "L2" ? "#2f6fdf" : "#e4402f");
+        const stations: GeometryInstance[] = [];
+        const lines: GeometryInstance[] = [];
+        for (const f of fc.features) {
+          const g = f.geometry;
+          if (!g) continue;
+          const color = colorOf(f.properties?.line);
+          if (g.type === "Polygon" || g.type === "MultiPolygon") {
+            for (const ring of outerRings({ features: [f] })) {
+              stations.push(
+                new GeometryInstance({
+                  geometry: new PolygonGeometry({
+                    polygonHierarchy: new PolygonHierarchy(
+                      Cartesian3.fromDegreesArray(ring.flat()),
+                    ),
+                  }),
+                  attributes: {
+                    color: ColorGeometryInstanceAttribute.fromColor(color.withAlpha(0.85)),
+                  },
+                }),
+              );
+            }
+          } else if (g.type === "LineString" || g.type === "MultiLineString") {
+            const paths =
+              g.type === "MultiLineString"
+                ? (g.coordinates as unknown as number[][][])
+                : [g.coordinates as unknown as number[][]];
+            for (const path of paths) {
+              if (path.length < 2) continue;
+              lines.push(
+                new GeometryInstance({
+                  geometry: new GroundPolylineGeometry({
+                    positions: Cartesian3.fromDegreesArray(path.flatMap(([x, y]) => [x, y])),
+                    width: 4,
+                  }),
+                  attributes: {
+                    color: ColorGeometryInstanceAttribute.fromColor(color.withAlpha(0.8)),
+                  },
+                }),
+              );
+            }
+          }
+        }
+        const group = new PrimitiveCollection();
+        if (stations.length) {
+          group.add(
+            new GroundPrimitive({
+              geometryInstances: stations,
+              classificationType: ClassificationType.TERRAIN,
+              appearance: new PerInstanceColorAppearance({ flat: true, translucent: true }),
+            }),
+          );
+        }
+        if (lines.length) {
+          group.add(
+            new GroundPolylinePrimitive({
+              geometryInstances: lines,
+              classificationType: ClassificationType.TERRAIN,
+              appearance: new PolylineColorAppearance(),
+            }),
+          );
+        }
+        viewer.scene.primitives.add(group);
+        register("metro", group);
       })(),
     );
   }

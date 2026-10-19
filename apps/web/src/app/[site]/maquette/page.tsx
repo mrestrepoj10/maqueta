@@ -4,7 +4,7 @@ import { MaquetteView } from "@/components/viewer/maquette-view";
 import { loadSite } from "@/lib/site";
 
 export async function generateStaticParams() {
-  return [{ site: "chapinero" }];
+  return [{ site: "chapinero" }, { site: "calle-72" }];
 }
 
 export default function MaquettePage({ params }: PageProps<"/[site]/maquette">) {
