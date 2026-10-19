@@ -20,9 +20,27 @@ export async function sampleHeightOffsets(
   const terrain = terrainAssetId
     ? await CesiumTerrainProvider.fromIonAssetId(terrainAssetId)
     : await createWorldTerrainAsync();
-  const points = buildings.map((b) => {
-    const [lon, lat] = centroid(b);
-    return Cartographic.fromDegrees(lon, lat);
+  // LiDAR models carry their own ground (baseElevation): one sample at the centroid converts
+  // orthometric to ellipsoidal. Extruded footprints start at 0, so sample every base vertex and
+  // seat them on the lowest point: on slopes nothing floats, the uphill side sinks into the ground.
+  const points: Cartographic[] = [];
+  const owner: number[] = [];
+  buildings.forEach((b, i) => {
+    if (b.baseElevation !== 0) {
+      const [lon, lat] = centroid(b);
+      points.push(Cartographic.fromDegrees(lon, lat));
+      owner.push(i);
+      return;
+    }
+    const seen = new Set<string>();
+    for (const [lon, lat, z] of b.triangles) {
+      if (z !== 0) continue;
+      const k = `${lon},${lat}`;
+      if (seen.has(k)) continue;
+      seen.add(k);
+      points.push(Cartographic.fromDegrees(lon, lat));
+      owner.push(i);
+    }
   });
   const heights: number[] = [];
   const BATCH = 1000;
@@ -30,7 +48,11 @@ export async function sampleHeightOffsets(
     const sampled = await sampleTerrainMostDetailed(terrain, points.slice(i, i + BATCH));
     for (const c of sampled) heights.push(c.height);
   }
-  return buildings.map((b, i) => heights[i] - b.baseElevation);
+  const ground = buildings.map(() => Infinity);
+  heights.forEach((h, k) => {
+    ground[owner[k]] = Math.min(ground[owner[k]], h);
+  });
+  return buildings.map((b, i) => ground[i] - b.baseElevation);
 }
 
 /** Centroid of all vertices. */

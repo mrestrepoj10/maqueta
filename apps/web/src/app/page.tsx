@@ -12,6 +12,7 @@ export default function Home() {
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-2">
+        <Button render={<Link href="/fenicia/maquette" />}>Triángulo de Fenicia</Button>
         <Button render={<Link href="/calle-72/maquette" />}>Actuación Estratégica Calle 72</Button>
         <Button variant="outline" render={<Link href="/chapinero/maquette" />}>
           Chapinero options demo

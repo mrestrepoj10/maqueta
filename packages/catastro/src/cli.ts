@@ -48,15 +48,17 @@ const centroidOf = (b: { triangles: [number, number, number][] }) => {
 const lidar = (await fetchBuildings(bbox)).filter((b) => keep(...centroidOf(b)));
 // IDECA's LiDAR models stop around lon -74.0775 (Chapinero, Teusaquillo, Barrios Unidos).
 // West of what LiDAR returned, fall back to extruded Catastro footprints.
+// With no LiDAR in the bbox at all, the whole area uses footprints (kept within the buffer).
 const lidarWest = lidar.reduce((m, b) => Math.min(m, centroidOf(b)[0]), Infinity);
-const fallbackEdge = lidarWest + 0.0005;
 const footprints =
-  bbox[0] < fallbackEdge - 0.001
-    ? await fetchFootprints(
-        [bbox[0], bbox[1], fallbackEdge, bbox[3]],
-        (lon, lat) => lon < fallbackEdge - 0.0005 && keepInside(lon, lat),
-      )
-    : [];
+  lidar.length === 0
+    ? await fetchFootprints(bbox, (lon, lat) => keep(lon, lat))
+    : bbox[0] < lidarWest - 0.0005
+      ? await fetchFootprints(
+          [bbox[0], bbox[1], lidarWest + 0.0005, bbox[3]],
+          (lon, lat) => lon < lidarWest && keepInside(lon, lat),
+        )
+      : [];
 const buildings = [...lidar, ...footprints];
 const tris = buildings.reduce((n, b) => n + b.triangles.length / 3, 0);
 console.log(

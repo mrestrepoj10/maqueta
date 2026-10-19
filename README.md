@@ -33,6 +33,7 @@ pnpm --filter @maqueta/web dev
 
 ## Sites
 
+- **Triángulo de Fenicia** (`/fenicia`, `/fenicia/maquette`): the Las Aguas renewal plan (Plan Parcial, Decreto 420 de 2014, promoted by Universidad de los Andes through Progresa Fenicia), where owners can become partners and the first stage of each unit houses the replacement homes and shops. The plan boundary is official (Datos Abiertos, planes parciales). Units 1, 2, 3 and 5 are rebuilt on real city blocks from the 2015 "Esquemas básicos de implantación" (Imagine Consultores): approximate. Context buildings are Catastro footprints extruded by floor count, as Mapas Bogotá shows them (no LiDAR here); footprints are seated on the lowest ground point under them, which matters on this hillside. Terrain: ion asset 6054544.
 - **Actuación Estratégica Calle 72** (`/calle-72`, `/calle-72/maquette`): a masterplan simulation of AE24 in Barrios Unidos (Decreto 242 de 2026, led by RenoBo). The plan boundary and Metro Line 1 and Line 2 stations are official open data. The six plots and their massing are illustrative, built on real city blocks near the Metro, the Canal Salitre and Alcázares. Buildings are IDECA LiDAR east of about lon -74.0775 and extruded Catastro footprints west of it.
 - **Chapinero** (`/chapinero`, `/chapinero/maquette`): three options for one lot on the Séptima.
 
