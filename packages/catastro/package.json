@@ -6,7 +6,8 @@
   "description": "Pulls Catastro Bogotá building footprints and writes a 3D Tiles tileset",
   "scripts": {
     "build": "tsx src/cli.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@gltf-transform/core": "^4.1.0",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@types/earcut": "^3.0.0",
+    "@types/node": "^24.19.2",
     "tsx": "^4.19.0",
     "typescript": "^5",
     "vitest": "^3.2.0"

@@ -81,8 +81,10 @@ export async function buildGlb(
 
   const doc = new Document();
   const buffer = doc.createBuffer();
-  const acc = (type: "VEC3" | "SCALAR", arr: Float32Array | Uint32Array) =>
-    doc.createAccessor().setType(type).setArray(arr).setBuffer(buffer);
+  const acc = (
+    type: "VEC3" | "SCALAR",
+    arr: Float32Array<ArrayBuffer> | Uint32Array<ArrayBuffer>,
+  ) => doc.createAccessor().setType(type).setArray(arr).setBuffer(buffer);
   const material = doc
     .createMaterial("ideca")
     .setBaseColorFactor([0.84, 0.83, 0.82, 1])
@@ -260,7 +262,7 @@ export function addMeshFeatures(glb: Uint8Array, props: FeatureProps[]): Uint8Ar
 
   const newBin = concat([bin, ...chunks]);
   json.buffers[0].byteLength = newBin.length;
-  let jsonBytes = new TextEncoder().encode(JSON.stringify(json));
+  let jsonBytes: Uint8Array = new TextEncoder().encode(JSON.stringify(json));
   const jpad = (4 - (jsonBytes.length % 4)) % 4;
   if (jpad) jsonBytes = concat([jsonBytes, new Uint8Array(jpad).fill(0x20)]);
 

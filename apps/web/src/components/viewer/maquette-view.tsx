@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { Fragment, useState } from "react";
 import { type BuildingInfo, infoRows } from "@/lib/buildings";
 import type { Site } from "@/lib/site";
+import type { LayerId } from "./cesium-viewer";
 
 const CesiumViewer = dynamic(() => import("./cesium-viewer").then((m) => m.CesiumViewer), {
   ssr: false,
@@ -18,6 +19,12 @@ export function MaquetteView({ site }: { site: Site }) {
   const [active, setActive] = useState<string[]>([site.proposals[0].id]);
   const [hour, setHour] = useState(10);
   const [selected, setSelected] = useState<BuildingInfo | null>(null);
+  const [layers, setLayers] = useState<Record<LayerId, boolean>>({
+    trees: true,
+    parks: true,
+    lots: true,
+    boundary: true,
+  });
 
   const toggle = (id: string) =>
     setActive((a) => (a.includes(id) ? a.filter((x) => x !== id) : [...a, id]));
@@ -30,6 +37,7 @@ export function MaquetteView({ site }: { site: Site }) {
         hour={hour}
         variant="maquette"
         onSelectBuilding={setSelected}
+        layers={layers}
       />
 
       {/* Brand card */}
@@ -136,6 +144,28 @@ export function MaquetteView({ site }: { site: Site }) {
           </div>
         </Panel>
 
+        <Panel title="capas">
+          <div className="grid grid-cols-2 gap-1.5">
+            {(
+              [
+                ["boundary", "límite"],
+                ["trees", "árboles"],
+                ["parks", "parques"],
+                ["lots", "lotes"],
+              ] as [LayerId, string][]
+            ).map(([id, label]) => (
+              <Pill
+                key={id}
+                tone={layers[id] ? "yellow" : "grey"}
+                onClick={() => setLayers((l) => ({ ...l, [id]: !l[id] }))}
+                className="justify-center"
+              >
+                {label}
+              </Pill>
+            ))}
+          </div>
+        </Panel>
+
         <Panel title="participación">
           <div className="flex flex-col gap-1.5">
             <Pill tone="grey" disabled>
@@ -151,7 +181,9 @@ export function MaquetteView({ site }: { site: Site }) {
 
       {site.context.buildings?.attribution && (
         <p className="absolute bottom-2 left-4 text-[10px] text-neutral-500">
-          {site.context.buildings.attribution} · Basemap © Esri
+          {site.context.buildings.attribution}
+          {site.context.trees?.attribution ? ` · ${site.context.trees.attribution}` : ""} · Basemap
+          © Esri
         </p>
       )}
     </div>

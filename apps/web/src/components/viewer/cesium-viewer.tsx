@@ -10,15 +10,26 @@ import {
   Cesium3DTileset,
   Math as CesiumMath,
   CesiumTerrainProvider,
+  ClassificationType,
   ClippingPolygon,
   ClippingPolygonCollection,
   Color,
+  ColorGeometryInstanceAttribute,
+  CornerType,
+  CorridorGeometry,
   createGooglePhotorealistic3DTileset,
+  GeometryInstance,
+  GroundPolylineGeometry,
+  GroundPolylinePrimitive,
+  GroundPrimitive,
   HeightReference,
   ImageryLayer,
   Ion,
   JulianDate,
+  PerInstanceColorAppearance,
+  PolygonGeometry,
   PolygonHierarchy,
+  PolylineColorAppearance,
   PolylineDashMaterialProperty,
   ScreenSpaceEventHandler,
   ScreenSpaceEventType,
@@ -45,7 +56,11 @@ export type ViewerProps = {
   variant?: "default" | "maquette";
   /** Called when the viewer clicks an existing building, or empty space (null). */
   onSelectBuilding?: (info: BuildingInfo | null) => void;
+  /** Which context layers are visible. Missing keys are visible. */
+  layers?: Partial<Record<LayerId, boolean>>;
 };
+
+export type LayerId = "trees" | "parks" | "lots" | "boundary";
 
 /** Pale-yellow massing, as in a physical maquette. */
 const MAQUETTE_PROPOSAL = "#f5e38a";
@@ -57,6 +72,8 @@ type Handles = {
   /** Existing-city tileset, once loaded. */
   context: Cesium3DTileset | null;
   pickHandler?: ScreenSpaceEventHandler;
+  /** Loaded context layers, keyed by id, for toggling. */
+  layers: Partial<Record<LayerId, { show: boolean }>>;
 };
 
 export function CesiumViewer({
@@ -65,6 +82,7 @@ export function CesiumViewer({
   hour,
   variant = "default",
   onSelectBuilding,
+  layers,
 }: ViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const handlesRef = useRef<Handles | null>(null);
@@ -72,6 +90,8 @@ export function CesiumViewer({
   activeRef.current = activeProposals;
   const onSelectRef = useRef(onSelectBuilding);
   onSelectRef.current = onSelectBuilding;
+  const layersRef = useRef(layers);
+  layersRef.current = layers;
 
   // Create the viewer once per site.
   useEffect(() => {
@@ -138,7 +158,7 @@ export function CesiumViewer({
       console.error("cesium render error", error);
     });
 
-    const handles: Handles = { viewer, terrain: terrainReady, context: null };
+    const handles: Handles = { viewer, terrain: terrainReady, context: null, layers: {} };
     handlesRef.current = handles;
     if (process.env.NODE_ENV !== "production") {
       (window as unknown as { __maqueta?: unknown }).__maqueta = {
@@ -157,6 +177,9 @@ export function CesiumViewer({
     });
 
     let cancelled = false;
+    loadContextLayers(viewer, site, maquette, handles, () => cancelled, layersRef).catch((err) =>
+      console.error("context layers failed", err),
+    );
     (async () => {
       if (site.context.google3d) {
         try {
@@ -309,6 +332,16 @@ export function CesiumViewer({
     };
   }, [site, activeProposals, variant]);
 
+  // Context layer visibility.
+  useEffect(() => {
+    const handles = handlesRef.current;
+    if (!handles) return;
+    for (const [id, layer] of Object.entries(handles.layers)) {
+      if (layer) layer.show = layers?.[id as LayerId] ?? true;
+    }
+    handles.viewer.scene.requestRender();
+  }, [layers]);
+
   // Sun position from the hour slider. Bogotá is UTC-5; the date is the March equinox.
   useEffect(() => {
     const viewer = handlesRef.current?.viewer;
@@ -329,4 +362,167 @@ function applyClipping(tileset: Cesium3DTileset, proposals: Proposal[], activeId
       (p) => new ClippingPolygon({ positions: Cartesian3.fromDegreesArray(p.footprint.flat()) }),
     );
   tileset.clippingPolygons = new ClippingPolygonCollection({ polygons });
+}
+
+/**
+ * Trees (3D Tiles), parks and lot lines (ground overlays) and the project boundary band. Each
+ * layer registers in `handles.layers` as soon as it loads, with the current visibility applied.
+ */
+async function loadContextLayers(
+  viewer: Viewer,
+  site: Site,
+  maquette: boolean,
+  handles: Handles,
+  isCancelled: () => boolean,
+  layersRef: { current: Partial<Record<LayerId, boolean>> | undefined },
+) {
+  const register = (id: LayerId, layer: { show: boolean }) => {
+    layer.show = layersRef.current?.[id] ?? true;
+    handles.layers[id] = layer;
+    viewer.scene.requestRender();
+  };
+  const tasks: Promise<void>[] = [];
+  const trees = site.context.trees;
+  if (trees) {
+    tasks.push(
+      (async () => {
+        const tileset = await Cesium3DTileset.fromUrl(trees.tileset);
+        if (isCancelled() || viewer.isDestroyed()) return;
+        tileset.shadows = ShadowMode.CAST_ONLY;
+        if (maquette) {
+          // Same soft studio light as the buildings, so crowns read sage instead of dark green.
+          const ambient = 0.7;
+          tileset.imageBasedLighting.sphericalHarmonicCoefficients = [
+            new Cartesian3(ambient, ambient, ambient),
+            ...Array.from({ length: 8 }, () => Cartesian3.ZERO),
+          ];
+        }
+        viewer.scene.primitives.add(tileset);
+        register("trees", tileset);
+      })(),
+    );
+  }
+  const overlays = site.context.overlays ?? {};
+  const fetchJson = async (url: string) => {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`${url}: ${res.status}`);
+    return (await res.json()) as GeoJsonFc;
+  };
+  if (overlays.parks) {
+    const url = overlays.parks;
+    tasks.push(
+      (async () => {
+        const fc = await fetchJson(url);
+        if (isCancelled() || viewer.isDestroyed()) return;
+        const color = Color.fromCssColorString(maquette ? "#d3e6c9" : "#7fbf6a").withAlpha(
+          maquette ? 1 : 0.45,
+        );
+        const instances = outerRings(fc).map(
+          (ring) =>
+            new GeometryInstance({
+              geometry: new PolygonGeometry({
+                polygonHierarchy: new PolygonHierarchy(Cartesian3.fromDegreesArray(ring.flat())),
+              }),
+              attributes: { color: ColorGeometryInstanceAttribute.fromColor(color) },
+            }),
+        );
+        if (instances.length === 0) return;
+        const prim = new GroundPrimitive({
+          geometryInstances: instances,
+          classificationType: ClassificationType.TERRAIN,
+          appearance: new PerInstanceColorAppearance({ flat: true, translucent: !maquette }),
+        });
+        viewer.scene.primitives.add(prim);
+        register("parks", prim);
+      })(),
+    );
+  }
+  if (overlays.lots) {
+    const url = overlays.lots;
+    tasks.push(
+      (async () => {
+        const fc = await fetchJson(url);
+        if (isCancelled() || viewer.isDestroyed()) return;
+        const color = Color.fromCssColorString(maquette ? "#b9b4a6" : "#ffffff").withAlpha(
+          maquette ? 0.9 : 0.5,
+        );
+        const instances = outerRings(fc).map(
+          (ring) =>
+            new GeometryInstance({
+              geometry: new GroundPolylineGeometry({
+                positions: Cartesian3.fromDegreesArray([...ring, ring[0]].flat()),
+                width: 1.5,
+              }),
+              attributes: { color: ColorGeometryInstanceAttribute.fromColor(color) },
+            }),
+        );
+        if (instances.length === 0) return;
+        const prim = new GroundPolylinePrimitive({
+          geometryInstances: instances,
+          classificationType: ClassificationType.TERRAIN,
+          appearance: new PolylineColorAppearance(),
+        });
+        viewer.scene.primitives.add(prim);
+        register("lots", prim);
+      })(),
+    );
+  }
+  if (overlays.boundary) {
+    const url = overlays.boundary;
+    tasks.push(
+      (async () => {
+        const fc = await fetchJson(url);
+        if (isCancelled() || viewer.isDestroyed()) return;
+        // PublicTwin-style project outline: a wide, flat yellow band on the ground.
+        const instances = outerRings(fc).map(
+          (ring) =>
+            new GeometryInstance({
+              geometry: new CorridorGeometry({
+                positions: Cartesian3.fromDegreesArray([...ring, ring[0]].flat()),
+                width: 6,
+                cornerType: CornerType.MITERED,
+              }),
+              attributes: {
+                color: ColorGeometryInstanceAttribute.fromColor(
+                  Color.fromCssColorString("#ffd60a"),
+                ),
+              },
+            }),
+        );
+        if (instances.length === 0) return;
+        const prim = new GroundPrimitive({
+          geometryInstances: instances,
+          classificationType: ClassificationType.TERRAIN,
+          appearance: new PerInstanceColorAppearance({ flat: true, translucent: false }),
+        });
+        viewer.scene.primitives.add(prim);
+        register("boundary", prim);
+      })(),
+    );
+  }
+  await Promise.all(tasks);
+}
+
+type GeoJsonFc = {
+  features: { geometry: { type: string; coordinates: number[][][] | number[][][][] } | null }[];
+};
+
+/** Outer rings of every (multi)polygon, closing vertex removed. */
+function outerRings(fc: GeoJsonFc): [number, number][][] {
+  const rings: [number, number][][] = [];
+  for (const f of fc.features) {
+    const g = f.geometry;
+    if (!g) continue;
+    const polys =
+      g.type === "MultiPolygon"
+        ? (g.coordinates as number[][][][])
+        : [g.coordinates as number[][][]];
+    for (const poly of polys) {
+      const ring = poly[0].map(([x, y]) => [x, y] as [number, number]);
+      const [a, b] = [ring[0], ring[ring.length - 1]];
+      if (ring.length > 1 && a[0] === b[0] && a[1] === b[1]) ring.pop();
+      if (ring.length >= 3) rings.push(ring);
+    }
+  }
+  return rings;
 }

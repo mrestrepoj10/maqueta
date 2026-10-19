@@ -50,6 +50,23 @@ set -a; . ../../apps/web/.env.local; set +a
 
 Put the printed asset id in `sites/chapinero.json` as `context.terrain` and pass it to the tiler with `--terrain`.
 
+## Context layers
+
+| Layer | Source | Script |
+|---|---|---|
+| Trees (5,847 in the demo bbox, low-poly crowns sized by census height) | Censo del arbolado urbano, Jardín Botánico de Bogotá, shapefile on Datos Abiertos (the REST service is capped at 100 records) | `src/trees_extract.py`, then `src/trees.ts` |
+| Parks | IDRD Sistema Distrital de Parques, `recreaciondeporte/parquesyescenarios` | `src/overlays.ts` |
+| Lot lines | Catastro `catastro/lote` | `src/overlays.ts` |
+| Project boundary (yellow band) | Catastro `catastro/manzana`, the block containing the site lot | `src/overlays.ts` |
+
+```bash
+cd packages/catastro
+.venv/bin/pip install pyshp
+.venv/bin/python -I src/trees_extract.py --bbox=-74.060,4.651,-74.049,4.660 --out data/chapinero-trees.json
+pnpm exec tsx src/trees.ts --in data/chapinero-trees.json --terrain 6048414 --out ../../apps/web/public/tilesets/chapinero-trees
+pnpm exec tsx src/overlays.ts --bbox=-74.060,4.651,-74.049,4.660 --lot 008306022019 --out ../../apps/web/public/tilesets/chapinero-overlays
+```
+
 ## Regenerate the Chapinero context
 
 Pulls IDECA's "Volumetría 2025" LiDAR building models and writes them as one centred glTF (float32 vertices relative to the tile centre, so there is no jitter at Earth-radius magnitudes) with a feature id per building and an `EXT_structural_metadata` table, so buildings can be clicked in the viewer. Besides the LiDAR fields (floors, height, roof form) the table carries the Catastro lot record joined through the `catastro/lote` service's Predio, Uso and Estrato tables: official address, barrio, destino económico, main use, estrato, PH/NPH, year built, number of predios and built area, decoded with the service's own code domains.

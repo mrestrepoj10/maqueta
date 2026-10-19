@@ -19,6 +19,7 @@ export function SiteView({ site }: { site: Site }) {
   const [active, setActive] = useState<string[]>([site.proposals[0].id]);
   const [hour, setHour] = useState(10);
   const [selected, setSelected] = useState<BuildingInfo | null>(null);
+  const [layers, setLayers] = useState<string[]>(["boundary", "trees", "parks", "lots"]);
 
   return (
     <div className="relative h-dvh w-full overflow-hidden">
@@ -27,6 +28,12 @@ export function SiteView({ site }: { site: Site }) {
         activeProposals={active}
         hour={hour}
         onSelectBuilding={setSelected}
+        layers={{
+          boundary: layers.includes("boundary"),
+          trees: layers.includes("trees"),
+          parks: layers.includes("parks"),
+          lots: layers.includes("lots"),
+        }}
       />
 
       <Card className="absolute left-4 top-4 w-80 bg-background/90 backdrop-blur">
@@ -83,6 +90,25 @@ export function SiteView({ site }: { site: Site }) {
           </div>
           <Separator />
           <div className="space-y-1">
+            <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+              Layers
+            </p>
+            <ToggleGroup
+              multiple
+              value={layers}
+              onValueChange={(v) => setLayers(v as string[])}
+              variant="outline"
+              size="sm"
+              className="flex-wrap"
+            >
+              <ToggleGroupItem value="boundary">Boundary</ToggleGroupItem>
+              <ToggleGroupItem value="trees">Trees</ToggleGroupItem>
+              <ToggleGroupItem value="parks">Parks</ToggleGroupItem>
+              <ToggleGroupItem value="lots">Lots</ToggleGroupItem>
+            </ToggleGroup>
+          </div>
+          <Separator />
+          <div className="space-y-1">
             <div className="flex items-center justify-between">
               <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
                 Sun
@@ -132,6 +158,7 @@ export function SiteView({ site }: { site: Site }) {
       {site.context.buildings?.attribution && (
         <p className="absolute bottom-2 left-4 text-[10px] text-white/70 drop-shadow">
           {site.context.buildings.attribution}
+          {site.context.trees?.attribution ? ` · ${site.context.trees.attribution}` : ""}
         </p>
       )}
     </div>

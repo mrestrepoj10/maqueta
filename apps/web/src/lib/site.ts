@@ -46,6 +46,17 @@ export const Site = z.object({
     buildings: Buildings.optional(),
     /** Cesium ion terrain asset id built from the city's own DTM. Defaults to World Terrain. */
     terrain: z.number().optional(),
+    /** Street trees as 3D Tiles (Bogotá: Jardín Botánico census). */
+    trees: z.object({ tileset: z.string(), attribution: z.string().optional() }).optional(),
+    /** Ground overlays baked to GeoJSON by packages/catastro/src/overlays.ts. */
+    overlays: z
+      .object({
+        parks: z.string().optional(),
+        lots: z.string().optional(),
+        /** Project area outline, drawn as a wide yellow band on the ground. */
+        boundary: z.string().optional(),
+      })
+      .optional(),
   }),
   proposals: z.array(Proposal).min(1),
 });

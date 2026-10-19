@@ -5,9 +5,9 @@
   "description": "Demo site: an existing 15-floor lot on the Séptima in Chapinero, replaced by three illustrative massing options. Buildings are IDECA's LiDAR 3D model; this is not a real project.",
   "baseElevation": 2600,
   "home": {
-    "position": [-74.0549, 4.654, 2840],
-    "heading": 335,
-    "pitch": -36
+    "position": [-74.0566, 4.6536, 2985],
+    "heading": 25,
+    "pitch": -52
   },
   "context": {
     "google3d": false,
@@ -15,6 +15,15 @@
     "buildings": {
       "tileset": "/tilesets/chapinero/tileset.json",
       "attribution": "Edificaciones 3D: Volumetría 2025, IDECA / UAECD (LiDAR) · Datos Abiertos Bogotá"
+    },
+    "trees": {
+      "tileset": "/tilesets/chapinero-trees/tileset.json",
+      "attribution": "Arbolado: Censo del arbolado urbano, Jardín Botánico de Bogotá"
+    },
+    "overlays": {
+      "parks": "/tilesets/chapinero-overlays/parks.geojson",
+      "lots": "/tilesets/chapinero-overlays/lots.geojson",
+      "boundary": "/tilesets/chapinero-overlays/boundary.geojson"
     }
   },
   "proposals": [
