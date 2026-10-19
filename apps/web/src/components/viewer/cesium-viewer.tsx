@@ -67,6 +67,11 @@ export type ViewerProps = {
   selectedPlot?: string | null;
   /** Fly the camera to this plot whenever the value changes. */
   focusPlot?: { id: string; at: number } | null;
+  /**
+   * Build-out timeline: show volumes whose phase is at most this value (0 = today, nothing built).
+   * Null shows every volume.
+   */
+  phase?: number | null;
 };
 
 export type LayerId = "trees" | "parks" | "lots" | "boundary" | "water" | "metro";
@@ -95,6 +100,7 @@ export function CesiumViewer({
   onSelectPlot,
   selectedPlot = null,
   focusPlot = null,
+  phase = null,
 }: ViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const handlesRef = useRef<Handles | null>(null);
@@ -108,6 +114,8 @@ export function CesiumViewer({
   onSelectPlotRef.current = onSelectPlot;
   const selectedPlotRef = useRef(selectedPlot);
   selectedPlotRef.current = selectedPlot;
+  const phaseRef = useRef(phase);
+  phaseRef.current = phase;
 
   // Create the viewer once per site.
   useEffect(() => {
@@ -232,7 +240,7 @@ export function CesiumViewer({
       }
       viewer.scene.primitives.add(tileset);
       handles.context = tileset;
-      applyClipping(tileset, site.proposals, activeRef.current);
+      applyClipping(tileset, site.proposals, activeRef.current, phaseRef.current);
       viewer.scene.requestRender();
 
       // Click to select a building: highlight it and report its metadata properties.
@@ -276,8 +284,10 @@ export function CesiumViewer({
     const handles = handlesRef.current;
     if (!handles) return;
     const { viewer } = handles;
-    const active = site.proposals.filter((p) => activeProposals.includes(p.id));
-    if (handles.context) applyClipping(handles.context, site.proposals, activeProposals);
+    const active = site.proposals
+      .filter((p) => activeProposals.includes(p.id))
+      .filter((p) => visibleVolumes(p, phase).length > 0);
+    if (handles.context) applyClipping(handles.context, site.proposals, activeProposals, phase);
 
     let cancelled = false;
     (async () => {
@@ -307,7 +317,7 @@ export function CesiumViewer({
         );
         const edge = variant === "maquette" ? Color.fromCssColorString("#9c8a1c") : Color.WHITE;
         const ring = [...p.footprint, p.footprint[0]].flat();
-        const volumes = p.volumes ?? [{ footprint: p.footprint, height: p.height }];
+        const volumes = visibleVolumes(p, phase);
         volumes.forEach((v, vi) => {
           const top = hi + v.height;
           viewer.entities.add({
@@ -371,7 +381,7 @@ export function CesiumViewer({
     return () => {
       cancelled = true;
     };
-  }, [site, activeProposals, variant, selectedPlot]);
+  }, [site, activeProposals, variant, selectedPlot, phase]);
 
   // Fly to a plot.
   useEffect(() => {
@@ -414,14 +424,38 @@ export function CesiumViewer({
   return <div ref={containerRef} className="absolute inset-0" />;
 }
 
-/** Remove existing buildings inside the active proposals' footprints. */
-function applyClipping(tileset: Cesium3DTileset, proposals: Proposal[], activeIds: string[]) {
-  const polygons = proposals
-    .filter((p) => activeIds.includes(p.id))
-    .map(
-      (p) => new ClippingPolygon({ positions: Cartesian3.fromDegreesArray(p.footprint.flat()) }),
-    );
-  tileset.clippingPolygons = new ClippingPolygonCollection({ polygons });
+/** Volumes of a plot visible at a timeline phase (null: all; volumes without phase: always). */
+function visibleVolumes(p: Proposal, phase: number | null) {
+  const volumes = p.volumes ?? [{ footprint: p.footprint, height: p.height }];
+  if (phase === null) return volumes;
+  return volumes.filter((v) => !("phase" in v) || v.phase === undefined || v.phase <= phase);
+}
+
+/**
+ * Remove existing buildings where active proposals are built. Phased plots only clear the areas
+ * of the phases shown; others clear their whole footprint.
+ */
+function applyClipping(
+  tileset: Cesium3DTileset,
+  proposals: Proposal[],
+  activeIds: string[],
+  phase: number | null = null,
+) {
+  const rings: [number, number][][] = [];
+  for (const p of proposals) {
+    if (!activeIds.includes(p.id)) continue;
+    const phased = p.volumes?.some((v) => v.phase !== undefined);
+    if (!phased) {
+      rings.push(p.footprint);
+      continue;
+    }
+    for (const v of visibleVolumes(p, phase)) rings.push(("clip" in v && v.clip) || v.footprint);
+  }
+  tileset.clippingPolygons = new ClippingPolygonCollection({
+    polygons: rings.map(
+      (r) => new ClippingPolygon({ positions: Cartesian3.fromDegreesArray(r.flat()) }),
+    ),
+  });
 }
 
 /**

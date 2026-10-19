@@ -38,6 +38,13 @@ export function MaquetteView({ site }: { site: Site }) {
   const [selected, setSelected] = useState<BuildingInfo | null>(null);
   const [plotId, setPlotId] = useState<string | null>(null);
   const [focus, setFocus] = useState<{ id: string; at: number } | null>(null);
+  // Build-out timeline: highest phase across plots; starts at the complete build-out.
+  const maxPhase = useMemo(
+    () => Math.max(0, ...site.proposals.flatMap((p) => (p.volumes ?? []).map((v) => v.phase ?? 0))),
+    [site],
+  );
+  const [phase, setPhase] = useState<number>(maxPhase);
+  const stages = STAGES.filter((s) => site.proposals.some((p) => p.stage === s));
   const available = useMemo(() => {
     const ids = new Set<LayerId>(["boundary"]);
     const c = site.context;
@@ -81,6 +88,7 @@ export function MaquetteView({ site }: { site: Site }) {
         selectedPlot={masterplan ? plotId : null}
         focusPlot={focus}
         layers={layers}
+        phase={maxPhase > 0 ? phase : null}
       />
 
       {/* Brand card */}
@@ -104,7 +112,11 @@ export function MaquetteView({ site }: { site: Site }) {
       {(plot || selected) && (
         <div className="absolute left-4 top-36 max-h-[calc(100dvh-10rem)] w-64 overflow-y-auto rounded-2xl [scrollbar-width:none]">
           {plot ? (
-            <PlotCard plot={plot} onClose={() => setPlotId(null)} />
+            <PlotCard
+              plot={plot}
+              phase={maxPhase > 0 ? phase : null}
+              onClose={() => setPlotId(null)}
+            />
           ) : selected ? (
             <BuildingCard building={selected} onClose={() => setSelected(null)} />
           ) : null}
@@ -139,27 +151,62 @@ export function MaquetteView({ site }: { site: Site }) {
 
         {masterplan ? (
           <>
-            <Panel title="etapa">
-              <div className="grid grid-cols-2 gap-1.5">
-                <Pill
-                  tone={stage === null ? "yellow" : "grey"}
-                  className="justify-center"
-                  onClick={() => setStage(null)}
-                >
-                  todas
-                </Pill>
-                {STAGES.filter((s) => site.proposals.some((p) => p.stage === s)).map((s) => (
+            {maxPhase > 0 && (
+              <Panel title="etapas de construcción">
+                <div className="grid grid-cols-4 gap-1.5">
+                  {Array.from({ length: maxPhase + 1 }, (_, n) => (
+                    <Pill
+                      key={n}
+                      tone={phase === n ? "yellow" : "grey"}
+                      className="justify-center whitespace-nowrap px-1.5 text-[11px]"
+                      onClick={() => setPhase(n)}
+                    >
+                      {n === 0 ? "hoy" : `etapa ${n}`}
+                    </Pill>
+                  ))}
+                </div>
+                <input
+                  type="range"
+                  min={0}
+                  max={maxPhase}
+                  step={1}
+                  value={phase}
+                  onChange={(e) => setPhase(Number(e.target.value))}
+                  className="mt-2 w-full accent-[#e3c400]"
+                  aria-label="Etapa de construcción"
+                />
+                <p className="mt-1 text-[11px] leading-snug text-neutral-500">
+                  {phase === 0
+                    ? "La ciudad hoy, antes de la renovación."
+                    : phase === maxPhase
+                      ? "Plan completo."
+                      : `Construido hasta la etapa ${phase}. La primera etapa de cada unidad aloja a quienes ya viven y trabajan allí.`}
+                </p>
+              </Panel>
+            )}
+            {stages.length > 1 && (
+              <Panel title="estado">
+                <div className="grid grid-cols-2 gap-1.5">
                   <Pill
-                    key={s}
-                    tone={stage === s ? "yellow" : "grey"}
+                    tone={stage === null ? "yellow" : "grey"}
                     className="justify-center"
-                    onClick={() => setStage(stage === s ? null : s)}
+                    onClick={() => setStage(null)}
                   >
-                    {s}
+                    todas
                   </Pill>
-                ))}
-              </div>
-            </Panel>
+                  {stages.map((s) => (
+                    <Pill
+                      key={s}
+                      tone={stage === s ? "yellow" : "grey"}
+                      className="justify-center"
+                      onClick={() => setStage(stage === s ? null : s)}
+                    >
+                      {s}
+                    </Pill>
+                  ))}
+                </div>
+              </Panel>
+            )}
             <Panel title="lotes">
               <div className="flex flex-col gap-1.5">
                 {site.proposals
@@ -261,7 +308,15 @@ export function MaquetteView({ site }: { site: Site }) {
   );
 }
 
-function PlotCard({ plot, onClose }: { plot: Proposal; onClose: () => void }) {
+function PlotCard({
+  plot,
+  phase,
+  onClose,
+}: {
+  plot: Proposal;
+  phase: number | null;
+  onClose: () => void;
+}) {
   const rows: [string, string | undefined][] = [
     ["barrio", plot.barrio],
     ["etapa", plot.stage],
@@ -299,6 +354,30 @@ function PlotCard({ plot, onClose }: { plot: Proposal; onClose: () => void }) {
             </Fragment>
           ))}
       </dl>
+      {plot.phases && plot.phases.length > 0 && (
+        <>
+          <h3 className="mt-3 text-center text-[12px] font-semibold text-neutral-700">
+            <span className="text-[#c9ad00]">• </span>etapas
+            <span className="text-[#c9ad00]"> •</span>
+          </h3>
+          <ol className="mt-1 flex flex-col gap-1.5">
+            {plot.phases.map((ph) => {
+              const built = phase === null || ph.n <= phase;
+              return (
+                <li
+                  key={ph.n}
+                  className={`rounded-xl px-2.5 py-1.5 text-[11px] leading-snug ${
+                    built ? "bg-[#fff3a8] text-neutral-800" : "bg-neutral-100 text-neutral-500"
+                  }`}
+                >
+                  <span className="font-semibold">{ph.label}</span>
+                  {ph.summary && <span className="block">{ph.summary}</span>}
+                </li>
+              );
+            })}
+          </ol>
+        </>
+      )}
       <h3 className="mt-3 text-center text-[12px] font-semibold text-neutral-700">
         <span className="text-[#c9ad00]">• </span>participación
         <span className="text-[#c9ad00]"> •</span>

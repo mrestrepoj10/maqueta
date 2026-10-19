@@ -25,6 +25,20 @@ export const Proposal = z.object({
         footprint: z.array(LonLat).min(3),
         holes: z.array(z.array(LonLat).min(3)).optional(),
         height: z.number().positive(),
+        /** Construction phase (1, 2, 3…). Volumes without a phase are always shown. */
+        phase: z.number().int().positive().optional(),
+        /** Area to remove from the existing city when this volume is shown. Defaults to footprint. */
+        clip: z.array(LonLat).min(3).optional(),
+      }),
+    )
+    .optional(),
+  /** Construction phases of this plot, for the timeline and the plot card. */
+  phases: z
+    .array(
+      z.object({
+        n: z.number().int().positive(),
+        label: z.string(),
+        summary: z.string().optional(),
       }),
     )
     .optional(),
