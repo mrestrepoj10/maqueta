@@ -1,10 +1,15 @@
 "use client";
 
 import {
+  Accessibility,
   Apple,
   Baby,
+  Bike,
   BrickWall,
+  Briefcase,
+  Building,
   Building2,
+  Bus,
   CalendarX,
   Carrot,
   ChevronDown,
@@ -16,8 +21,11 @@ import {
   Download,
   Drama,
   Dumbbell,
+  Eye,
   Factory,
   Footprints,
+  Hammer,
+  HandHeart,
   HeartPulse,
   House,
   KeyRound,
@@ -27,9 +35,14 @@ import {
   MapPin,
   Palette,
   Pencil,
+  Ruler,
+  Scale,
+  ShieldCheck,
+  Sprout,
   Store,
   Sun,
   ToyBrick,
+  TrainFront,
   Trees,
   TriangleAlert,
   Users,
@@ -50,6 +63,19 @@ import {
 import type { Proposal } from "@/lib/site";
 
 const ICONS: Record<string, LucideIcon> = {
+  Accessibility,
+  Bike,
+  Briefcase,
+  Building,
+  Bus,
+  Eye,
+  HandHeart,
+  Hammer,
+  Ruler,
+  Scale,
+  ShieldCheck,
+  Sprout,
+  TrainFront,
   Apple,
   Baby,
   BrickWall,
@@ -86,13 +112,6 @@ const Icon = ({ name, className }: { name?: string; className?: string }) => {
 };
 
 const LETTERS = "ABCDEFGH";
-const ACTORS: Record<string, string> = {
-  propietario: "propietario",
-  arrendatario: "arrendatario",
-  comerciante: "comerciante",
-  estudiante: "estudiante",
-  visitante: "visitante",
-};
 
 export type Duration = "2" | "5" | "10";
 
@@ -120,9 +139,12 @@ export function SurveyPanel({
   onShowResults,
   hour,
   onHour,
+  onPreviewOption,
 }: {
   hour?: number;
   onHour?: (h: number) => void;
+  /** Answering the "opcion" question shows that option in the model. */
+  onPreviewOption?: (id: string) => void;
   survey: Survey;
   questions: Question[];
   plot: Proposal;
@@ -175,6 +197,7 @@ export function SurveyPanel({
       const nextVal = has ? cur.filter((x) => x !== id) : cur.length < max ? [...cur, id] : cur;
       setAnswers({ ...answers, [q.id]: nextVal });
     } else setAnswers({ ...answers, [q.id]: id });
+    if (q.id === "opcion") onPreviewOption?.(id);
   };
 
   return (
@@ -280,7 +303,7 @@ export function SurveyPanel({
                   <span>{q.minLabel}</span>
                   <span>{q.maxLabel}</span>
                 </div>
-                {q.icon === "Sun" && onHour && (
+                {onHour && (
                   <div className="mt-3 flex items-center gap-1.5 text-[11px]">
                     <Sun className="size-4" />
                     <span className="mr-1">ver la sombra a las</span>
@@ -378,7 +401,9 @@ export function ResultsPanel({
   onClose,
   selectedComment,
   onSelectComment,
+  scopeToPlot = true,
 }: {
+  scopeToPlot?: boolean;
   survey: Survey;
   responses: Response[];
   plot: Proposal | null;
@@ -391,13 +416,15 @@ export function ResultsPanel({
   const scoped = useMemo(
     () =>
       responses.filter(
-        (r) => (!plot || r.plot === plot.id) && (actor === "todos" || r.answers.relacion === actor),
+        (r) =>
+          (!plot || !scopeToPlot || r.plot === plot.id) &&
+          (actor === "todos" || r.answers.relacion === actor),
       ),
-    [responses, plot, actor],
+    [responses, plot, actor, scopeToPlot],
   );
   const cs = useMemo(() => allComments(survey, scoped), [survey, scoped]);
   const choiceQs = survey.questions.filter(
-    (q) => q.type !== "text" && (!q.plots || !plot || q.plots.includes(plot.id)),
+    (q) => q.type !== "text" && (!q.plots || !plot || !scopeToPlot || q.plots.includes(plot.id)),
   );
 
   const exportCsv = () => {
@@ -427,7 +454,7 @@ export function ResultsPanel({
       </div>
       <p className="mt-1 text-[12px] text-neutral-600">
         <span className="font-semibold text-neutral-900 tabular-nums">{scoped.length}</span> aportes
-        {plot ? ` en ${plot.name}` : " en todo el plan"}
+        {plot && scopeToPlot ? ` en ${plot.name}` : " en total"}
         {simulated && (
           <span className="ml-1 rounded-full bg-[#fff3a8] px-1.5 text-[10px] text-[#7a6600]">
             simulados
@@ -435,7 +462,10 @@ export function ResultsPanel({
         )}
       </p>
       <div className="mt-2 flex flex-wrap gap-1">
-        {["todos", ...Object.keys(ACTORS)].map((a) => (
+        {[
+          "todos",
+          ...(survey.questions.find((q) => q.id === "relacion")?.options?.map((o) => o.id) ?? []),
+        ].map((a) => (
           <button
             key={a}
             type="button"

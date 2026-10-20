@@ -208,6 +208,7 @@ export function MaquetteView({
               onClose={() => setMode("explore")}
               selectedComment={selectedComment}
               onSelectComment={setSelectedComment}
+              scopeToPlot={masterplan}
             />
           ) : plot ? (
             <PlotCard
@@ -242,6 +243,11 @@ export function MaquetteView({
           onShowResults={() => setMode("results")}
           hour={hour}
           onHour={setHour}
+          onPreviewOption={(id) => {
+            if (masterplan) return;
+            if (site.proposals.some((p) => p.id === id)) setActive([id]);
+            else if (id === "ninguna") setActive([]);
+          }}
         />
       )}
 
@@ -414,8 +420,28 @@ export function MaquetteView({
               <span className="font-semibold tabular-nums text-neutral-900">
                 {responses.length}
               </span>{" "}
-              aportes. Elige un lote para participar o mira los resultados.
+              aportes.{" "}
+              {masterplan
+                ? "Elige un lote para participar o mira los resultados."
+                : "Compara las opciones y cuéntanos qué piensas."}
             </p>
+            {!masterplan && (
+              <>
+                <p className="mt-2 text-[11px] text-neutral-600">¿Cuánto tiempo tienes?</p>
+                <div className="mt-1 grid grid-cols-3 gap-1.5">
+                  {(["2", "5", "10"] as Duration[]).map((d) => (
+                    <Pill
+                      key={d}
+                      tone="yellow"
+                      className="justify-center"
+                      onClick={() => startSurvey(active[0] ?? site.proposals[0].id, d)}
+                    >
+                      {d === "10" ? "10 min+" : `${d} min`}
+                    </Pill>
+                  ))}
+                </div>
+              </>
+            )}
             <Pill
               tone="yellow"
               className="mt-2 w-full justify-center"

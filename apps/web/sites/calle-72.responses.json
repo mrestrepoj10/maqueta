@@ -1,0 +1,5216 @@
+{
+  "simulated": true,
+  "note": "Respuestas simuladas para la demostración; no son datos reales.",
+  "responses": [
+    {
+      "id": "sim-134",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T12:11:32.107340"
+    },
+    {
+      "id": "sim-364",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T15:14:04.106640"
+    },
+    {
+      "id": "sim-166",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 2,
+        "primerpiso": ["mercado", "jardin", "talleres"],
+        "canal": ["ferias", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T17:32:44.313053"
+    },
+    {
+      "id": "sim-159",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 4,
+        "primerpiso": ["cuidado"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T18:50:44.586595"
+    },
+    {
+      "id": "sim-272",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T19:53:41.163244"
+    },
+    {
+      "id": "sim-101",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 4,
+        "primerpiso": ["mercado", "talleres", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T20:01:08.314075"
+    },
+    {
+      "id": "sim-338",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["movilidad"],
+        "altura": 5,
+        "primerpiso": ["mercado", "cultura", "jardin"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T20:06:13.048035"
+    },
+    {
+      "id": "sim-281",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T21:13:01.086409"
+    },
+    {
+      "id": "sim-131",
+      "plot": "p6",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T21:25:45.692447"
+    },
+    {
+      "id": "sim-096",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "seguridad"],
+        "altura": 1,
+        "primerpiso": ["talleres", "cultura"],
+        "preocupaciones": {
+          "text": "Una torre de 26 pisos junto a casas de dos pisos en San Felipe: ¿quién compra mi casa y a qué precio?",
+          "position": [-74.0626565, 4.6611811]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T22:05:13.490254"
+    },
+    {
+      "id": "sim-027",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["cultura"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T22:13:04.573217"
+    },
+    {
+      "id": "sim-097",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 3,
+        "primerpiso": ["cultura", "cuidado", "talleres"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-21T23:46:46.821288"
+    },
+    {
+      "id": "sim-214",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T00:37:59.662752"
+    },
+    {
+      "id": "sim-331",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 1,
+        "primerpiso": ["jardin", "cultura", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T20:07:09.034499"
+    },
+    {
+      "id": "sim-003",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 5,
+        "primerpiso": ["mercado", "cultura", "cuidado"],
+        "canal": ["sendero", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T21:11:39.949812"
+    },
+    {
+      "id": "sim-164",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["talleres", "cuidado", "jardin"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T21:34:16.886345"
+    },
+    {
+      "id": "sim-233",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T21:36:21.895899"
+    },
+    {
+      "id": "sim-169",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T21:41:53.802479"
+    },
+    {
+      "id": "sim-030",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["jardin"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T21:46:41.133971"
+    },
+    {
+      "id": "sim-310",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T22:04:04.875088"
+    },
+    {
+      "id": "sim-315",
+      "plot": "p4",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["vis"],
+        "altura": 1,
+        "primerpiso": ["talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T03:23:15.917500"
+    },
+    {
+      "id": "sim-265",
+      "plot": "p6",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "prioridad": ["vis", "comercio"],
+        "altura": 3,
+        "primerpiso": ["cultura", "mercado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T03:51:21.022412"
+    },
+    {
+      "id": "sim-199",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cultura", "jardin"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T07:18:54.994080"
+    },
+    {
+      "id": "sim-139",
+      "plot": "p4",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T08:00:10.869336"
+    },
+    {
+      "id": "sim-313",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 1,
+        "primerpiso": ["mercado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T08:44:48.227838"
+    },
+    {
+      "id": "sim-156",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T08:52:20.288463"
+    },
+    {
+      "id": "sim-174",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T17:54:25.039019"
+    },
+    {
+      "id": "sim-325",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T21:03:05.638302"
+    },
+    {
+      "id": "sim-075",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 3,
+        "primerpiso": ["mercado", "jardin", "talleres"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T21:46:05.372125"
+    },
+    {
+      "id": "sim-229",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T22:38:57.413575"
+    },
+    {
+      "id": "sim-142",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["comercio"],
+        "altura": 4,
+        "primerpiso": ["talleres"],
+        "canal": ["sendero", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T02:09:56.494992"
+    },
+    {
+      "id": "sim-038",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 1,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T08:57:18.904185"
+    },
+    {
+      "id": "sim-382",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "comercio"],
+        "altura": 2,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T14:13:16.445662"
+    },
+    {
+      "id": "sim-089",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T18:09:11.957566"
+    },
+    {
+      "id": "sim-341",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "verde"],
+        "altura": 2,
+        "primerpiso": ["jardin", "talleres", "mercado"],
+        "canal": ["juegos", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T19:31:42.983240"
+    },
+    {
+      "id": "sim-230",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["cultura", "talleres"],
+        "ideas": {
+          "text": "Que el intercambiador tenga una plaza cubierta conectada a las dos estaciones, sin cruzar la Caracas.",
+          "position": [-74.0636036, 4.6616401]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T20:08:33.099675"
+    },
+    {
+      "id": "sim-324",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["vis"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "mercado", "cultura"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T20:54:22.517698"
+    },
+    {
+      "id": "sim-216",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["movilidad", "verde"],
+        "altura": 2,
+        "primerpiso": ["mercado", "cuidado", "jardin"],
+        "canal": ["juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T21:47:11.123783"
+    },
+    {
+      "id": "sim-116",
+      "plot": "p6",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["cultura", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T22:07:59.066987"
+    },
+    {
+      "id": "sim-322",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T22:11:22.792670"
+    },
+    {
+      "id": "sim-277",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 2,
+        "primerpiso": ["cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T22:19:20.804283"
+    },
+    {
+      "id": "sim-244",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad"],
+        "altura": 4,
+        "primerpiso": ["cultura"],
+        "canal": ["luz", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T05:30:46.735648"
+    },
+    {
+      "id": "sim-005",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 4,
+        "primerpiso": ["talleres", "mercado", "cultura"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T10:53:48.939752"
+    },
+    {
+      "id": "sim-122",
+      "plot": "p4",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T14:32:49.067441"
+    },
+    {
+      "id": "sim-190",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T21:54:40.236876"
+    },
+    {
+      "id": "sim-081",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 1,
+        "primerpiso": ["cultura", "jardin", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T21:59:23.332301"
+    },
+    {
+      "id": "sim-224",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["mercado"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T22:44:00.039681"
+    },
+    {
+      "id": "sim-348",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["movilidad"],
+        "altura": 4,
+        "primerpiso": ["talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T15:56:44.963241"
+    },
+    {
+      "id": "sim-019",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 3,
+        "primerpiso": ["jardin", "mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T18:49:06.366982"
+    },
+    {
+      "id": "sim-068",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T19:06:02.061616"
+    },
+    {
+      "id": "sim-123",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T19:06:23.583435"
+    },
+    {
+      "id": "sim-383",
+      "plot": "p4",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cuidado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T19:07:41.651286"
+    },
+    {
+      "id": "sim-059",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad"],
+        "altura": 1,
+        "primerpiso": ["jardin", "talleres", "cultura"],
+        "canal": ["juegos"],
+        "ideas": {
+          "text": "Ferias de fin de semana en el borde del canal para los talleres de muebles del Doce de Octubre.",
+          "position": [-74.0774879, 4.6661327]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T19:39:38.436618"
+    },
+    {
+      "id": "sim-154",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["jardin", "mercado"],
+        "canal": ["humedal", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T21:58:46.497168"
+    },
+    {
+      "id": "sim-357",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["cultura", "talleres", "mercado"],
+        "canal": ["ferias", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T22:25:14.517378"
+    },
+    {
+      "id": "sim-176",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["jardin", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T22:29:40.559751"
+    },
+    {
+      "id": "sim-076",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "talleres"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T22:49:38.662870"
+    },
+    {
+      "id": "sim-121",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T05:51:22.162427"
+    },
+    {
+      "id": "sim-061",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "verde"],
+        "altura": 4,
+        "primerpiso": ["mercado", "talleres", "jardin"],
+        "canal": ["juegos", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T12:07:58.075871"
+    },
+    {
+      "id": "sim-366",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "vis"],
+        "altura": 3,
+        "primerpiso": ["mercado", "talleres", "cultura"],
+        "preocupaciones": {
+          "text": "Las obras del Metro ya cerraron la Caracas un año; otra obra encima y los negocios de la 72 cerramos.",
+          "position": [-74.0626711, 4.661488]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T12:34:06.338563"
+    },
+    {
+      "id": "sim-203",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["talleres"],
+        "canal": ["luz", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T19:23:30.008948"
+    },
+    {
+      "id": "sim-098",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "mercado"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T19:55:57.854524"
+    },
+    {
+      "id": "sim-118",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 1,
+        "primerpiso": ["cultura", "cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T20:28:27.886032"
+    },
+    {
+      "id": "sim-020",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "vis"],
+        "altura": 1,
+        "primerpiso": ["talleres"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T21:50:10.701887"
+    },
+    {
+      "id": "sim-083",
+      "plot": "p4",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["cultura", "mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T22:09:32.936924"
+    },
+    {
+      "id": "sim-048",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T22:35:48.032562"
+    },
+    {
+      "id": "sim-210",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 2,
+        "primerpiso": ["talleres", "mercado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T00:53:14.585998"
+    },
+    {
+      "id": "sim-326",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 3,
+        "primerpiso": ["cultura", "mercado"],
+        "canal": ["luz", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T08:11:26.833253"
+    },
+    {
+      "id": "sim-043",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T13:55:20.740421"
+    },
+    {
+      "id": "sim-353",
+      "plot": "p6",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 5,
+        "primerpiso": ["talleres"],
+        "ideas": {
+          "text": "El jardín infantil propuesto es justo lo que falta en San Fernando.",
+          "position": [-74.0822276, 4.6728598]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T14:24:32.264162"
+    },
+    {
+      "id": "sim-107",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["vis", "comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T19:53:01.072079"
+    },
+    {
+      "id": "sim-113",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["mercado", "jardin", "cuidado"],
+        "canal": ["luz", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T20:22:06.167225"
+    },
+    {
+      "id": "sim-208",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["jardin", "cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T20:29:41.262037"
+    },
+    {
+      "id": "sim-029",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["verde"],
+        "altura": 5,
+        "primerpiso": ["mercado", "cultura", "cuidado"],
+        "canal": ["luz", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T20:57:42.784953"
+    },
+    {
+      "id": "sim-375",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["vis", "comercio"],
+        "altura": 3,
+        "primerpiso": ["mercado", "jardin", "talleres"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T21:39:02.776357"
+    },
+    {
+      "id": "sim-042",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 4,
+        "primerpiso": ["cuidado"],
+        "canal": ["sendero", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T21:39:30.417786"
+    },
+    {
+      "id": "sim-153",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "mercado", "talleres"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T22:09:59.945680"
+    },
+    {
+      "id": "sim-191",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "jardin", "talleres"],
+        "canal": ["luz", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T11:05:34.250022"
+    },
+    {
+      "id": "sim-053",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["vis"],
+        "altura": 2,
+        "primerpiso": ["talleres", "mercado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T13:09:15.066914"
+    },
+    {
+      "id": "sim-334",
+      "plot": "p4",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["cultura", "cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T14:18:54.141661"
+    },
+    {
+      "id": "sim-385",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["jardin", "cultura", "talleres"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T14:20:48.976114"
+    },
+    {
+      "id": "sim-072",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["mercado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T19:30:59.872105"
+    },
+    {
+      "id": "sim-018",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "otra",
+        "prioridad": ["vis", "comercio"],
+        "altura": 1,
+        "primerpiso": ["cultura"],
+        "canal": ["sendero", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T19:45:50.941979"
+    },
+    {
+      "id": "sim-011",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "talleres"],
+        "canal": ["juegos", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T22:15:54.155748"
+    },
+    {
+      "id": "sim-198",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T22:38:56.621310"
+    },
+    {
+      "id": "sim-274",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 3,
+        "primerpiso": ["mercado", "talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T22:59:56.984920"
+    },
+    {
+      "id": "sim-258",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["vis", "verde"],
+        "altura": 4,
+        "primerpiso": ["jardin", "cultura"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T04:50:24.918931"
+    },
+    {
+      "id": "sim-228",
+      "plot": "p6",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["talleres", "cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T09:26:01.383849"
+    },
+    {
+      "id": "sim-317",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "jardin", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T11:56:25.553434"
+    },
+    {
+      "id": "sim-300",
+      "plot": "p6",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["seguridad"],
+        "altura": 1,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T20:26:09.853217"
+    },
+    {
+      "id": "sim-237",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde", "comercio"],
+        "altura": 3,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T20:45:43.487546"
+    },
+    {
+      "id": "sim-221",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["cultura", "talleres"],
+        "canal": ["sendero", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T20:46:00.196023"
+    },
+    {
+      "id": "sim-219",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["comercio", "vis"],
+        "altura": 4,
+        "primerpiso": ["jardin"],
+        "canal": ["humedal", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T21:02:16.040424"
+    },
+    {
+      "id": "sim-288",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["seguridad", "vis"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T15:14:14.338602"
+    },
+    {
+      "id": "sim-006",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "otra",
+        "prioridad": ["verde", "seguridad"],
+        "altura": 1,
+        "primerpiso": ["cultura"],
+        "canal": ["humedal", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T16:20:12.497329"
+    },
+    {
+      "id": "sim-095",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 1,
+        "primerpiso": ["cuidado", "talleres", "jardin"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T19:07:16.267972"
+    },
+    {
+      "id": "sim-367",
+      "plot": "p4",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T19:55:39.589508"
+    },
+    {
+      "id": "sim-257",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 2,
+        "primerpiso": ["talleres", "cultura", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T22:07:26.421672"
+    },
+    {
+      "id": "sim-014",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "cultura", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T22:43:26.016603"
+    },
+    {
+      "id": "sim-092",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["vis"],
+        "altura": 1,
+        "primerpiso": ["cuidado", "cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T02:32:32.339133"
+    },
+    {
+      "id": "sim-195",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 2,
+        "primerpiso": ["cultura", "jardin", "talleres"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T11:40:57.095199"
+    },
+    {
+      "id": "sim-349",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "verde"],
+        "altura": 4,
+        "primerpiso": ["talleres", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T16:38:02.731762"
+    },
+    {
+      "id": "sim-369",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T20:51:04.255033"
+    },
+    {
+      "id": "sim-241",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 5,
+        "primerpiso": ["talleres", "cuidado", "mercado"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T21:29:47.509083"
+    },
+    {
+      "id": "sim-170",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 5,
+        "primerpiso": ["cuidado", "mercado", "jardin"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T21:47:16.649951"
+    },
+    {
+      "id": "sim-060",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "vis"],
+        "altura": 3,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T22:12:36.352857"
+    },
+    {
+      "id": "sim-197",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T22:29:18.568936"
+    },
+    {
+      "id": "sim-356",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "verde"],
+        "altura": 2,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T22:55:10.262716"
+    },
+    {
+      "id": "sim-268",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 1,
+        "primerpiso": ["cuidado"],
+        "canal": ["juegos", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T22:58:55.933001"
+    },
+    {
+      "id": "sim-137",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 5,
+        "primerpiso": ["mercado", "cultura", "cuidado"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T19:04:53.631877"
+    },
+    {
+      "id": "sim-074",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 1,
+        "primerpiso": ["mercado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T21:07:19.576843"
+    },
+    {
+      "id": "sim-026",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["jardin", "cuidado", "mercado"],
+        "canal": ["juegos"],
+        "preocupaciones": {
+          "text": "Llevo 15 años arrendando en el Doce de Octubre. Si suben los arriendos con la estación, ¿a dónde me voy?",
+          "position": [-74.0756172, 4.6684782]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T22:07:53.046579"
+    },
+    {
+      "id": "sim-299",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 4,
+        "primerpiso": ["jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T22:40:49.610856"
+    },
+    {
+      "id": "sim-234",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["cultura", "talleres"],
+        "canal": ["sendero", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T22:41:17.484207"
+    },
+    {
+      "id": "sim-032",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["cultura", "jardin"],
+        "canal": ["juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T22:56:26.559797"
+    },
+    {
+      "id": "sim-248",
+      "plot": "p4",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 2,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T22:59:03.763799"
+    },
+    {
+      "id": "sim-066",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["movilidad"],
+        "altura": 1,
+        "primerpiso": ["mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T19:09:33.706743"
+    },
+    {
+      "id": "sim-179",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["vis", "seguridad"],
+        "altura": 1,
+        "primerpiso": ["mercado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T20:22:48.529504"
+    },
+    {
+      "id": "sim-239",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 2,
+        "primerpiso": ["mercado", "jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T22:27:02.091922"
+    },
+    {
+      "id": "sim-079",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 4,
+        "primerpiso": ["jardin", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T06:00:07.306034"
+    },
+    {
+      "id": "sim-236",
+      "plot": "p6",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["verde", "seguridad"],
+        "altura": 5,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T13:14:51.504825"
+    },
+    {
+      "id": "sim-119",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["mercado", "cuidado", "talleres"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T19:33:01.765259"
+    },
+    {
+      "id": "sim-245",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T18:31:49.671074"
+    },
+    {
+      "id": "sim-311",
+      "plot": "p6",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["verde"],
+        "altura": 4,
+        "primerpiso": ["mercado", "talleres", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:44:20.372647"
+    },
+    {
+      "id": "sim-025",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T20:14:30.696765"
+    },
+    {
+      "id": "sim-377",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["comercio", "vis"],
+        "altura": 3,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T23:53:15.134884"
+    },
+    {
+      "id": "sim-305",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "jardin", "cultura"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T05:18:36.442700"
+    },
+    {
+      "id": "sim-301",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T07:59:58.942890"
+    },
+    {
+      "id": "sim-148",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T17:52:43.860254"
+    },
+    {
+      "id": "sim-127",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "comercio"],
+        "altura": 4,
+        "primerpiso": ["talleres", "cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T20:37:38.469451"
+    },
+    {
+      "id": "sim-125",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 4,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T22:31:49.770439"
+    },
+    {
+      "id": "sim-168",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["vis"],
+        "altura": 1,
+        "primerpiso": ["cuidado", "cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T06:13:27.586864"
+    },
+    {
+      "id": "sim-332",
+      "plot": "p6",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["movilidad"],
+        "altura": 4,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T08:43:34.869521"
+    },
+    {
+      "id": "sim-296",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["jardin", "talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T15:40:07.881862"
+    },
+    {
+      "id": "sim-110",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["cuidado"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T17:31:19.751884"
+    },
+    {
+      "id": "sim-354",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["mercado", "jardin"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:28:40.502279"
+    },
+    {
+      "id": "sim-017",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 3,
+        "primerpiso": ["talleres"],
+        "canal": ["juegos", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:37:12.827582"
+    },
+    {
+      "id": "sim-126",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "comercio"],
+        "altura": 4,
+        "primerpiso": ["cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T05:34:04.090747"
+    },
+    {
+      "id": "sim-379",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T10:14:27.735854"
+    },
+    {
+      "id": "sim-217",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 4,
+        "primerpiso": ["jardin", "cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:02:43.699293"
+    },
+    {
+      "id": "sim-044",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cuidado", "mercado"],
+        "canal": ["humedal", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:04:48.270524"
+    },
+    {
+      "id": "sim-267",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["vis", "verde"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "cultura", "jardin"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:40:02.110782"
+    },
+    {
+      "id": "sim-276",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["vis", "movilidad"],
+        "altura": 1,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:44:29.267449"
+    },
+    {
+      "id": "sim-256",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:43:45.200741"
+    },
+    {
+      "id": "sim-207",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["jardin"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T01:48:38.809087"
+    },
+    {
+      "id": "sim-316",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T05:33:03.070754"
+    },
+    {
+      "id": "sim-255",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T07:57:38.868659"
+    },
+    {
+      "id": "sim-329",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 5,
+        "primerpiso": ["jardin", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T11:22:45.153518"
+    },
+    {
+      "id": "sim-012",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T14:39:29.633234"
+    },
+    {
+      "id": "sim-080",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:33:16.036040"
+    },
+    {
+      "id": "sim-273",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:45:12.034051"
+    },
+    {
+      "id": "sim-086",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "mercado"],
+        "preocupaciones": {
+          "text": "Comercio continuo en la 72 está bien, pero que no sea solo para cadenas grandes.",
+          "position": [-74.0715176, 4.6633666]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T23:46:56.632864"
+    },
+    {
+      "id": "sim-240",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["jardin", "talleres", "mercado"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T00:05:09.945874"
+    },
+    {
+      "id": "sim-036",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T06:49:02.584117"
+    },
+    {
+      "id": "sim-094",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 2,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T14:14:53.198354"
+    },
+    {
+      "id": "sim-212",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 2,
+        "primerpiso": ["talleres", "jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T18:32:06.675599"
+    },
+    {
+      "id": "sim-340",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 1,
+        "primerpiso": ["mercado", "cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T19:14:18.358902"
+    },
+    {
+      "id": "sim-223",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 5,
+        "primerpiso": ["cultura", "mercado", "cuidado"],
+        "canal": ["juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T19:41:12.922362"
+    },
+    {
+      "id": "sim-062",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["movilidad"],
+        "altura": 2,
+        "primerpiso": ["jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T22:28:57.610984"
+    },
+    {
+      "id": "sim-013",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["mercado", "cuidado", "talleres"],
+        "canal": ["juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T22:32:58.029752"
+    },
+    {
+      "id": "sim-271",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["mercado", "talleres", "jardin"],
+        "ideas": {
+          "text": "Baja altura aquí está bien; que los edificios altos queden sobre la calle 72 y la Caracas.",
+          "position": [-74.0683605, 4.6651326]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T08:11:06.276324"
+    },
+    {
+      "id": "sim-140",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T11:00:25.950294"
+    },
+    {
+      "id": "sim-196",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:17:14.156256"
+    },
+    {
+      "id": "sim-307",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "verde"],
+        "altura": 2,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:17:57.251493"
+    },
+    {
+      "id": "sim-133",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 1,
+        "primerpiso": ["cuidado", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:27:22.965713"
+    },
+    {
+      "id": "sim-290",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["mercado", "talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T20:26:08.894305"
+    },
+    {
+      "id": "sim-106",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 4,
+        "primerpiso": ["mercado", "jardin", "talleres"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T20:51:53.052184"
+    },
+    {
+      "id": "sim-314",
+      "plot": "p4",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:19:20.657000"
+    },
+    {
+      "id": "sim-280",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "vis"],
+        "altura": 3,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:25:27.814994"
+    },
+    {
+      "id": "sim-254",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:55:06.238953"
+    },
+    {
+      "id": "sim-247",
+      "plot": "p4",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 5,
+        "primerpiso": ["cuidado", "talleres", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T06:55:36.001534"
+    },
+    {
+      "id": "sim-069",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["mercado", "talleres", "cultura"],
+        "canal": ["luz", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T15:43:56.329360"
+    },
+    {
+      "id": "sim-323",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T20:18:09.757299"
+    },
+    {
+      "id": "sim-088",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["cultura", "cuidado", "mercado"],
+        "canal": ["ferias", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:12:28.620957"
+    },
+    {
+      "id": "sim-181",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 2,
+        "primerpiso": ["mercado", "cultura"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:14:37.399777"
+    },
+    {
+      "id": "sim-227",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "prioridad": ["movilidad"],
+        "altura": 5,
+        "primerpiso": ["cultura", "talleres"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:48:45.873705"
+    },
+    {
+      "id": "sim-103",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["comercio", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T22:43:25.505790"
+    },
+    {
+      "id": "sim-343",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado"],
+        "canal": ["ferias", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T04:37:12.403571"
+    },
+    {
+      "id": "sim-263",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T05:24:56.938363"
+    },
+    {
+      "id": "sim-384",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["cultura", "cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T14:09:05.981279"
+    },
+    {
+      "id": "sim-041",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["talleres", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T20:03:47.183660"
+    },
+    {
+      "id": "sim-114",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T20:13:18.478023"
+    },
+    {
+      "id": "sim-275",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cuidado", "jardin"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T22:04:28.329029"
+    },
+    {
+      "id": "sim-104",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["jardin", "cultura"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T22:09:01.495705"
+    },
+    {
+      "id": "sim-171",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["cultura", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T22:16:44.406166"
+    },
+    {
+      "id": "sim-261",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "verde"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cultura", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T22:44:43.870884"
+    },
+    {
+      "id": "sim-365",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 4,
+        "primerpiso": ["jardin", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T06:08:45.533560"
+    },
+    {
+      "id": "sim-211",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "comercio"],
+        "altura": 4,
+        "primerpiso": ["jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T09:24:00.135989"
+    },
+    {
+      "id": "sim-205",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 5,
+        "primerpiso": ["mercado", "cultura"],
+        "canal": ["ferias", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T10:45:38.302844"
+    },
+    {
+      "id": "sim-270",
+      "plot": "p4",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["vis", "verde"],
+        "altura": 2,
+        "primerpiso": ["cultura", "cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T14:22:49.631883"
+    },
+    {
+      "id": "sim-287",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 4,
+        "primerpiso": ["talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T19:54:42.111086"
+    },
+    {
+      "id": "sim-024",
+      "plot": "p6",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 5,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T19:57:48.287101"
+    },
+    {
+      "id": "sim-283",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["jardin", "talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T20:27:59.579971"
+    },
+    {
+      "id": "sim-264",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "jardin", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T20:45:19.397475"
+    },
+    {
+      "id": "sim-022",
+      "plot": "p6",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T22:45:15.958512"
+    },
+    {
+      "id": "sim-063",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["verde"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T22:49:35.579521"
+    },
+    {
+      "id": "sim-251",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["talleres", "cuidado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T07:38:38.289384"
+    },
+    {
+      "id": "sim-321",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 1,
+        "primerpiso": ["jardin", "mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T09:52:54.474964"
+    },
+    {
+      "id": "sim-232",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T19:32:40.141923"
+    },
+    {
+      "id": "sim-082",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "movilidad"],
+        "altura": 5,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T22:51:55.203134"
+    },
+    {
+      "id": "sim-262",
+      "plot": "p6",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["comercio"],
+        "altura": 4,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T03:16:11.670161"
+    },
+    {
+      "id": "sim-151",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["cultura", "mercado"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T07:14:28.389186"
+    },
+    {
+      "id": "sim-037",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T15:45:41.186808"
+    },
+    {
+      "id": "sim-016",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["verde", "comercio"],
+        "altura": 1,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T16:15:28.621333"
+    },
+    {
+      "id": "sim-085",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["cultura", "cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T18:50:40.333445"
+    },
+    {
+      "id": "sim-346",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["jardin", "talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T19:02:52.716427"
+    },
+    {
+      "id": "sim-183",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "cultura"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T19:10:47.622231"
+    },
+    {
+      "id": "sim-376",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["comercio", "vis"],
+        "altura": 1,
+        "primerpiso": ["mercado", "cuidado", "talleres"],
+        "canal": ["humedal", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T19:15:21.581507"
+    },
+    {
+      "id": "sim-152",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["comercio", "verde"],
+        "altura": 5,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T19:17:32.931596"
+    },
+    {
+      "id": "sim-145",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "vis"],
+        "altura": 3,
+        "primerpiso": ["cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T19:35:20.027657"
+    },
+    {
+      "id": "sim-070",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["comercio", "verde"],
+        "altura": 4,
+        "primerpiso": ["talleres", "cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T20:47:18.993289"
+    },
+    {
+      "id": "sim-186",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["comercio", "verde"],
+        "altura": 5,
+        "primerpiso": ["talleres", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T21:50:01.678758"
+    },
+    {
+      "id": "sim-002",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 1,
+        "primerpiso": ["talleres", "cultura", "mercado"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T22:00:08.112331"
+    },
+    {
+      "id": "sim-130",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 3,
+        "primerpiso": ["cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T22:02:34.116656"
+    },
+    {
+      "id": "sim-120",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["vis", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T22:26:44.975430"
+    },
+    {
+      "id": "sim-071",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["comercio", "vis"],
+        "altura": 2,
+        "primerpiso": ["jardin", "talleres", "cuidado"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T22:51:37.849126"
+    },
+    {
+      "id": "sim-373",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cultura"],
+        "canal": ["humedal", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T01:50:09.917615"
+    },
+    {
+      "id": "sim-372",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["cultura", "cuidado", "talleres"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T03:09:09.208025"
+    },
+    {
+      "id": "sim-185",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["vis", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["cultura", "jardin", "cuidado"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T03:44:51.149704"
+    },
+    {
+      "id": "sim-084",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cultura", "mercado"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T06:06:10.678965"
+    },
+    {
+      "id": "sim-344",
+      "plot": "p6",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T06:45:29.543600"
+    },
+    {
+      "id": "sim-180",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T08:13:07.837119"
+    },
+    {
+      "id": "sim-155",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["movilidad"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T09:35:33.139591"
+    },
+    {
+      "id": "sim-206",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "cultura", "mercado"],
+        "canal": ["sendero", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T10:24:07.955232"
+    },
+    {
+      "id": "sim-333",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 2,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T10:56:48.183898"
+    },
+    {
+      "id": "sim-330",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["cultura"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T12:00:01.945977"
+    },
+    {
+      "id": "sim-115",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 2,
+        "primerpiso": ["jardin", "talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T13:57:44.780976"
+    },
+    {
+      "id": "sim-320",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 4,
+        "primerpiso": ["mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T14:23:00.689594"
+    },
+    {
+      "id": "sim-157",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["mercado", "cultura", "talleres"],
+        "canal": ["juegos"],
+        "ideas": {
+          "text": "El Canal Salitre puede ser un corredor ecológico real: humedal, aves y un sendero continuo a lo largo del canal.",
+          "position": [-74.0769735, 4.6656152]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T14:56:36.052683"
+    },
+    {
+      "id": "sim-065",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["cultura", "talleres", "jardin"],
+        "canal": ["ferias", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T15:17:25.574024"
+    },
+    {
+      "id": "sim-350",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["cultura", "talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T15:39:17.298717"
+    },
+    {
+      "id": "sim-359",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cultura", "cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T18:08:25.135826"
+    },
+    {
+      "id": "sim-058",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["cultura", "talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T18:36:16.257017"
+    },
+    {
+      "id": "sim-163",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["verde"],
+        "altura": 5,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T18:37:33.212726"
+    },
+    {
+      "id": "sim-374",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 3,
+        "primerpiso": ["mercado", "talleres", "cuidado"],
+        "ideas": {
+          "text": "Una Manzana del Cuidado en el primer piso, con jardín infantil y lavandería comunitaria.",
+          "position": [-74.070587, 4.6642018]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T19:07:28.947043"
+    },
+    {
+      "id": "sim-361",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["verde", "seguridad"],
+        "altura": 1,
+        "primerpiso": ["mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T19:16:22.729887"
+    },
+    {
+      "id": "sim-351",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis"],
+        "altura": 3,
+        "primerpiso": ["mercado"],
+        "canal": ["ferias", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T19:22:41.203189"
+    },
+    {
+      "id": "sim-158",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "verde"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "talleres", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T19:25:16.257705"
+    },
+    {
+      "id": "sim-031",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["talleres", "cultura", "jardin"],
+        "canal": ["juegos", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T19:57:51.998179"
+    },
+    {
+      "id": "sim-160",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cultura"],
+        "canal": ["juegos", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:06:19.129942"
+    },
+    {
+      "id": "sim-201",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["comercio"],
+        "altura": 1,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:06:25.037109"
+    },
+    {
+      "id": "sim-117",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["vis", "movilidad"],
+        "altura": 1,
+        "primerpiso": ["jardin", "cultura", "talleres"],
+        "preocupaciones": {
+          "text": "Más densidad sin más colegios ni centros de salud; ya hoy no alcanzan.",
+          "position": [-74.0821173, 4.6730601]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:09:05.724887"
+    },
+    {
+      "id": "sim-004",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:10:07.589837"
+    },
+    {
+      "id": "sim-124",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde", "comercio"],
+        "altura": 2,
+        "primerpiso": ["mercado", "talleres", "jardin"],
+        "canal": ["luz", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:10:30.946659"
+    },
+    {
+      "id": "sim-269",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado", "jardin"],
+        "canal": ["juegos", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:46:13.151512"
+    },
+    {
+      "id": "sim-295",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["comercio", "vis"],
+        "altura": 4,
+        "primerpiso": ["cultura", "jardin", "mercado"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:53:57.352972"
+    },
+    {
+      "id": "sim-358",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["cultura"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:02:50.686059"
+    },
+    {
+      "id": "sim-318",
+      "plot": "p6",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:06:06.398186"
+    },
+    {
+      "id": "sim-297",
+      "plot": "p6",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 4,
+        "primerpiso": ["talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:08:33.008819"
+    },
+    {
+      "id": "sim-213",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:18:04.581227"
+    },
+    {
+      "id": "sim-144",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:34:35.979752"
+    },
+    {
+      "id": "sim-073",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:45:51.464196"
+    },
+    {
+      "id": "sim-010",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 5,
+        "primerpiso": ["mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:51:18.432323"
+    },
+    {
+      "id": "sim-308",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 5,
+        "primerpiso": ["jardin", "cultura", "mercado"],
+        "canal": ["sendero", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:53:41.622726"
+    },
+    {
+      "id": "sim-259",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "movilidad"],
+        "altura": 4,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:54:05.248484"
+    },
+    {
+      "id": "sim-284",
+      "plot": "p6",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:54:37.682068"
+    },
+    {
+      "id": "sim-282",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["jardin", "talleres"],
+        "canal": ["sendero", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:54:58.407500"
+    },
+    {
+      "id": "sim-222",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["cultura", "talleres", "mercado"],
+        "canal": ["ferias", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:02:26.400972"
+    },
+    {
+      "id": "sim-250",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:11:25.393160"
+    },
+    {
+      "id": "sim-381",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado", "cultura"],
+        "canal": ["juegos", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:14:25.881902"
+    },
+    {
+      "id": "sim-188",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:17:05.427085"
+    },
+    {
+      "id": "sim-100",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 3,
+        "primerpiso": ["mercado"],
+        "canal": ["ferias", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:28:11.973577"
+    },
+    {
+      "id": "sim-370",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "jardin", "talleres"],
+        "canal": ["humedal", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:29:11.545299"
+    },
+    {
+      "id": "sim-202",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "mercado"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:29:42.538882"
+    },
+    {
+      "id": "sim-184",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cuidado"],
+        "canal": ["sendero"],
+        "preocupaciones": {
+          "text": "El canal de noche es oscuro e inseguro; antes de construir hay que iluminarlo.",
+          "position": [-74.0776743, 4.6659524]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:50:28.086268"
+    },
+    {
+      "id": "sim-173",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "jardin", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:53:45.208400"
+    },
+    {
+      "id": "sim-352",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "jardin", "mercado"],
+        "canal": ["humedal", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:56:45.390389"
+    },
+    {
+      "id": "sim-289",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 5,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T00:03:52.534971"
+    },
+    {
+      "id": "sim-242",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "prioridad": ["vis", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T00:57:56.817907"
+    },
+    {
+      "id": "sim-162",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["comercio", "vis"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "mercado"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T01:50:46.363986"
+    },
+    {
+      "id": "sim-000",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["cultura", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T03:28:30.324466"
+    },
+    {
+      "id": "sim-293",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T04:12:23.960586"
+    },
+    {
+      "id": "sim-141",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T08:50:00.634088"
+    },
+    {
+      "id": "sim-220",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 1,
+        "primerpiso": ["mercado", "cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T10:39:28.311823"
+    },
+    {
+      "id": "sim-135",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T10:50:51.661156"
+    },
+    {
+      "id": "sim-111",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["seguridad", "vis"],
+        "altura": 1,
+        "primerpiso": ["cuidado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T10:58:10.750015"
+    },
+    {
+      "id": "sim-362",
+      "plot": "p6",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["comercio"],
+        "altura": 5,
+        "primerpiso": ["talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T12:02:02.115948"
+    },
+    {
+      "id": "sim-049",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "vis"],
+        "altura": 2,
+        "primerpiso": ["mercado", "cuidado", "cultura"],
+        "canal": ["humedal", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T14:35:45.411138"
+    },
+    {
+      "id": "sim-099",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T18:07:32.053180"
+    },
+    {
+      "id": "sim-090",
+      "plot": "p4",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 4,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T18:40:03.275011"
+    },
+    {
+      "id": "sim-371",
+      "plot": "p5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 5,
+        "primerpiso": ["cultura", "talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T19:03:24.096735"
+    },
+    {
+      "id": "sim-147",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 3,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T19:13:43.919022"
+    },
+    {
+      "id": "sim-238",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 1,
+        "primerpiso": ["jardin"],
+        "canal": ["ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T19:38:05.867991"
+    },
+    {
+      "id": "sim-149",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["vis", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "mercado"],
+        "canal": ["luz", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T19:40:48.645234"
+    },
+    {
+      "id": "sim-218",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "vis"],
+        "altura": 3,
+        "primerpiso": ["talleres", "jardin"],
+        "canal": ["sendero", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T19:42:43.335562"
+    },
+    {
+      "id": "sim-064",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cuidado", "talleres"],
+        "canal": ["luz", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:03:24.953768"
+    },
+    {
+      "id": "sim-015",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:04:08.065207"
+    },
+    {
+      "id": "sim-368",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["jardin", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:11:06.850304"
+    },
+    {
+      "id": "sim-102",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["movilidad"],
+        "altura": 2,
+        "primerpiso": ["talleres", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:12:04.046313"
+    },
+    {
+      "id": "sim-051",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["cuidado"],
+        "canal": ["ferias", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:29:03.251737"
+    },
+    {
+      "id": "sim-252",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["verde", "comercio"],
+        "altura": 1,
+        "primerpiso": ["cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:33:19.200753"
+    },
+    {
+      "id": "sim-033",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres", "cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:34:51.457211"
+    },
+    {
+      "id": "sim-054",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "verde"],
+        "altura": 2,
+        "primerpiso": ["mercado"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:42:52.333499"
+    },
+    {
+      "id": "sim-291",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["comercio", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["talleres", "mercado", "cultura"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:44:57.849253"
+    },
+    {
+      "id": "sim-093",
+      "plot": "p6",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "prioridad": ["movilidad"],
+        "altura": 4,
+        "primerpiso": ["mercado", "talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:56:49.595893"
+    },
+    {
+      "id": "sim-194",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "prioridad": ["verde"],
+        "altura": 4,
+        "primerpiso": ["cultura", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T21:04:18.845970"
+    },
+    {
+      "id": "sim-143",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cuidado", "talleres"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T21:24:36.416910"
+    },
+    {
+      "id": "sim-225",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["talleres"],
+        "canal": ["humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T21:26:20.220559"
+    },
+    {
+      "id": "sim-380",
+      "plot": "p4",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T21:35:07.889625"
+    },
+    {
+      "id": "sim-189",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde", "comercio"],
+        "altura": 4,
+        "primerpiso": ["jardin", "cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T21:55:49.064604"
+    },
+    {
+      "id": "sim-046",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["mercado", "talleres", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T22:08:32.469368"
+    },
+    {
+      "id": "sim-337",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["jardin", "cultura", "cuidado"],
+        "canal": ["humedal"],
+        "ideas": {
+          "text": "Que la vivienda VIP de esta manzana sea primero para los arrendatarios del barrio.",
+          "position": [-74.074728, 4.6688069]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T22:22:50.172799"
+    },
+    {
+      "id": "sim-253",
+      "plot": "p6",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["vis", "verde"],
+        "altura": 4,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T22:25:31.282488"
+    },
+    {
+      "id": "sim-050",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "mercado", "talleres"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T22:32:09.533603"
+    },
+    {
+      "id": "sim-001",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 5,
+        "primerpiso": ["jardin", "cultura", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T22:33:01.168552"
+    },
+    {
+      "id": "sim-178",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T00:34:27.179925"
+    },
+    {
+      "id": "sim-021",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["comercio", "permanecer"],
+        "altura": 1,
+        "primerpiso": ["cultura", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T06:51:40.881799"
+    },
+    {
+      "id": "sim-260",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres", "cultura", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T08:04:08.403284"
+    },
+    {
+      "id": "sim-047",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "verde"],
+        "altura": 3,
+        "primerpiso": ["talleres", "jardin", "cuidado"],
+        "canal": ["luz", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T08:29:28.168412"
+    },
+    {
+      "id": "sim-204",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["movilidad", "vis"],
+        "altura": 1,
+        "primerpiso": ["mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T09:08:14.649042"
+    },
+    {
+      "id": "sim-034",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 4,
+        "primerpiso": ["jardin", "cuidado", "talleres"],
+        "canal": ["humedal", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T09:29:12.084098"
+    },
+    {
+      "id": "sim-039",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["comercio"],
+        "altura": 5,
+        "primerpiso": ["jardin", "talleres", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T11:32:52.311236"
+    },
+    {
+      "id": "sim-246",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T15:20:25.430974"
+    },
+    {
+      "id": "sim-177",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "mercado", "talleres"],
+        "canal": ["juegos", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T15:34:07.676242"
+    },
+    {
+      "id": "sim-045",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["movilidad", "vis"],
+        "altura": 4,
+        "primerpiso": ["cultura", "mercado"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T17:09:41.991387"
+    },
+    {
+      "id": "sim-146",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad"],
+        "altura": 4,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T17:18:42.433603"
+    },
+    {
+      "id": "sim-209",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["cultura", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T17:31:30.962769"
+    },
+    {
+      "id": "sim-302",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["vis", "verde"],
+        "altura": 2,
+        "primerpiso": ["talleres", "jardin", "cuidado"],
+        "canal": ["humedal", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:00:35.485924"
+    },
+    {
+      "id": "sim-285",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["vis", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["cultura", "jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:07:38.091374"
+    },
+    {
+      "id": "sim-327",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["cultura", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:08:07.414779"
+    },
+    {
+      "id": "sim-200",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cultura", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:17:33.763987"
+    },
+    {
+      "id": "sim-067",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["verde", "comercio"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:32:03.766806"
+    },
+    {
+      "id": "sim-279",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:33:15.586263"
+    },
+    {
+      "id": "sim-112",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["mercado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:33:29.710878"
+    },
+    {
+      "id": "sim-231",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 2,
+        "primerpiso": ["talleres", "mercado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:34:18.395620"
+    },
+    {
+      "id": "sim-028",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis", "verde"],
+        "altura": 3,
+        "primerpiso": ["cuidado"],
+        "canal": ["juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:35:41.090889"
+    },
+    {
+      "id": "sim-347",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres", "jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:50:49.422604"
+    },
+    {
+      "id": "sim-342",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "otra",
+        "prioridad": ["permanecer"],
+        "altura": 1,
+        "primerpiso": ["talleres", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:04:23.123969"
+    },
+    {
+      "id": "sim-192",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 1,
+        "primerpiso": ["cuidado", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:20:03.944828"
+    },
+    {
+      "id": "sim-108",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres", "mercado", "jardin"],
+        "canal": ["humedal", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:31:41.081408"
+    },
+    {
+      "id": "sim-215",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:32:14.667584"
+    },
+    {
+      "id": "sim-249",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 4,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:37:11.571625"
+    },
+    {
+      "id": "sim-136",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 4,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:37:16.954452"
+    },
+    {
+      "id": "sim-335",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:47:12.682572"
+    },
+    {
+      "id": "sim-056",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "comercio"],
+        "altura": 5,
+        "primerpiso": ["talleres", "cultura", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:52:09.878802"
+    },
+    {
+      "id": "sim-138",
+      "plot": "p3",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["cultura", "cuidado", "jardin"],
+        "canal": ["sendero", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:55:01.717490"
+    },
+    {
+      "id": "sim-187",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:56:08.222499"
+    },
+    {
+      "id": "sim-023",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T20:57:59.090565"
+    },
+    {
+      "id": "sim-132",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["mercado", "cuidado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T21:14:37.341155"
+    },
+    {
+      "id": "sim-150",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["movilidad"],
+        "altura": 2,
+        "primerpiso": ["jardin", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T21:24:11.054477"
+    },
+    {
+      "id": "sim-078",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T21:24:39.803604"
+    },
+    {
+      "id": "sim-128",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["permanecer"],
+        "altura": 4,
+        "primerpiso": ["jardin", "talleres", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T21:37:53.688571"
+    },
+    {
+      "id": "sim-312",
+      "plot": "p2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "vis"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cuidado"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T21:45:12.226371"
+    },
+    {
+      "id": "sim-235",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 5,
+        "primerpiso": ["mercado", "talleres", "cuidado"],
+        "preocupaciones": {
+          "text": "Los talleres y galerías de San Felipe y Alcázares son el corazón productivo; no los saquen con la renovación.",
+          "position": [-74.0680908, 4.6663585]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:01:50.139318"
+    },
+    {
+      "id": "sim-328",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["permanecer"],
+        "altura": 3,
+        "primerpiso": ["cuidado"],
+        "canal": ["luz", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:06:00.956702"
+    },
+    {
+      "id": "sim-226",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "vis"],
+        "altura": 3,
+        "primerpiso": ["jardin", "mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:25:34.863649"
+    },
+    {
+      "id": "sim-167",
+      "plot": "p5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["seguridad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["mercado", "talleres", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:31:59.608419"
+    },
+    {
+      "id": "sim-055",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "comercio"],
+        "altura": 5,
+        "primerpiso": ["talleres"],
+        "canal": ["juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:35:26.183784"
+    },
+    {
+      "id": "sim-336",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["permanecer", "comercio"],
+        "altura": 1,
+        "primerpiso": ["talleres", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:35:30.451820"
+    },
+    {
+      "id": "sim-057",
+      "plot": "p5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "prioridad": ["verde", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["jardin", "cultura", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:45:28.518695"
+    },
+    {
+      "id": "sim-161",
+      "plot": "p5",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 3,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:47:31.176730"
+    },
+    {
+      "id": "sim-035",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["verde"],
+        "altura": 2,
+        "primerpiso": ["cuidado", "cultura", "mercado"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:47:33.961609"
+    },
+    {
+      "id": "sim-378",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "vis"],
+        "altura": 3,
+        "primerpiso": ["jardin", "mercado", "cultura"],
+        "canal": ["humedal", "ferias"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:51:18.415953"
+    },
+    {
+      "id": "sim-175",
+      "plot": "p4",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["comercio", "seguridad"],
+        "altura": 5,
+        "primerpiso": ["jardin", "mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T22:59:50.774483"
+    },
+    {
+      "id": "sim-109",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "prioridad": ["vis", "seguridad"],
+        "altura": 1,
+        "primerpiso": ["cultura", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T23:48:41.506857"
+    },
+    {
+      "id": "sim-040",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 2,
+        "primerpiso": ["mercado", "jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T00:15:49.300911"
+    },
+    {
+      "id": "sim-091",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cuidado", "mercado"],
+        "canal": ["juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T00:40:42.248615"
+    },
+    {
+      "id": "sim-266",
+      "plot": "p2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "prioridad": ["seguridad", "comercio"],
+        "altura": 2,
+        "primerpiso": ["mercado", "talleres"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T01:58:42.266520"
+    },
+    {
+      "id": "sim-165",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "mercado", "cultura"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T02:23:40.140320"
+    },
+    {
+      "id": "sim-087",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["verde", "comercio"],
+        "altura": 5,
+        "primerpiso": ["cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T05:22:20.128872"
+    },
+    {
+      "id": "sim-182",
+      "plot": "p3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "prioridad": ["vis", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "mercado", "cultura"],
+        "canal": ["humedal", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T05:48:15.118672"
+    },
+    {
+      "id": "sim-363",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "prioridad": ["comercio"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "jardin"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T07:34:00.088288"
+    },
+    {
+      "id": "sim-193",
+      "plot": "p2",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "nosabia",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 1,
+        "primerpiso": ["cultura", "cuidado", "jardin"],
+        "canal": ["luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T09:23:05.220780"
+    },
+    {
+      "id": "sim-309",
+      "plot": "p3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "prioridad": ["seguridad"],
+        "altura": 2,
+        "primerpiso": ["cultura", "jardin", "mercado"],
+        "canal": ["sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T10:04:02.776999"
+    },
+    {
+      "id": "sim-319",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["permanecer"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T10:56:50.959444"
+    },
+    {
+      "id": "sim-008",
+      "plot": "p4",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer"],
+        "altura": 4,
+        "primerpiso": ["cuidado", "mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T12:34:49.131463"
+    },
+    {
+      "id": "sim-052",
+      "plot": "p1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T13:01:02.344422"
+    },
+    {
+      "id": "sim-286",
+      "plot": "p5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "comercio"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T13:19:12.416518"
+    },
+    {
+      "id": "sim-007",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "otra",
+        "prioridad": ["comercio", "vis"],
+        "altura": 1,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T13:38:09.446908"
+    },
+    {
+      "id": "sim-009",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "si",
+        "prioridad": ["movilidad"],
+        "altura": 2,
+        "primerpiso": ["mercado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T13:44:58.845472"
+    },
+    {
+      "id": "sim-077",
+      "plot": "p2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "prioridad": ["verde", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["jardin"],
+        "canal": ["sendero", "humedal"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T13:47:28.929219"
+    },
+    {
+      "id": "sim-306",
+      "plot": "p1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "verde"],
+        "altura": 3,
+        "primerpiso": ["cuidado", "talleres", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T19:10:29.959751"
+    },
+    {
+      "id": "sim-278",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["vis"],
+        "altura": 5,
+        "primerpiso": ["mercado", "cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T19:11:46.175311"
+    },
+    {
+      "id": "sim-339",
+      "plot": "p1",
+      "answers": {
+        "relacion": "organizacion",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 3,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T19:40:35.471751"
+    },
+    {
+      "id": "sim-355",
+      "plot": "p5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["movilidad", "permanecer"],
+        "altura": 4,
+        "primerpiso": ["talleres", "mercado", "jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T19:48:18.978610"
+    },
+    {
+      "id": "sim-345",
+      "plot": "p1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "prioridad": ["movilidad", "seguridad"],
+        "altura": 2,
+        "primerpiso": ["jardin", "mercado", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T20:41:16.947376"
+    },
+    {
+      "id": "sim-129",
+      "plot": "p4",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "prioridad": ["comercio", "movilidad"],
+        "altura": 3,
+        "primerpiso": ["mercado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T20:48:05.465518"
+    },
+    {
+      "id": "sim-294",
+      "plot": "p3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "prioridad": ["comercio", "seguridad"],
+        "altura": 4,
+        "primerpiso": ["mercado", "jardin"],
+        "canal": ["luz", "sendero"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T21:13:39.673721"
+    },
+    {
+      "id": "sim-360",
+      "plot": "p2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 3,
+        "primerpiso": ["jardin", "mercado", "cuidado"],
+        "canal": ["sendero", "luz"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T21:32:49.531076"
+    },
+    {
+      "id": "sim-292",
+      "plot": "p6",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer"],
+        "altura": 1,
+        "primerpiso": ["talleres", "mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T21:33:55.694250"
+    },
+    {
+      "id": "sim-105",
+      "plot": "p5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "prioridad": ["verde", "comercio"],
+        "altura": 3,
+        "primerpiso": ["mercado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T21:35:10.646645"
+    },
+    {
+      "id": "sim-298",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["vis", "permanecer"],
+        "altura": 5,
+        "primerpiso": ["mercado", "jardin", "talleres"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T21:57:09.003094"
+    },
+    {
+      "id": "sim-172",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "prioridad": ["permanecer", "seguridad"],
+        "altura": 3,
+        "primerpiso": ["talleres", "cuidado", "cultura"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T22:34:28.717933"
+    },
+    {
+      "id": "sim-303",
+      "plot": "p4",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 4,
+        "primerpiso": ["cuidado"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T22:37:19.750951"
+    },
+    {
+      "id": "sim-304",
+      "plot": "p3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["permanecer"],
+        "altura": 2,
+        "primerpiso": ["jardin", "mercado"],
+        "canal": ["ferias", "juegos"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T22:51:03.216436"
+    },
+    {
+      "id": "sim-243",
+      "plot": "p1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "prioridad": ["seguridad"],
+        "altura": 2,
+        "primerpiso": ["jardin"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T22:52:24.717486"
+    }
+  ]
+}

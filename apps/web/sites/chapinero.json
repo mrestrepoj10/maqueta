@@ -1,8 +1,8 @@
 {
   "slug": "chapinero",
-  "name": "Carrera 7 con Calle 70",
+  "name": "Carrera 7 # 72-41",
   "city": "Bogotá",
-  "description": "Demo site: an existing 15-floor lot on the Séptima in Chapinero, replaced by three illustrative massing options. Buildings are IDECA's LiDAR 3D model; this is not a real project.",
+  "description": "Simulación: renovación de un lote sobre la Séptima en Porciúncula, hoy un hotel de 15 pisos de 2008 (2.594 m² de lote, 21.755 m² construidos según Catastro). Tres opciones ilustrativas para comparar; los edificios vecinos son el modelo LiDAR de IDECA. No es un proyecto real.",
   "baseElevation": 2600,
   "home": {
     "position": [-74.0566, 4.6536, 2985],
@@ -29,8 +29,8 @@
   "proposals": [
     {
       "id": "a",
-      "name": "Option A · Low block",
-      "summary": "6 floors across the whole lot.",
+      "name": "Opción A · Bloque bajo",
+      "summary": "6 pisos en todo el lote, con patio y comercio hacia la Séptima.",
       "footprint": [
         [-74.055784, 4.655982],
         [-74.055769, 4.655771],
@@ -41,12 +41,13 @@
         [-74.055672, 4.656146]
       ],
       "height": 18,
-      "color": "#2563eb"
+      "color": "#2563eb",
+      "floors": 6
     },
     {
       "id": "b",
-      "name": "Option B · Slim tower",
-      "summary": "18 floors on the existing tower footprint, podium kept.",
+      "name": "Opción B · Torre esbelta",
+      "summary": "18 pisos sobre la huella de la torre actual, conservando la plataforma.",
       "footprint": [
         [-74.055451, 4.655994],
         [-74.055497, 4.655926],
@@ -61,12 +62,13 @@
         [-74.055448, 4.655992]
       ],
       "height": 54,
-      "color": "#16a34a"
+      "color": "#16a34a",
+      "floors": 18
     },
     {
       "id": "c",
-      "name": "Option C · Mid-rise",
-      "summary": "9 floors across the whole lot.",
+      "name": "Opción C · Altura media",
+      "summary": "9 pisos en todo el lote, con más área construida que la opción A.",
       "footprint": [
         [-74.055784, 4.655982],
         [-74.055769, 4.655771],
@@ -77,7 +79,14 @@
         [-74.055672, 4.656146]
       ],
       "height": 27,
-      "color": "#ea580c"
+      "color": "#ea580c",
+      "floors": 9
     }
+  ],
+  "facts": [
+    ["lote", "2.594 m² · Porciúncula, Chapinero"],
+    ["hoy", "hotel de 15 pisos (2008), 21.755 m²"],
+    ["frente a", "Quinta Camacho, sector de conservación"],
+    ["movilidad", "Séptima, corredor de transporte"]
   ]
 }

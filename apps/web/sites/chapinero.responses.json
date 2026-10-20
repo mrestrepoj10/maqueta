@@ -1,0 +1,3778 @@
+{
+  "simulated": true,
+  "note": "Respuestas simuladas para la demostración; no son datos reales.",
+  "responses": [
+    {
+      "id": "sim-195",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["cafes", "cultura", "vecinal"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T16:11:44.802070"
+    },
+    {
+      "id": "sim-169",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "ocasional",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["cafes"],
+        "espacio": ["andenes", "plazoleta"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T19:43:28.263480"
+    },
+    {
+      "id": "sim-004",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T20:37:14.798568"
+    },
+    {
+      "id": "sim-178",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cultura", "salud", "cafes"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T20:57:02.104969"
+    },
+    {
+      "id": "sim-105",
+      "plot": "c",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cafes", "bicis"],
+        "espacio": ["andenes"],
+        "lenguaje": ["moderno"],
+        "preocupaciones": {
+          "text": "El andén de la Séptima frente al lote es angosto y se inunda; no se puede caminar con coche de bebé.",
+          "position": [-74.0555609, 4.6554173]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T22:19:45.946788"
+    },
+    {
+      "id": "sim-246",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["salud", "vecinal"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T19:05:23.434501"
+    },
+    {
+      "id": "sim-075",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T19:58:08.410310"
+    },
+    {
+      "id": "sim-000",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["salud"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T20:18:12.988581"
+    },
+    {
+      "id": "sim-020",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cultura", "cafes", "vecinal"],
+        "espacio": ["plazoleta", "accesible"],
+        "lenguaje": ["industrial", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T13:15:54.565200"
+    },
+    {
+      "id": "sim-182",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "ninguna",
+        "sombra": 5,
+        "primerpiso": ["vecinal"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["industrial", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T15:15:17.770018"
+    },
+    {
+      "id": "sim-171",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T17:14:04.080445"
+    },
+    {
+      "id": "sim-204",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "vecinal"],
+        "espacio": ["andenes"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T20:38:35.771579"
+    },
+    {
+      "id": "sim-072",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["bicis", "cultura", "cafes"],
+        "espacio": ["paradero"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T21:36:57.217264"
+    },
+    {
+      "id": "sim-206",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["cafes", "cultura"],
+        "espacio": ["andenes"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T22:20:36.371709"
+    },
+    {
+      "id": "sim-189",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["plazoleta", "accesible"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T22:48:01.886867"
+    },
+    {
+      "id": "sim-143",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["cultura", "cafes"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T07:29:35.282602"
+    },
+    {
+      "id": "sim-084",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cafes", "bicis"],
+        "espacio": ["accesible"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T14:18:42.185410"
+    },
+    {
+      "id": "sim-056",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cultura"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo", "verde"],
+        "preocupaciones": {
+          "text": "Una torre de 18 pisos frente a Quinta Camacho le quita el sol de la mañana a las casas de la calle 72.",
+          "position": [-74.0557205, 4.6557061]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T20:29:51.947168"
+    },
+    {
+      "id": "sim-115",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cultura", "salud", "vecinal"],
+        "espacio": ["andenes", "paradero"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T21:22:00.121829"
+    },
+    {
+      "id": "sim-224",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["cultura", "cafes", "vecinal"],
+        "espacio": ["accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T21:38:01.092206"
+    },
+    {
+      "id": "sim-179",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "vecinal", "bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["moderno"],
+        "preocupaciones": {
+          "text": "Que no sea otra fachada de vidrio cerrada hacia la calle; de noche esta esquina es oscura.",
+          "position": [-74.0555739, 4.6553572]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T06:51:44.750123"
+    },
+    {
+      "id": "sim-043",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "salud", "bicis"],
+        "espacio": ["paradero"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T19:57:30.161858"
+    },
+    {
+      "id": "sim-025",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "vecinal", "salud"],
+        "espacio": ["andenes"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T22:13:28.601552"
+    },
+    {
+      "id": "sim-090",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["cafes"],
+        "espacio": ["paradero"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T22:35:04.929986"
+    },
+    {
+      "id": "sim-059",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cafes", "cultura"],
+        "espacio": ["accesible", "andenes"],
+        "lenguaje": ["verde", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T19:21:38.643348"
+    },
+    {
+      "id": "sim-173",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cafes", "cultura", "vecinal"],
+        "espacio": ["accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T19:48:00.857915"
+    },
+    {
+      "id": "sim-103",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cafes", "cultura", "bicis"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T19:52:04.070550"
+    },
+    {
+      "id": "sim-234",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cafes"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T22:41:09.832139"
+    },
+    {
+      "id": "sim-061",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes"],
+        "espacio": ["andenes", "accesible"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T06:17:24.553322"
+    },
+    {
+      "id": "sim-183",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 1,
+        "primerpiso": ["cultura", "cafes", "bicis"],
+        "espacio": ["andenes"],
+        "lenguaje": ["verde", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T14:54:48.921009"
+    },
+    {
+      "id": "sim-203",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cafes", "cultura"],
+        "espacio": ["accesible"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T19:17:27.166401"
+    },
+    {
+      "id": "sim-042",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "bicis", "cultura"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T21:33:50.798651"
+    },
+    {
+      "id": "sim-160",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["salud"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T22:06:26.788192"
+    },
+    {
+      "id": "sim-002",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cultura"],
+        "espacio": ["andenes", "accesible"],
+        "lenguaje": ["moderno", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T22:10:28.340213"
+    },
+    {
+      "id": "sim-079",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["salud", "bicis"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T06:37:47.754933"
+    },
+    {
+      "id": "sim-100",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cafes", "bicis"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["moderno", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T15:14:36.701593"
+    },
+    {
+      "id": "sim-015",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "salud"],
+        "espacio": ["plazoleta", "paradero"],
+        "lenguaje": ["vidrio", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T19:01:27.552129"
+    },
+    {
+      "id": "sim-005",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cafes", "bicis"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["vidrio", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T21:25:00.659298"
+    },
+    {
+      "id": "sim-111",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T22:54:55.970057"
+    },
+    {
+      "id": "sim-135",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "bicis", "cafes"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T18:59:10.270665"
+    },
+    {
+      "id": "sim-073",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes", "vecinal", "cultura"],
+        "espacio": ["accesible"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:12:45.281792"
+    },
+    {
+      "id": "sim-228",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes"],
+        "espacio": ["andenes"],
+        "lenguaje": ["verde", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:33:34.595241"
+    },
+    {
+      "id": "sim-113",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "cultura", "vecinal"],
+        "espacio": ["andenes", "plazoleta"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:35:01.004159"
+    },
+    {
+      "id": "sim-197",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 1,
+        "primerpiso": ["bicis"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T20:32:12.514271"
+    },
+    {
+      "id": "sim-065",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["plazoleta", "paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T20:49:21.828578"
+    },
+    {
+      "id": "sim-030",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["cultura", "cafes"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T22:57:54.650980"
+    },
+    {
+      "id": "sim-116",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["cafes"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["vidrio", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T22:59:39.301309"
+    },
+    {
+      "id": "sim-128",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cafes", "salud"],
+        "espacio": ["andenes"],
+        "lenguaje": ["moderno", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T00:51:56.747364"
+    },
+    {
+      "id": "sim-070",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 5,
+        "primerpiso": ["cafes"],
+        "espacio": ["accesible"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T02:48:45.593851"
+    },
+    {
+      "id": "sim-010",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["cultura", "vecinal", "bicis"],
+        "espacio": ["paradero"],
+        "lenguaje": ["vidrio", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:24:16.301138"
+    },
+    {
+      "id": "sim-137",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "salud", "bicis"],
+        "espacio": ["accesible", "andenes"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:13:20.724409"
+    },
+    {
+      "id": "sim-210",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cafes", "cultura", "vecinal"],
+        "espacio": ["paradero"],
+        "lenguaje": ["moderno", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:21:01.470618"
+    },
+    {
+      "id": "sim-095",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cultura"],
+        "espacio": ["andenes"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T06:01:38.346439"
+    },
+    {
+      "id": "sim-174",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["plazoleta", "accesible"],
+        "lenguaje": ["moderno", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:05:24.173770"
+    },
+    {
+      "id": "sim-046",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["vecinal"],
+        "espacio": ["plazoleta", "accesible"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:12:26.419299"
+    },
+    {
+      "id": "sim-211",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "bicis", "vecinal"],
+        "espacio": ["paradero", "plazoleta"],
+        "lenguaje": ["moderno"],
+        "ideas": {
+          "text": "Si la torre libera el resto del lote, que ese espacio sea un jardín público abierto a la Séptima.",
+          "position": [-74.0555676, 4.655352]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:30:21.779750"
+    },
+    {
+      "id": "sim-104",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["salud", "vecinal", "cafes"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T22:06:39.957449"
+    },
+    {
+      "id": "sim-152",
+      "plot": "c",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["bicis", "vecinal"],
+        "espacio": ["plazoleta", "paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T03:05:52.376446"
+    },
+    {
+      "id": "sim-055",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "ninguna",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cultura"],
+        "espacio": ["arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T06:13:44.612503"
+    },
+    {
+      "id": "sim-196",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes", "bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T11:43:11.501668"
+    },
+    {
+      "id": "sim-097",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T18:27:33.101659"
+    },
+    {
+      "id": "sim-142",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["vecinal", "bicis", "cafes"],
+        "espacio": ["andenes"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:50:23.493999"
+    },
+    {
+      "id": "sim-053",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "vecinal", "bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:01:43.292930"
+    },
+    {
+      "id": "sim-219",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["vidrio", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:07:39.246646"
+    },
+    {
+      "id": "sim-166",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["bicis", "salud"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:25:40.871591"
+    },
+    {
+      "id": "sim-225",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "bicis"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:41:41.893829"
+    },
+    {
+      "id": "sim-158",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["salud", "bicis"],
+        "espacio": ["andenes"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:00:24.705544"
+    },
+    {
+      "id": "sim-188",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["vidrio", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:00:29.661487"
+    },
+    {
+      "id": "sim-226",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["salud"],
+        "espacio": ["andenes", "accesible"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:30:03.753327"
+    },
+    {
+      "id": "sim-181",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["cultura"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["industrial", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:44:07.718420"
+    },
+    {
+      "id": "sim-013",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 1,
+        "primerpiso": ["cultura", "cafes", "salud"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T00:06:30.654068"
+    },
+    {
+      "id": "sim-069",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["vecinal"],
+        "espacio": ["accesible", "paradero"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T01:33:43.790762"
+    },
+    {
+      "id": "sim-237",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "salud", "cultura"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T03:01:37.100484"
+    },
+    {
+      "id": "sim-151",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "ninguna",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "salud", "cafes"],
+        "espacio": ["andenes"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T04:17:40.782939"
+    },
+    {
+      "id": "sim-146",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 1,
+        "primerpiso": ["cultura", "cafes"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["verde", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T07:06:32.794755"
+    },
+    {
+      "id": "sim-012",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["andenes", "paradero"],
+        "lenguaje": ["moderno", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T09:15:00.651034"
+    },
+    {
+      "id": "sim-207",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["ladrillo", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T09:34:25.757913"
+    },
+    {
+      "id": "sim-187",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["cultura", "vecinal"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T11:07:45.220287"
+    },
+    {
+      "id": "sim-007",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["vecinal"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T12:17:54.656183"
+    },
+    {
+      "id": "sim-071",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "ocasional",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["arboles"],
+        "lenguaje": ["ladrillo"],
+        "preocupaciones": {
+          "text": "Dos años de ruido de obra en una cuadra de vivienda. ¿Qué horarios va a tener?",
+          "position": [-74.0559474, 4.6556847]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T14:20:55.486829"
+    },
+    {
+      "id": "sim-107",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "ocasional",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cafes"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["ladrillo", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T16:34:20.448053"
+    },
+    {
+      "id": "sim-200",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cafes", "salud", "bicis"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T17:45:00.189676"
+    },
+    {
+      "id": "sim-029",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cultura", "cafes", "bicis"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T18:22:41.761340"
+    },
+    {
+      "id": "sim-052",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "ocasional",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes"],
+        "espacio": ["accesible", "arboles"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:01:32.807403"
+    },
+    {
+      "id": "sim-039",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes", "salud"],
+        "espacio": ["plazoleta", "paradero"],
+        "lenguaje": ["ladrillo", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:03:45.252083"
+    },
+    {
+      "id": "sim-199",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cafes"],
+        "espacio": ["plazoleta", "paradero"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:05:00.449289"
+    },
+    {
+      "id": "sim-149",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["vecinal"],
+        "espacio": ["plazoleta", "paradero"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:13:17.856633"
+    },
+    {
+      "id": "sim-136",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 1,
+        "primerpiso": ["vecinal", "cultura"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["ladrillo", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:18:45.840347"
+    },
+    {
+      "id": "sim-044",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cafes", "vecinal"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["vidrio", "industrial"],
+        "preocupaciones": {
+          "text": "Si cierran la esquina dos años de obra, los locales de la 72 perdemos los clientes del hotel.",
+          "position": [-74.0557668, 4.6562643]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:27:35.758102"
+    },
+    {
+      "id": "sim-134",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "ocasional",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cultura"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:35:40.434453"
+    },
+    {
+      "id": "sim-133",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cultura"],
+        "espacio": ["accesible", "arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:39:50.863984"
+    },
+    {
+      "id": "sim-162",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 2,
+        "primerpiso": ["cultura"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["vidrio", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:41:04.091535"
+    },
+    {
+      "id": "sim-093",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cafes", "salud", "vecinal"],
+        "espacio": ["andenes", "plazoleta"],
+        "lenguaje": ["vidrio", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:43:30.268635"
+    },
+    {
+      "id": "sim-067",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["cultura", "vecinal", "salud"],
+        "espacio": ["accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:49:23.364355"
+    },
+    {
+      "id": "sim-117",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cultura", "cafes", "bicis"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:51:24.621851"
+    },
+    {
+      "id": "sim-194",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cultura"],
+        "espacio": ["arboles"],
+        "lenguaje": ["industrial", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T20:05:25.657415"
+    },
+    {
+      "id": "sim-112",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["cultura", "salud"],
+        "espacio": ["andenes"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T20:06:22.277007"
+    },
+    {
+      "id": "sim-186",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 1,
+        "primerpiso": ["cafes", "vecinal", "bicis"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["moderno", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T20:09:21.061779"
+    },
+    {
+      "id": "sim-001",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T20:18:28.997480"
+    },
+    {
+      "id": "sim-110",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["salud", "bicis"],
+        "espacio": ["accesible", "arboles"],
+        "lenguaje": ["industrial", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:05:54.950138"
+    },
+    {
+      "id": "sim-032",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["andenes", "plazoleta"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:36:26.272877"
+    },
+    {
+      "id": "sim-036",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cafes", "salud"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:44:42.203829"
+    },
+    {
+      "id": "sim-244",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cafes"],
+        "espacio": ["arboles"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:50:05.332518"
+    },
+    {
+      "id": "sim-080",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cultura", "vecinal", "cafes"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:52:12.645715"
+    },
+    {
+      "id": "sim-049",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cultura"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["verde", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:04:18.945715"
+    },
+    {
+      "id": "sim-109",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["cafes", "cultura", "vecinal"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:11:52.944910"
+    },
+    {
+      "id": "sim-014",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cultura", "salud", "cafes"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["verde", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:34:34.654401"
+    },
+    {
+      "id": "sim-198",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:39:32.969018"
+    },
+    {
+      "id": "sim-122",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cultura"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T23:19:10.298632"
+    },
+    {
+      "id": "sim-078",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "salud", "cultura"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T02:04:08.976276"
+    },
+    {
+      "id": "sim-229",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["salud", "vecinal", "bicis"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T03:36:18.166297"
+    },
+    {
+      "id": "sim-048",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 1,
+        "primerpiso": ["cafes", "bicis"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T04:44:18.277146"
+    },
+    {
+      "id": "sim-141",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "cultura", "bicis"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T05:11:30.681300"
+    },
+    {
+      "id": "sim-119",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["salud", "cafes"],
+        "espacio": ["arboles", "andenes"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T10:21:59.297325"
+    },
+    {
+      "id": "sim-082",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["salud"],
+        "espacio": ["paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T13:41:55.210012"
+    },
+    {
+      "id": "sim-047",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 1,
+        "primerpiso": ["cultura"],
+        "espacio": ["accesible", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T15:37:05.338394"
+    },
+    {
+      "id": "sim-008",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cultura", "cafes", "vecinal"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["moderno", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T16:51:16.321203"
+    },
+    {
+      "id": "sim-033",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["industrial", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T19:05:35.030880"
+    },
+    {
+      "id": "sim-157",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["salud"],
+        "espacio": ["arboles", "accesible"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T19:18:01.931578"
+    },
+    {
+      "id": "sim-051",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cultura"],
+        "espacio": ["arboles"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T19:32:09.265285"
+    },
+    {
+      "id": "sim-202",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T19:37:42.125998"
+    },
+    {
+      "id": "sim-101",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["salud", "cultura", "cafes"],
+        "espacio": ["arboles"],
+        "lenguaje": ["moderno", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T20:11:10.492219"
+    },
+    {
+      "id": "sim-060",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["vecinal"],
+        "espacio": ["paradero"],
+        "lenguaje": ["vidrio", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T20:22:36.156365"
+    },
+    {
+      "id": "sim-153",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["andenes", "plazoleta"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T20:30:43.863077"
+    },
+    {
+      "id": "sim-221",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T20:40:03.861122"
+    },
+    {
+      "id": "sim-009",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["accesible"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T20:41:54.622788"
+    },
+    {
+      "id": "sim-130",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["cafes", "vecinal"],
+        "espacio": ["andenes", "accesible"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T21:23:24.231591"
+    },
+    {
+      "id": "sim-127",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal"],
+        "espacio": ["plazoleta", "accesible"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T21:25:09.087248"
+    },
+    {
+      "id": "sim-058",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "vecinal", "bicis"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T21:25:27.500266"
+    },
+    {
+      "id": "sim-040",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["ladrillo", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T21:35:51.815619"
+    },
+    {
+      "id": "sim-213",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["moderno", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T21:56:19.148393"
+    },
+    {
+      "id": "sim-045",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "bicis"],
+        "espacio": ["accesible", "andenes"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T21:59:12.435000"
+    },
+    {
+      "id": "sim-018",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cafes", "bicis", "vecinal"],
+        "espacio": ["arboles", "paradero"],
+        "lenguaje": ["moderno", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T22:07:53.188927"
+    },
+    {
+      "id": "sim-074",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "bicis", "salud"],
+        "espacio": ["andenes", "paradero"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T22:47:15.889995"
+    },
+    {
+      "id": "sim-167",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["salud", "vecinal", "bicis"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T22:56:06.054693"
+    },
+    {
+      "id": "sim-164",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "bicis", "cafes"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T23:49:13.187406"
+    },
+    {
+      "id": "sim-006",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["vecinal"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T00:22:07.526913"
+    },
+    {
+      "id": "sim-223",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["cultura", "bicis", "cafes"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T00:37:23.448479"
+    },
+    {
+      "id": "sim-232",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["bicis", "cafes"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T00:55:02.942353"
+    },
+    {
+      "id": "sim-216",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["salud"],
+        "espacio": ["arboles", "andenes"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T01:12:56.354445"
+    },
+    {
+      "id": "sim-215",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "cultura", "vecinal"],
+        "espacio": ["plazoleta", "paradero"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T02:35:55.921776"
+    },
+    {
+      "id": "sim-099",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["cafes"],
+        "espacio": ["accesible"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T03:36:41.238297"
+    },
+    {
+      "id": "sim-023",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["bicis", "vecinal"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["industrial", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T06:02:34.937458"
+    },
+    {
+      "id": "sim-129",
+      "plot": "c",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 5,
+        "primerpiso": ["cafes"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["verde", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T06:11:17.263333"
+    },
+    {
+      "id": "sim-098",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cultura", "bicis"],
+        "espacio": ["andenes"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T06:20:52.162175"
+    },
+    {
+      "id": "sim-027",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T07:09:48.629507"
+    },
+    {
+      "id": "sim-150",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes", "salud"],
+        "espacio": ["paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T07:15:27.667159"
+    },
+    {
+      "id": "sim-193",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis", "cafes", "vecinal"],
+        "espacio": ["accesible", "paradero"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T08:36:58.607530"
+    },
+    {
+      "id": "sim-114",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["cafes", "vecinal"],
+        "espacio": ["accesible"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T10:18:37.279635"
+    },
+    {
+      "id": "sim-017",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["cultura"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T14:44:51.031492"
+    },
+    {
+      "id": "sim-123",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "ocasional",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "salud", "bicis"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["vidrio", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T16:38:57.700307"
+    },
+    {
+      "id": "sim-155",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["bicis", "cafes", "cultura"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T17:00:45.946319"
+    },
+    {
+      "id": "sim-242",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["bicis", "cafes"],
+        "espacio": ["arboles", "accesible"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T18:29:12.689026"
+    },
+    {
+      "id": "sim-091",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cultura", "salud"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:03:57.846353"
+    },
+    {
+      "id": "sim-159",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["vecinal"],
+        "espacio": ["andenes"],
+        "lenguaje": ["ladrillo", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:18:26.495941"
+    },
+    {
+      "id": "sim-191",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["salud", "cafes", "vecinal"],
+        "espacio": ["arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:19:04.516737"
+    },
+    {
+      "id": "sim-163",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes"],
+        "espacio": ["paradero", "plazoleta"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:35:58.262830"
+    },
+    {
+      "id": "sim-235",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["salud"],
+        "espacio": ["arboles", "andenes"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:41:00.841258"
+    },
+    {
+      "id": "sim-096",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cultura", "bicis"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:47:18.115959"
+    },
+    {
+      "id": "sim-026",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["arboles", "andenes"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T20:24:42.568677"
+    },
+    {
+      "id": "sim-205",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cafes", "cultura"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T20:48:46.397562"
+    },
+    {
+      "id": "sim-050",
+      "plot": "c",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 1,
+        "primerpiso": ["bicis", "cultura"],
+        "espacio": ["paradero", "accesible"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T20:51:16.103022"
+    },
+    {
+      "id": "sim-175",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cultura", "cafes", "vecinal"],
+        "espacio": ["andenes", "accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:05:21.717712"
+    },
+    {
+      "id": "sim-201",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["cafes", "cultura", "bicis"],
+        "espacio": ["andenes", "plazoleta"],
+        "lenguaje": ["verde"],
+        "ideas": {
+          "text": "Un espacio cultural en el primer piso: galería o sala de ensayo para la zona.",
+          "position": [-74.055054, 4.6557934]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:05:37.873440"
+    },
+    {
+      "id": "sim-124",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cafes", "salud"],
+        "espacio": ["paradero", "plazoleta"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:13:32.155028"
+    },
+    {
+      "id": "sim-227",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes"],
+        "espacio": ["paradero", "plazoleta"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:33:31.503321"
+    },
+    {
+      "id": "sim-125",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "bicis", "cafes"],
+        "espacio": ["andenes"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T22:08:27.434623"
+    },
+    {
+      "id": "sim-120",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "salud", "cafes"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T22:17:44.668582"
+    },
+    {
+      "id": "sim-147",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes", "cultura", "salud"],
+        "espacio": ["accesible"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T22:25:21.218874"
+    },
+    {
+      "id": "sim-192",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 3,
+        "primerpiso": ["bicis", "salud"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T22:58:01.040436"
+    },
+    {
+      "id": "sim-132",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["vecinal"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T05:18:00.607792"
+    },
+    {
+      "id": "sim-239",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["salud"],
+        "espacio": ["arboles"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T09:28:22.165282"
+    },
+    {
+      "id": "sim-038",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes"],
+        "espacio": ["arboles", "paradero"],
+        "lenguaje": ["industrial", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T11:18:10.428069"
+    },
+    {
+      "id": "sim-021",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["bicis", "cafes", "vecinal"],
+        "espacio": ["paradero", "accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T11:29:44.524672"
+    },
+    {
+      "id": "sim-062",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "bicis", "cafes"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T11:53:41.139766"
+    },
+    {
+      "id": "sim-170",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["cafes", "salud", "cultura"],
+        "espacio": ["andenes"],
+        "lenguaje": ["vidrio", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T12:15:46.608974"
+    },
+    {
+      "id": "sim-220",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["bicis", "cultura", "salud"],
+        "espacio": ["paradero"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T12:16:26.307366"
+    },
+    {
+      "id": "sim-088",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["bicis", "cafes", "salud"],
+        "espacio": ["paradero", "plazoleta"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T13:22:11.220431"
+    },
+    {
+      "id": "sim-085",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["cafes"],
+        "espacio": ["arboles", "paradero"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T13:32:40.612033"
+    },
+    {
+      "id": "sim-077",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["vecinal"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T16:18:40.859229"
+    },
+    {
+      "id": "sim-184",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 1,
+        "primerpiso": ["cafes", "salud", "vecinal"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["vidrio", "ladrillo"],
+        "ideas": {
+          "text": "Locales pequeños en el primer piso, a la escala de la calle 72, no una gran superficie.",
+          "position": [-74.0558401, 4.6562335]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T16:49:01.732246"
+    },
+    {
+      "id": "sim-161",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cafes", "bicis", "vecinal"],
+        "espacio": ["accesible", "paradero"],
+        "lenguaje": ["verde", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T17:44:15.894243"
+    },
+    {
+      "id": "sim-024",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 2,
+        "primerpiso": ["cultura", "cafes"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T19:33:05.346772"
+    },
+    {
+      "id": "sim-168",
+      "plot": "c",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["bicis"],
+        "espacio": ["andenes", "paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T19:42:45.162399"
+    },
+    {
+      "id": "sim-180",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 5,
+        "primerpiso": ["salud", "bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T19:46:02.182728"
+    },
+    {
+      "id": "sim-230",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T20:03:06.447880"
+    },
+    {
+      "id": "sim-245",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["moderno", "vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T20:33:40.204085"
+    },
+    {
+      "id": "sim-212",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "salud", "cultura"],
+        "espacio": ["plazoleta", "accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T20:56:06.804479"
+    },
+    {
+      "id": "sim-019",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes"],
+        "espacio": ["accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T20:57:58.586772"
+    },
+    {
+      "id": "sim-241",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis", "cafes", "salud"],
+        "espacio": ["paradero"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:14:32.577571"
+    },
+    {
+      "id": "sim-003",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cultura"],
+        "espacio": ["paradero"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:21:13.795227"
+    },
+    {
+      "id": "sim-172",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cafes", "salud", "bicis"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["verde", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:25:35.092279"
+    },
+    {
+      "id": "sim-054",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cultura", "cafes"],
+        "espacio": ["andenes"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:30:22.062052"
+    },
+    {
+      "id": "sim-177",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["cafes", "salud", "vecinal"],
+        "espacio": ["accesible", "paradero"],
+        "lenguaje": ["verde", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:37:07.986169"
+    },
+    {
+      "id": "sim-218",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cultura", "bicis"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:40:26.339960"
+    },
+    {
+      "id": "sim-076",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cultura", "cafes", "bicis"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:41:34.827263"
+    },
+    {
+      "id": "sim-138",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T22:19:16.422154"
+    },
+    {
+      "id": "sim-148",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cafes", "vecinal"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T22:26:13.022752"
+    },
+    {
+      "id": "sim-022",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["cafes", "vecinal", "salud"],
+        "espacio": ["arboles"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T22:36:58.800502"
+    },
+    {
+      "id": "sim-165",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["bicis", "cultura", "cafes"],
+        "espacio": ["arboles"],
+        "lenguaje": ["industrial", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T22:54:27.048087"
+    },
+    {
+      "id": "sim-118",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["cultura", "bicis", "cafes"],
+        "espacio": ["paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T02:39:52.380787"
+    },
+    {
+      "id": "sim-094",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["cafes", "vecinal", "salud"],
+        "espacio": ["arboles", "paradero"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T09:24:27.909475"
+    },
+    {
+      "id": "sim-236",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["bicis", "cafes", "cultura"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T19:34:27.838433"
+    },
+    {
+      "id": "sim-154",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["vecinal", "cultura"],
+        "espacio": ["arboles", "accesible"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T00:40:30.981001"
+    },
+    {
+      "id": "sim-057",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["cafes", "bicis", "cultura"],
+        "espacio": ["arboles", "paradero"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T01:26:32.643091"
+    },
+    {
+      "id": "sim-243",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cafes", "bicis"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["industrial", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T14:27:25.397906"
+    },
+    {
+      "id": "sim-222",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["cafes", "cultura"],
+        "espacio": ["andenes"],
+        "lenguaje": ["vidrio", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T19:27:01.212714"
+    },
+    {
+      "id": "sim-035",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["bicis"],
+        "espacio": ["plazoleta", "arboles"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T20:01:33.422000"
+    },
+    {
+      "id": "sim-041",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T20:21:54.341645"
+    },
+    {
+      "id": "sim-185",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["bicis", "cafes"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["moderno", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T21:33:18.204580"
+    },
+    {
+      "id": "sim-208",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["bicis", "cultura", "cafes"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["vidrio", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T21:52:20.931855"
+    },
+    {
+      "id": "sim-156",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cafes", "vecinal", "cultura"],
+        "espacio": ["arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T21:59:19.870010"
+    },
+    {
+      "id": "sim-190",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "ocasional",
+        "opcion": "c",
+        "sombra": 4,
+        "primerpiso": ["bicis", "vecinal", "cafes"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T09:24:23.676058"
+    },
+    {
+      "id": "sim-139",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["cultura", "vecinal", "bicis"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T21:14:59.770307"
+    },
+    {
+      "id": "sim-214",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["arboles", "paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T22:55:46.996374"
+    },
+    {
+      "id": "sim-034",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cafes", "cultura"],
+        "espacio": ["accesible", "arboles"],
+        "lenguaje": ["verde", "industrial"],
+        "ideas": {
+          "text": "Ladrillo y alturas que dialoguen con Quinta Camacho; la opción A se siente parte del barrio.",
+          "position": [-74.0552416, 4.6559045]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T22:16:58.919176"
+    },
+    {
+      "id": "sim-126",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["vecinal", "cafes", "bicis"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:16:54.551492"
+    },
+    {
+      "id": "sim-240",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cafes", "cultura", "vecinal"],
+        "espacio": ["accesible"],
+        "lenguaje": ["vidrio", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:44:46.279836"
+    },
+    {
+      "id": "sim-068",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["salud", "cafes", "vecinal"],
+        "espacio": ["arboles", "accesible"],
+        "lenguaje": ["vidrio", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T22:52:53.273612"
+    },
+    {
+      "id": "sim-089",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "cafes", "bicis"],
+        "espacio": ["plazoleta", "accesible"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T13:40:18.625023"
+    },
+    {
+      "id": "sim-217",
+      "plot": "c",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cafes"],
+        "espacio": ["andenes", "arboles"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T20:32:48.659088"
+    },
+    {
+      "id": "sim-087",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "salud", "cafes"],
+        "espacio": ["arboles", "accesible"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T21:41:44.099560"
+    },
+    {
+      "id": "sim-066",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T21:50:13.829795"
+    },
+    {
+      "id": "sim-238",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["cultura", "vecinal"],
+        "espacio": ["paradero", "plazoleta"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T22:15:09.015548"
+    },
+    {
+      "id": "sim-140",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 3,
+        "primerpiso": ["cultura"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo"],
+        "ideas": {
+          "text": "Una plazoleta en la esquina con sombra de árboles, para esperar el bus sin estar en el andén.",
+          "position": [-74.0557687, 4.65566]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T00:45:24.708194"
+    },
+    {
+      "id": "sim-102",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["vecinal"],
+        "espacio": ["paradero"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T01:57:26.336755"
+    },
+    {
+      "id": "sim-028",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "salud", "vecinal"],
+        "espacio": ["paradero", "plazoleta"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T03:22:25.569426"
+    },
+    {
+      "id": "sim-121",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["arboles"],
+        "lenguaje": ["verde", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T03:24:21.775245"
+    },
+    {
+      "id": "sim-086",
+      "plot": "c",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cultura", "bicis"],
+        "espacio": ["accesible"],
+        "lenguaje": ["moderno"],
+        "ideas": {
+          "text": "Biciparqueadero público sobre la Séptima: hoy no hay dónde dejar la bici en toda la cuadra.",
+          "position": [-74.0559123, 4.6558114]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T09:32:34.710978"
+    },
+    {
+      "id": "sim-209",
+      "plot": "c",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 2,
+        "primerpiso": ["bicis", "cultura"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["vidrio", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-20T19:05:54.711349"
+    },
+    {
+      "id": "sim-063",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cultura"],
+        "espacio": ["accesible", "andenes"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T10:04:35.047646"
+    },
+    {
+      "id": "sim-106",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cafes"],
+        "espacio": ["accesible"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T19:11:31.788515"
+    },
+    {
+      "id": "sim-247",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["bicis", "vecinal"],
+        "espacio": ["arboles", "plazoleta"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "preocupaciones": {
+          "text": "Más apartamentos sin parqueaderos nuevos: la calle 71 ya está llena de carros en doble fila.",
+          "position": [-74.0559868, 4.655998]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T20:19:17.112289"
+    },
+    {
+      "id": "sim-037",
+      "plot": "c",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 5,
+        "primerpiso": ["vecinal", "cultura", "cafes"],
+        "espacio": ["arboles", "andenes"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T21:08:02.955066"
+    },
+    {
+      "id": "sim-081",
+      "plot": "b",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 5,
+        "primerpiso": ["salud", "vecinal"],
+        "espacio": ["arboles", "paradero"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-21T23:41:21.681854"
+    },
+    {
+      "id": "sim-233",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "ocasional",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["bicis"],
+        "espacio": ["arboles"],
+        "lenguaje": ["verde"],
+        "ideas": {
+          "text": "Ampliar el andén retrocediendo el primer piso, con un paradero cubierto.",
+          "position": [-74.0558807, 4.6561704]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-22T01:38:40.674750"
+    },
+    {
+      "id": "sim-011",
+      "plot": "c",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 4,
+        "primerpiso": ["vecinal", "bicis", "salud"],
+        "espacio": ["plazoleta", "andenes"],
+        "lenguaje": ["moderno", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-22T14:23:59.290616"
+    },
+    {
+      "id": "sim-131",
+      "plot": "b",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "diario",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["bicis", "cultura", "cafes"],
+        "espacio": ["arboles"],
+        "lenguaje": ["vidrio", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-22T20:31:01.352565"
+    },
+    {
+      "id": "sim-092",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "semanal",
+        "opcion": "ninguna",
+        "sombra": 3,
+        "primerpiso": ["cafes", "bicis"],
+        "espacio": ["andenes", "plazoleta"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-22T21:11:28.471785"
+    },
+    {
+      "id": "sim-176",
+      "plot": "a",
+      "answers": {
+        "relacion": "estudiante",
+        "frecuencia": "semanal",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cultura", "bicis"],
+        "espacio": ["accesible", "plazoleta"],
+        "lenguaje": ["moderno", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-22T22:20:53.827621"
+    },
+    {
+      "id": "sim-231",
+      "plot": "a",
+      "answers": {
+        "relacion": "vecino",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 5,
+        "primerpiso": ["salud"],
+        "espacio": ["arboles"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-22T23:11:36.392816"
+    },
+    {
+      "id": "sim-064",
+      "plot": "b",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["cafes", "cultura"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["moderno", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-23T08:38:29.679099"
+    },
+    {
+      "id": "sim-108",
+      "plot": "a",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["vecinal"],
+        "espacio": ["paradero", "arboles"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-23T15:43:06.965300"
+    },
+    {
+      "id": "sim-083",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "ocasional",
+        "opcion": "a",
+        "sombra": 3,
+        "primerpiso": ["salud", "cafes", "cultura"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-23T19:30:03.023426"
+    },
+    {
+      "id": "sim-145",
+      "plot": "a",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "diario",
+        "opcion": "c",
+        "sombra": 1,
+        "primerpiso": ["bicis", "vecinal", "cultura"],
+        "espacio": ["arboles", "andenes"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-23T20:25:41.383990"
+    },
+    {
+      "id": "sim-016",
+      "plot": "b",
+      "answers": {
+        "relacion": "oficina",
+        "frecuencia": "semanal",
+        "opcion": "c",
+        "sombra": 2,
+        "primerpiso": ["cultura", "cafes"],
+        "espacio": ["paradero", "andenes"],
+        "lenguaje": ["vidrio"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-23T20:31:58.876395"
+    },
+    {
+      "id": "sim-031",
+      "plot": "a",
+      "answers": {
+        "relacion": "comerciante",
+        "frecuencia": "diario",
+        "opcion": "ninguna",
+        "sombra": 4,
+        "primerpiso": ["bicis", "vecinal", "salud"],
+        "espacio": ["plazoleta"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-24T21:22:32.657345"
+    },
+    {
+      "id": "sim-144",
+      "plot": "b",
+      "answers": {
+        "relacion": "peaton",
+        "frecuencia": "ocasional",
+        "opcion": "b",
+        "sombra": 3,
+        "primerpiso": ["cafes"],
+        "espacio": ["andenes", "accesible"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-25T05:46:30.021705"
+    }
+  ]
+}

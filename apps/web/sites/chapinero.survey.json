@@ -1,0 +1,129 @@
+{
+  "sections": [
+    { "id": "s1", "title": "Conociéndote" },
+    { "id": "s2", "title": "Decisiones" },
+    { "id": "s3", "title": "Preguntas abiertas" }
+  ],
+  "questions": [
+    {
+      "id": "relacion",
+      "section": "s1",
+      "type": "single",
+      "icon": "Users",
+      "prompt": "¿Cuál es tu relación con esta esquina de la Séptima?",
+      "options": [
+        { "id": "vecino", "label": "Vivo en Porciúncula o Quinta Camacho", "icon": "House" },
+        { "id": "comerciante", "label": "Tengo un negocio en la calle 72", "icon": "Store" },
+        { "id": "oficina", "label": "Trabajo en la zona", "icon": "Briefcase" },
+        { "id": "estudiante", "label": "Estudio cerca", "icon": "GraduationCap" },
+        { "id": "peaton", "label": "Paso por aquí a pie, en bici o en bus", "icon": "Bike" }
+      ]
+    },
+    {
+      "id": "frecuencia",
+      "section": "s1",
+      "type": "single",
+      "icon": "Footprints",
+      "prompt": "¿Con qué frecuencia pasas por la carrera 7 con calle 72?",
+      "options": [
+        { "id": "diario", "label": "Todos los días", "icon": "CircleCheck" },
+        { "id": "semanal", "label": "Varias veces por semana", "icon": "Footprints" },
+        { "id": "ocasional", "label": "De vez en cuando", "icon": "CircleHelp" }
+      ]
+    },
+    {
+      "id": "opcion",
+      "section": "s2",
+      "type": "single",
+      "icon": "Building2",
+      "prompt": "Después de ver las tres opciones en el modelo, ¿cuál prefieres para este lote?",
+      "help": "Al elegir una opción, el modelo la muestra. Compáralas antes de decidir.",
+      "options": [
+        { "id": "a", "label": "A · Bloque bajo, 6 pisos", "icon": "BrickWall" },
+        { "id": "b", "label": "B · Torre esbelta, 18 pisos", "icon": "Building" },
+        { "id": "c", "label": "C · Altura media, 9 pisos", "icon": "Building2" },
+        { "id": "ninguna", "label": "Ninguna, dejarlo como está", "icon": "CircleX" }
+      ]
+    },
+    {
+      "id": "sombra",
+      "section": "s2",
+      "type": "scale",
+      "min": 1,
+      "max": 5,
+      "icon": "Sun",
+      "prompt": "¿Qué tanto te preocupa la sombra del nuevo edificio sobre la Séptima y las casas vecinas?",
+      "help": "Usa los botones del sol para ver la sombra. 1 = nada, 5 = mucho.",
+      "minLabel": "nada",
+      "maxLabel": "mucho"
+    },
+    {
+      "id": "primerpiso",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 3,
+      "icon": "Store",
+      "prompt": "¿Qué debería tener el primer piso, hacia la Séptima?",
+      "help": "Elige entre 1 y 3.",
+      "options": [
+        { "id": "cafes", "label": "Cafés y restaurantes", "icon": "Coffee" },
+        { "id": "vecinal", "label": "Comercio de barrio", "icon": "Store" },
+        { "id": "cultura", "label": "Espacio cultural", "icon": "Drama" },
+        { "id": "salud", "label": "Salud y cuidado", "icon": "HeartPulse" },
+        { "id": "bicis", "label": "Parqueadero de bicicletas", "icon": "Bike" },
+        { "id": "otro", "label": "Otro", "icon": "Pencil" }
+      ]
+    },
+    {
+      "id": "espacio",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 2,
+      "icon": "Trees",
+      "prompt": "¿Qué debería ganar la calle con este proyecto?",
+      "help": "Elige 1 o 2.",
+      "options": [
+        { "id": "plazoleta", "label": "Una plazoleta en la esquina", "icon": "Trees" },
+        { "id": "andenes", "label": "Andenes más anchos", "icon": "Footprints" },
+        { "id": "arboles", "label": "Más árboles", "icon": "Sprout" },
+        { "id": "paradero", "label": "Paradero cubierto", "icon": "Bus" },
+        { "id": "accesible", "label": "Acceso para sillas de ruedas", "icon": "Accessibility" }
+      ]
+    },
+    {
+      "id": "lenguaje",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 2,
+      "icon": "Palette",
+      "prompt": "Medidor de preferencias: ¿cómo debería verse el edificio?",
+      "help": "Elige 1 o 2. Quinta Camacho, al frente, es un sector de conservación en ladrillo.",
+      "options": [
+        { "id": "ladrillo", "label": "Ladrillo, como Quinta Camacho", "icon": "BrickWall" },
+        { "id": "moderno", "label": "Moderno", "icon": "Building2" },
+        { "id": "verde", "label": "Con fachadas verdes", "icon": "Leaf" },
+        { "id": "vidrio", "label": "Vidrio y transparencia", "icon": "Eye" },
+        { "id": "industrial", "label": "Industrial", "icon": "Factory" }
+      ]
+    },
+    {
+      "id": "ideas",
+      "section": "s3",
+      "type": "text",
+      "icon": "Lightbulb",
+      "prompt": "Comparte ideas u oportunidades que ves en este lote.",
+      "pin": true
+    },
+    {
+      "id": "preocupaciones",
+      "section": "s3",
+      "type": "text",
+      "icon": "TriangleAlert",
+      "prompt": "Comparte las preocupaciones que tengas.",
+      "pin": true
+    }
+  ]
+}

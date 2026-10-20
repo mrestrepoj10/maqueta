@@ -1,0 +1,231 @@
+{
+  "sections": [
+    {
+      "id": "s1",
+      "title": "Conociéndote"
+    },
+    {
+      "id": "s2",
+      "title": "Decisiones"
+    },
+    {
+      "id": "s3",
+      "title": "Preguntas abiertas"
+    }
+  ],
+  "questions": [
+    {
+      "id": "relacion",
+      "section": "s1",
+      "type": "single",
+      "icon": "Users",
+      "prompt": "¿Cuál es tu relación con Barrios Unidos?",
+      "options": [
+        {
+          "id": "propietario",
+          "label": "Vivo aquí, soy propietario",
+          "icon": "House"
+        },
+        {
+          "id": "arrendatario",
+          "label": "Vivo aquí, en arriendo",
+          "icon": "KeyRound"
+        },
+        {
+          "id": "comerciante",
+          "label": "Tengo un negocio o taller aquí",
+          "icon": "Store"
+        },
+        {
+          "id": "organizacion",
+          "label": "Hago parte de una JAC u organización",
+          "icon": "HandHeart"
+        },
+        {
+          "id": "visitante",
+          "label": "Trabajo o paso por aquí",
+          "icon": "Footprints"
+        }
+      ]
+    },
+    {
+      "id": "talleres",
+      "section": "s1",
+      "type": "single",
+      "icon": "CalendarX",
+      "prompt": "¿Has podido asistir a los encuentros presenciales de la Actuación Estratégica?",
+      "options": [
+        {
+          "id": "si",
+          "label": "Sí, al menos a uno",
+          "icon": "CircleCheck"
+        },
+        {
+          "id": "horario",
+          "label": "No, por el horario",
+          "icon": "CalendarX"
+        },
+        {
+          "id": "nosabia",
+          "label": "No sabía que existían",
+          "icon": "CircleHelp"
+        },
+        {
+          "id": "otra",
+          "label": "No, por otra razón",
+          "icon": "CircleX"
+        }
+      ]
+    },
+    {
+      "id": "prioridad",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 2,
+      "icon": "Scale",
+      "prompt": "¿Qué debería priorizar la Actuación Estratégica Calle 72?",
+      "help": "Elige 1 o 2.",
+      "options": [
+        {
+          "id": "permanecer",
+          "label": "Que los vecinos actuales puedan quedarse",
+          "icon": "House"
+        },
+        {
+          "id": "vis",
+          "label": "Vivienda social VIS y VIP",
+          "icon": "KeyRound"
+        },
+        {
+          "id": "comercio",
+          "label": "Proteger el comercio y los talleres",
+          "icon": "Store"
+        },
+        {
+          "id": "verde",
+          "label": "Parques y el Canal Salitre",
+          "icon": "Trees"
+        },
+        {
+          "id": "movilidad",
+          "label": "Conexión con el Metro",
+          "icon": "TrainFront"
+        },
+        {
+          "id": "seguridad",
+          "label": "Seguridad",
+          "icon": "ShieldCheck"
+        }
+      ]
+    },
+    {
+      "id": "altura",
+      "section": "s2",
+      "type": "scale",
+      "min": 1,
+      "max": 5,
+      "icon": "Ruler",
+      "prompt": "Hoy la mayoría de casas tiene 2 o 3 pisos. ¿Qué tan de acuerdo estás con la altura propuesta para este lote?",
+      "help": "Usa los botones del sol para ver la sombra. 1 = nada de acuerdo, 5 = muy de acuerdo.",
+      "minLabel": "nada",
+      "maxLabel": "muy de acuerdo"
+    },
+    {
+      "id": "primerpiso",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 3,
+      "icon": "Store",
+      "prompt": "¿Qué debería tener el primer piso de este lote?",
+      "help": "Elige entre 1 y 3.",
+      "options": [
+        {
+          "id": "talleres",
+          "label": "Talleres y comercio que ya existe",
+          "icon": "Hammer"
+        },
+        {
+          "id": "mercado",
+          "label": "Plaza de mercado",
+          "icon": "Apple"
+        },
+        {
+          "id": "cuidado",
+          "label": "Manzana del cuidado",
+          "icon": "HeartPulse"
+        },
+        {
+          "id": "jardin",
+          "label": "Jardín infantil",
+          "icon": "Baby"
+        },
+        {
+          "id": "cultura",
+          "label": "Espacio cultural",
+          "icon": "Drama"
+        },
+        {
+          "id": "otro",
+          "label": "Otro",
+          "icon": "Pencil"
+        }
+      ]
+    },
+    {
+      "id": "canal",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 2,
+      "icon": "Waves",
+      "plots": ["p3", "p2"],
+      "prompt": "Canal Salitre: ¿qué te gustaría encontrar en el corredor?",
+      "help": "Elige 1 o 2. Es la misma pregunta que RenoBo hizo en la jornada del 17 de octubre.",
+      "options": [
+        {
+          "id": "sendero",
+          "label": "Sendero peatonal y ciclorruta",
+          "icon": "Bike"
+        },
+        {
+          "id": "humedal",
+          "label": "Restauración ecológica",
+          "icon": "Sprout"
+        },
+        {
+          "id": "juegos",
+          "label": "Juegos infantiles",
+          "icon": "ToyBrick"
+        },
+        {
+          "id": "luz",
+          "label": "Iluminación y seguridad",
+          "icon": "ShieldCheck"
+        },
+        {
+          "id": "ferias",
+          "label": "Ferias y mercados",
+          "icon": "Carrot"
+        }
+      ]
+    },
+    {
+      "id": "ideas",
+      "section": "s3",
+      "type": "text",
+      "icon": "Lightbulb",
+      "prompt": "Comparte ideas u oportunidades que ves en este lote.",
+      "pin": true
+    },
+    {
+      "id": "preocupaciones",
+      "section": "s3",
+      "type": "text",
+      "icon": "TriangleAlert",
+      "prompt": "Comparte las preocupaciones que tengas.",
+      "pin": true
+    }
+  ]
+}

@@ -172,10 +172,17 @@ export function CesiumViewer({
       selectionIndicator: false,
       fullscreenButton: false,
       shadows: true,
+      // Draw only when something changes; continuous rendering pins weak GPUs at 100%.
+      requestRenderMode: true,
+      maximumRenderTimeChange: Number.POSITIVE_INFINITY,
     });
     viewer.scene.globe.depthTestAgainstTerrain = true;
-    viewer.shadowMap.softShadows = true;
-    viewer.shadowMap.size = 4096;
+    // ?lite: lighter shadows for slow machines and headless recording.
+    const lite =
+      typeof location !== "undefined" && new URLSearchParams(location.search).has("lite");
+    viewer.shadowMap.softShadows = !lite;
+    viewer.shadowMap.size = lite ? 1024 : 4096;
+    if (lite) viewer.resolutionScale = 0.75;
     viewer.shadowMap.maximumDistance = 3000;
     if (maquette) {
       // Paper-model look: white sky, no atmosphere or fog, soft shadows.
@@ -258,7 +265,7 @@ export function CesiumViewer({
       viewer.scene.primitives.add(tileset);
       handles.context = tileset;
       applyClipping(tileset, site.proposals, activeRef.current, phaseRef.current);
-      viewer.scene.requestRender();
+      renderFor(viewer);
 
       // Click to select a building: highlight it and report its metadata properties.
       const highlight = Color.fromCssColorString(maquette ? "#ffb547" : "#60a5fa");
@@ -300,7 +307,7 @@ export function CesiumViewer({
         } else {
           onSelectRef.current?.(null);
         }
-        viewer.scene.requestRender();
+        renderFor(viewer);
       }, ScreenSpaceEventType.LEFT_CLICK);
     })();
 
@@ -408,7 +415,7 @@ export function CesiumViewer({
           },
         });
       }
-      viewer.scene.requestRender();
+      renderFor(viewer);
     })().catch((err) => console.error("proposal sync failed", err));
 
     return () => {
@@ -437,7 +444,7 @@ export function CesiumViewer({
         },
       });
     }
-    viewer.scene.requestRender();
+    renderFor(viewer);
   }, [pins, selectedPin]);
 
   // Crosshair cursor while picking a point.
@@ -472,7 +479,7 @@ export function CesiumViewer({
     for (const [id, layer] of Object.entries(handles.layers)) {
       if (layer) layer.show = layers?.[id as LayerId] ?? true;
     }
-    handles.viewer.scene.requestRender();
+    renderFor(handles.viewer);
   }, [layers]);
 
   // Sun position from the hour slider. Bogotá is UTC-5; the date is the March equinox.
@@ -481,7 +488,7 @@ export function CesiumViewer({
     if (!viewer) return;
     viewer.clock.currentTime = JulianDate.fromDate(new Date(Date.UTC(2026, 2, 21, hour + 5)));
     viewer.clock.shouldAnimate = false;
-    viewer.scene.requestRender();
+    renderFor(viewer);
   }, [hour]);
 
   return <div ref={containerRef} className="absolute inset-0" />;
@@ -536,7 +543,7 @@ async function loadContextLayers(
   const register = (id: LayerId, layer: { show: boolean }) => {
     layer.show = layersRef.current?.[id] ?? true;
     handles.layers[id] = layer;
-    viewer.scene.requestRender();
+    renderFor(viewer);
   };
   const tasks: Promise<void>[] = [];
   const trees = site.context.trees;
@@ -797,4 +804,22 @@ function pinSource(viewer: Viewer): CustomDataSource {
   const ds = new CustomDataSource("pins");
   viewer.dataSources.add(ds);
   return ds;
+}
+
+/**
+ * In request-render mode a single requested frame is not enough after scene changes: entity
+ * geometry and clipping are built over several frames. Keep requesting frames for a moment.
+ */
+function renderFor(viewer: Viewer, ms = 2500) {
+  if (viewer.isDestroyed()) return;
+  viewer.scene.requestRender();
+  const start = performance.now();
+  const tick = () => {
+    if (viewer.isDestroyed()) return;
+    viewer.scene.requestRender();
+    const t = performance.now() - start;
+    // Keep going for `ms`, then until entity geometry is built (capped at 20 s).
+    if (t < ms || (!viewer.dataSourceDisplay.ready && t < 20000)) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
 }
