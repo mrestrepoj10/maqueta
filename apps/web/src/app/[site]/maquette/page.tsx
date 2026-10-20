@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { MaquetteView } from "@/components/viewer/maquette-view";
+import { loadParticipation } from "@/lib/participation";
 import { loadSite } from "@/lib/site";
 
 export async function generateStaticParams() {
@@ -23,5 +24,6 @@ async function Site({ params }: { params: PageProps<"/[site]/maquette">["params"
   } catch {
     notFound();
   }
-  return <MaquetteView site={site} />;
+  const participation = await loadParticipation(slug);
+  return <MaquetteView site={site} participation={participation} />;
 }

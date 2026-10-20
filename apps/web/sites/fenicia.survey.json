@@ -1,0 +1,132 @@
+{
+  "sections": [
+    { "id": "s1", "title": "Conociéndote" },
+    { "id": "s2", "title": "Decisiones" },
+    { "id": "s3", "title": "Preguntas abiertas" }
+  ],
+  "questions": [
+    {
+      "id": "relacion",
+      "section": "s1",
+      "type": "single",
+      "icon": "Users",
+      "prompt": "¿Cuál es tu relación con Las Aguas?",
+      "options": [
+        { "id": "propietario", "label": "Vivo aquí, soy propietario", "icon": "House" },
+        { "id": "arrendatario", "label": "Vivo aquí, en arriendo", "icon": "KeyRound" },
+        { "id": "comerciante", "label": "Tengo un negocio aquí", "icon": "Store" },
+        { "id": "estudiante", "label": "Estudio o trabajo en la zona", "icon": "GraduationCap" },
+        { "id": "visitante", "label": "Visito el sector", "icon": "Footprints" }
+      ]
+    },
+    {
+      "id": "talleres",
+      "section": "s1",
+      "type": "single",
+      "icon": "CalendarX",
+      "prompt": "¿Has podido asistir a los talleres presenciales del proyecto?",
+      "options": [
+        { "id": "si", "label": "Sí, al menos a uno", "icon": "CircleCheck" },
+        { "id": "horario", "label": "No, por el horario", "icon": "CalendarX" },
+        { "id": "nosabia", "label": "No sabía que existían", "icon": "CircleHelp" },
+        { "id": "otra", "label": "No, por otra razón", "icon": "CircleX" }
+      ]
+    },
+    {
+      "id": "reemplazo",
+      "section": "s2",
+      "type": "single",
+      "icon": "House",
+      "plots": ["uau1", "uau5"],
+      "prompt": "La etapa 1 de esta unidad aloja a quienes ya viven y trabajan aquí. ¿Responde a tus necesidades?",
+      "options": [
+        { "id": "si", "label": "Sí", "icon": "CircleCheck" },
+        { "id": "parcial", "label": "En parte", "icon": "CircleHelp" },
+        { "id": "no", "label": "No", "icon": "CircleX" },
+        { "id": "na", "label": "No aplica para mí", "icon": "Footprints" }
+      ]
+    },
+    {
+      "id": "primerpiso",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 3,
+      "icon": "Store",
+      "prompt": "¿Qué debería tener el primer piso, hacia la calle?",
+      "help": "Elige entre 1 y 3.",
+      "options": [
+        { "id": "vecinal", "label": "Comercio vecinal", "icon": "Store" },
+        { "id": "mercado", "label": "Plaza de mercado", "icon": "Apple" },
+        { "id": "cafes", "label": "Cafés y restaurantes", "icon": "Coffee" },
+        { "id": "salud", "label": "Salud y cuidado", "icon": "HeartPulse" },
+        { "id": "jardin", "label": "Jardín infantil", "icon": "Baby" },
+        { "id": "otro", "label": "Otro", "icon": "Pencil" }
+      ]
+    },
+    {
+      "id": "plaza",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 3,
+      "icon": "Trees",
+      "prompt": "Plaza central: ¿qué te gustaría encontrar?",
+      "help": "Elige entre 1 y 3.",
+      "options": [
+        { "id": "verde", "label": "Zona verde accesible", "icon": "Trees" },
+        { "id": "juegos", "label": "Juegos infantiles", "icon": "ToyBrick" },
+        { "id": "campesino", "label": "Mercado campesino", "icon": "Carrot" },
+        { "id": "gimnasio", "label": "Gimnasio al aire libre", "icon": "Dumbbell" },
+        { "id": "cultura", "label": "Escenario cultural", "icon": "Drama" },
+        { "id": "rio", "label": "Recuperar el río San Francisco", "icon": "Waves" }
+      ]
+    },
+    {
+      "id": "lenguaje",
+      "section": "s2",
+      "type": "multi",
+      "min": 1,
+      "max": 2,
+      "icon": "Palette",
+      "prompt": "Medidor de preferencias: ¿cómo deberían verse los edificios?",
+      "help": "Elige 1 o 2.",
+      "options": [
+        { "id": "ladrillo", "label": "Ladrillo tradicional", "icon": "BrickWall" },
+        { "id": "moderno", "label": "Moderno", "icon": "Building2" },
+        { "id": "verde", "label": "Con mucha vegetación", "icon": "Leaf" },
+        { "id": "colorido", "label": "Colorido", "icon": "Palette" },
+        { "id": "industrial", "label": "Industrial", "icon": "Factory" }
+      ]
+    },
+    {
+      "id": "sombra",
+      "section": "s2",
+      "type": "scale",
+      "min": 1,
+      "max": 5,
+      "icon": "Sun",
+      "plots": ["uau2"],
+      "prompt": "¿Qué tanto te preocupa la sombra del hotel de 40 pisos sobre la calle 20?",
+      "help": "Usa los botones del sol para ver la sombra. 1 = nada, 5 = mucho.",
+      "minLabel": "nada",
+      "maxLabel": "mucho"
+    },
+    {
+      "id": "ideas",
+      "section": "s3",
+      "type": "text",
+      "icon": "Lightbulb",
+      "prompt": "Comparte ideas u oportunidades que ves en este lote.",
+      "pin": true
+    },
+    {
+      "id": "preocupaciones",
+      "section": "s3",
+      "type": "text",
+      "icon": "TriangleAlert",
+      "prompt": "Comparte las preocupaciones que tengas.",
+      "pin": true
+    }
+  ]
+}

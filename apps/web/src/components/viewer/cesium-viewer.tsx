@@ -18,6 +18,7 @@ import {
   ColorGeometryInstanceAttribute,
   CornerType,
   CorridorGeometry,
+  CustomDataSource,
   createGooglePhotorealistic3DTileset,
   GeometryInstance,
   GroundPolylineGeometry,
@@ -72,7 +73,16 @@ export type ViewerProps = {
    * Null shows every volume.
    */
   phase?: number | null;
+  /** Community comments drawn as pins on the model. */
+  pins?: Pin[];
+  onSelectPin?: (id: string) => void;
+  selectedPin?: string | null;
+  /** When true, the next click on the model reports a point instead of selecting. */
+  pickPoint?: boolean;
+  onPickPoint?: (lonLat: [number, number]) => void;
 };
+
+export type Pin = { id: string; position: [number, number]; kind: string };
 
 export type LayerId = "trees" | "parks" | "lots" | "boundary" | "water" | "metro";
 
@@ -101,6 +111,11 @@ export function CesiumViewer({
   selectedPlot = null,
   focusPlot = null,
   phase = null,
+  pins = [],
+  onSelectPin,
+  selectedPin = null,
+  pickPoint = false,
+  onPickPoint,
 }: ViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const handlesRef = useRef<Handles | null>(null);
@@ -116,6 +131,8 @@ export function CesiumViewer({
   selectedPlotRef.current = selectedPlot;
   const phaseRef = useRef(phase);
   phaseRef.current = phase;
+  const pickRef = useRef({ pickPoint, onPickPoint, onSelectPin });
+  pickRef.current = { pickPoint, onPickPoint, onSelectPin };
 
   // Create the viewer once per site.
   useEffect(() => {
@@ -249,7 +266,23 @@ export function CesiumViewer({
       const handler = new ScreenSpaceEventHandler(viewer.scene.canvas);
       handles.pickHandler = handler;
       handler.setInputAction((e: ScreenSpaceEventHandler.PositionedEvent) => {
+        if (pickRef.current.pickPoint) {
+          const p = viewer.scene.pickPosition(e.position);
+          if (p) {
+            const c = Cartographic.fromCartesian(p);
+            pickRef.current.onPickPoint?.([
+              CesiumMath.toDegrees(c.longitude),
+              CesiumMath.toDegrees(c.latitude),
+            ]);
+          }
+          return;
+        }
         const picked = viewer.scene.pick(e.position);
+        const pinId: unknown = (picked as { id?: { id?: unknown } } | undefined)?.id?.id;
+        if (typeof pinId === "string" && pinId.startsWith("pin:")) {
+          pickRef.current.onSelectPin?.(pinId.slice(4));
+          return;
+        }
         if (selected && !selected.tileset.isDestroyed()) {
           selected.color = Color.WHITE;
         }
@@ -382,6 +415,36 @@ export function CesiumViewer({
       cancelled = true;
     };
   }, [site, activeProposals, variant, selectedPlot, phase]);
+
+  // Community pins: a dark ring with a yellow (idea) or orange (concern) dot, always on top.
+  useEffect(() => {
+    const viewer = handlesRef.current?.viewer;
+    if (!viewer) return;
+    const source = pinSource(viewer);
+    source.entities.removeAll();
+    for (const pin of pins) {
+      const selected = pin.id === selectedPin;
+      source.entities.add({
+        id: `pin:${pin.id}`,
+        position: Cartesian3.fromDegrees(pin.position[0], pin.position[1]),
+        point: {
+          pixelSize: selected ? 18 : 12,
+          color: Color.fromCssColorString(pin.kind === "preocupaciones" ? "#f28c28" : "#ffd60a"),
+          outlineColor: Color.fromCssColorString("#1f1d18"),
+          outlineWidth: selected ? 3 : 2,
+          heightReference: HeightReference.CLAMP_TO_GROUND,
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+        },
+      });
+    }
+    viewer.scene.requestRender();
+  }, [pins, selectedPin]);
+
+  // Crosshair cursor while picking a point.
+  useEffect(() => {
+    const canvas = handlesRef.current?.viewer.scene.canvas;
+    if (canvas) canvas.style.cursor = pickPoint ? "crosshair" : "";
+  }, [pickPoint]);
 
   // Fly to a plot.
   useEffect(() => {
@@ -725,4 +788,13 @@ function outerRings(fc: GeoJsonFc): [number, number][][] {
     }
   }
   return rings;
+}
+
+/** A dedicated data source for pins, so they never collide with proposal entities. */
+function pinSource(viewer: Viewer): CustomDataSource {
+  const existing = viewer.dataSources.getByName("pins")[0];
+  if (existing) return existing as CustomDataSource;
+  const ds = new CustomDataSource("pins");
+  viewer.dataSources.add(ds);
+  return ds;
 }

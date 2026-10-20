@@ -1,0 +1,4407 @@
+{
+  "simulated": true,
+  "note": "Respuestas simuladas para la demostración; no son datos reales.",
+  "responses": [
+    {
+      "id": "sim-285",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["vecinal"],
+        "plaza": ["juegos", "rio", "campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T20:06:13.048035"
+    },
+    {
+      "id": "sim-238",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "cafes"],
+        "plaza": ["rio", "campesino"],
+        "lenguaje": ["verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T21:13:01.086409"
+    },
+    {
+      "id": "sim-000",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["rio", "campesino"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-09-22T21:31:36.052739"
+    },
+    {
+      "id": "sim-073",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "jardin", "vecinal"],
+        "plaza": ["campesino", "verde"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T06:11:13.184939"
+    },
+    {
+      "id": "sim-185",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "jardin"],
+        "plaza": ["verde"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T07:32:20.885428"
+    },
+    {
+      "id": "sim-170",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["salud", "cafes", "mercado"],
+        "plaza": ["juegos", "rio", "verde"],
+        "lenguaje": ["verde"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T09:02:17.386771"
+    },
+    {
+      "id": "sim-177",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["salud", "cafes", "vecinal"],
+        "plaza": ["rio", "verde", "cultura"],
+        "lenguaje": ["moderno"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T09:31:39.458101"
+    },
+    {
+      "id": "sim-182",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal"],
+        "plaza": ["campesino", "juegos", "verde"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "no",
+        "preocupaciones": {
+          "text": "Las VIP de 10 pisos sin ascensor no sirven para personas mayores.",
+          "position": [-74.0662742, 4.6050578]
+        },
+        "ideas": {
+          "text": "Los puentes entre la UAU 1 y la UAU 5 pueden ser jardines comunitarios.",
+          "position": [-74.0662145, 4.6057805]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T19:02:21.822470"
+    },
+    {
+      "id": "sim-140",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "mercado", "jardin"],
+        "plaza": ["cultura"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T20:07:05.703987"
+    },
+    {
+      "id": "sim-227",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "jardin"],
+        "plaza": ["campesino", "rio", "cultura"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T20:12:55.601188"
+    },
+    {
+      "id": "sim-239",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["cultura"],
+        "lenguaje": ["verde", "industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T20:32:01.739863"
+    },
+    {
+      "id": "sim-021",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "jardin", "salud"],
+        "plaza": ["campesino", "juegos"],
+        "lenguaje": ["moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T21:02:10.129888"
+    },
+    {
+      "id": "sim-161",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "vecinal", "mercado"],
+        "plaza": ["campesino", "cultura", "juegos"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T21:22:40.549162"
+    },
+    {
+      "id": "sim-180",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "salud", "jardin"],
+        "plaza": ["verde", "cultura", "campesino"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T22:32:48.148268"
+    },
+    {
+      "id": "sim-120",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "salud"],
+        "plaza": ["verde"],
+        "lenguaje": ["moderno", "colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T22:34:43.310968"
+    },
+    {
+      "id": "sim-261",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal"],
+        "plaza": ["campesino"],
+        "lenguaje": ["moderno", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-23T23:57:41.457049"
+    },
+    {
+      "id": "sim-190",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "vecinal", "cafes"],
+        "plaza": ["campesino"],
+        "lenguaje": ["verde", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T04:20:26.399375"
+    },
+    {
+      "id": "sim-049",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal"],
+        "plaza": ["campesino", "verde", "cultura"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T09:56:00.823078"
+    },
+    {
+      "id": "sim-309",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["mercado", "salud", "jardin"],
+        "plaza": ["campesino", "verde"],
+        "lenguaje": ["verde", "colorido"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T19:21:28.568739"
+    },
+    {
+      "id": "sim-283",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado", "cafes"],
+        "plaza": ["gimnasio", "rio", "verde"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-24T21:32:12.687591"
+    },
+    {
+      "id": "sim-044",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["rio", "campesino", "verde"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T02:03:40.333803"
+    },
+    {
+      "id": "sim-111",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "salud"],
+        "plaza": ["cultura"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T19:13:29.211832"
+    },
+    {
+      "id": "sim-142",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["verde", "rio", "campesino"],
+        "lenguaje": ["industrial", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T19:27:28.929724"
+    },
+    {
+      "id": "sim-199",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["gimnasio", "campesino"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T20:07:31.823284"
+    },
+    {
+      "id": "sim-214",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado", "salud"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T20:54:33.470602"
+    },
+    {
+      "id": "sim-165",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "salud"],
+        "plaza": ["campesino", "cultura", "gimnasio"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T21:04:48.762109"
+    },
+    {
+      "id": "sim-079",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "primerpiso": ["cafes"],
+        "plaza": ["campesino", "verde", "juegos"],
+        "lenguaje": ["industrial", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-25T21:51:11.489955"
+    },
+    {
+      "id": "sim-037",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["vecinal"],
+        "plaza": ["verde", "cultura", "campesino"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T10:47:31.528406"
+    },
+    {
+      "id": "sim-146",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "mercado", "cafes"],
+        "plaza": ["juegos", "gimnasio", "cultura"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T19:53:46.745420"
+    },
+    {
+      "id": "sim-306",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["salud", "vecinal", "cafes"],
+        "plaza": ["cultura", "gimnasio", "rio"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T21:21:59.129775"
+    },
+    {
+      "id": "sim-151",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "mercado"],
+        "plaza": ["juegos", "gimnasio"],
+        "lenguaje": ["verde"],
+        "reemplazo": "si",
+        "preocupaciones": {
+          "text": "Los patios interiores deben tener luz; en el barrio siempre hemos tenido ventanas a la calle.",
+          "position": [-74.0656735, 4.6057454]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-26T22:33:11.550138"
+    },
+    {
+      "id": "sim-293",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["verde", "campesino", "rio"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T15:56:44.963241"
+    },
+    {
+      "id": "sim-094",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "vecinal", "salud"],
+        "plaza": ["cultura", "campesino"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T16:01:26.673215"
+    },
+    {
+      "id": "sim-209",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["mercado"],
+        "plaza": ["rio", "cultura", "verde"],
+        "lenguaje": ["colorido", "ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T19:14:43.112106"
+    },
+    {
+      "id": "sim-152",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "jardin", "vecinal"],
+        "plaza": ["verde", "campesino"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T19:28:02.232760"
+    },
+    {
+      "id": "sim-223",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["cultura", "gimnasio"],
+        "lenguaje": ["colorido", "moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T20:35:57.154524"
+    },
+    {
+      "id": "sim-099",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["salud"],
+        "plaza": ["gimnasio", "verde", "campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 5,
+        "preocupaciones": {
+          "text": "La torre de 40 pisos le quita el sol de la tarde a la calle 20 y a las casas de enfrente.",
+          "position": [-74.0663522, 4.60312]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T20:59:10.993239"
+    },
+    {
+      "id": "sim-273",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "cafes"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-09-27T22:56:57.854071"
+    },
+    {
+      "id": "sim-130",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "cafes", "salud"],
+        "plaza": ["rio", "juegos", "campesino"],
+        "lenguaje": ["colorido", "moderno"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T08:17:28.423210"
+    },
+    {
+      "id": "sim-147",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "vecinal", "salud"],
+        "plaza": ["gimnasio", "campesino", "cultura"],
+        "lenguaje": ["colorido", "ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T12:00:54.062979"
+    },
+    {
+      "id": "sim-197",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["salud", "jardin"],
+        "plaza": ["rio", "verde"],
+        "lenguaje": ["ladrillo", "industrial"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T19:44:05.427333"
+    },
+    {
+      "id": "sim-123",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "jardin", "mercado"],
+        "plaza": ["gimnasio", "campesino"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T20:02:29.881671"
+    },
+    {
+      "id": "sim-032",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "otra",
+        "primerpiso": ["salud", "mercado", "vecinal"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T20:17:06.204558"
+    },
+    {
+      "id": "sim-034",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["verde"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T21:12:00.490978"
+    },
+    {
+      "id": "sim-249",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "jardin"],
+        "plaza": ["juegos", "verde", "campesino"],
+        "lenguaje": ["ladrillo", "industrial"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T22:23:40.667627"
+    },
+    {
+      "id": "sim-119",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "mercado", "cafes"],
+        "plaza": ["verde", "cultura", "rio"],
+        "lenguaje": ["verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-09-28T22:48:07.781716"
+    },
+    {
+      "id": "sim-092",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "salud"],
+        "plaza": ["campesino", "verde", "gimnasio"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T01:26:50.597580"
+    },
+    {
+      "id": "sim-166",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["jardin"],
+        "plaza": ["verde", "rio", "campesino"],
+        "lenguaje": ["colorido", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T10:02:56.328834"
+    },
+    {
+      "id": "sim-271",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["salud", "mercado"],
+        "plaza": ["rio"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T10:25:32.769617"
+    },
+    {
+      "id": "sim-082",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "vecinal", "salud"],
+        "plaza": ["juegos"],
+        "lenguaje": ["ladrillo", "colorido"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T14:03:28.667157"
+    },
+    {
+      "id": "sim-087",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["mercado"],
+        "plaza": ["rio", "cultura", "verde"],
+        "lenguaje": ["colorido"],
+        "ideas": {
+          "text": "La plaza central debería estar abierta a todo el barrio, no solo a la universidad.",
+          "position": [-74.065452, 4.6034518]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T19:27:04.213173"
+    },
+    {
+      "id": "sim-220",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["salud"],
+        "plaza": ["cultura", "verde", "campesino"],
+        "lenguaje": ["colorido"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T20:02:36.148306"
+    },
+    {
+      "id": "sim-277",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "mercado", "cafes"],
+        "plaza": ["verde", "juegos", "campesino"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T20:12:34.346190"
+    },
+    {
+      "id": "sim-075",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "cafes", "mercado"],
+        "plaza": ["rio", "campesino", "cultura"],
+        "lenguaje": ["verde", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T20:36:01.655839"
+    },
+    {
+      "id": "sim-134",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["cafes"],
+        "plaza": ["campesino", "cultura", "rio"],
+        "lenguaje": ["moderno", "colorido"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T22:04:00.396240"
+    },
+    {
+      "id": "sim-296",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal"],
+        "plaza": ["cultura", "verde", "juegos"],
+        "lenguaje": ["colorido", "moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-09-29T22:08:05.721468"
+    },
+    {
+      "id": "sim-093",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "mercado", "salud"],
+        "plaza": ["gimnasio", "verde"],
+        "lenguaje": ["colorido", "ladrillo"],
+        "preocupaciones": {
+          "text": "La universidad crece y el barrio se vuelve solo para estudiantes.",
+          "position": [-74.0649292, 4.6041106]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T04:35:57.028942"
+    },
+    {
+      "id": "sim-155",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["rio", "verde", "juegos"],
+        "lenguaje": ["verde", "ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T09:18:26.691336"
+    },
+    {
+      "id": "sim-257",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "mercado", "vecinal"],
+        "plaza": ["campesino", "verde", "juegos"],
+        "lenguaje": ["moderno"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T19:09:14.852795"
+    },
+    {
+      "id": "sim-102",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "salud"],
+        "plaza": ["gimnasio", "verde"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T19:46:38.135036"
+    },
+    {
+      "id": "sim-039",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["jardin", "cafes", "vecinal"],
+        "plaza": ["campesino", "juegos", "gimnasio"],
+        "lenguaje": ["industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-09-30T21:15:04.199449"
+    },
+    {
+      "id": "sim-069",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["jardin"],
+        "plaza": ["juegos", "rio"],
+        "lenguaje": ["verde", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T10:31:53.353155"
+    },
+    {
+      "id": "sim-195",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado", "cafes"],
+        "plaza": ["rio", "campesino"],
+        "lenguaje": ["moderno"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T14:46:08.754163"
+    },
+    {
+      "id": "sim-040",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "cafes", "jardin"],
+        "plaza": ["rio", "verde", "campesino"],
+        "lenguaje": ["ladrillo", "colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T19:02:04.277602"
+    },
+    {
+      "id": "sim-311",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "salud", "jardin"],
+        "plaza": ["campesino"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T19:16:09.732858"
+    },
+    {
+      "id": "sim-144",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "vecinal", "cafes"],
+        "plaza": ["verde", "campesino", "cultura"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T20:36:33.000768"
+    },
+    {
+      "id": "sim-148",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "salud"],
+        "plaza": ["verde"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T20:36:55.467822"
+    },
+    {
+      "id": "sim-250",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["salud", "vecinal", "mercado"],
+        "plaza": ["juegos", "gimnasio", "verde"],
+        "lenguaje": ["verde", "ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T21:14:54.110583"
+    },
+    {
+      "id": "sim-016",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "cafes", "mercado"],
+        "plaza": ["juegos"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T21:29:58.543163"
+    },
+    {
+      "id": "sim-188",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["salud", "vecinal"],
+        "plaza": ["verde", "cultura", "campesino"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T22:19:02.871642"
+    },
+    {
+      "id": "sim-167",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["jardin", "mercado", "salud"],
+        "plaza": ["campesino", "gimnasio", "rio"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-01T23:59:19.569435"
+    },
+    {
+      "id": "sim-139",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "jardin", "mercado"],
+        "plaza": ["campesino"],
+        "lenguaje": ["verde", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T02:21:03.863949"
+    },
+    {
+      "id": "sim-038",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["salud", "mercado", "vecinal"],
+        "plaza": ["rio", "campesino", "juegos"],
+        "lenguaje": ["moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T20:22:27.403690"
+    },
+    {
+      "id": "sim-198",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["salud"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T20:42:27.171307"
+    },
+    {
+      "id": "sim-235",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["salud"],
+        "plaza": ["rio", "verde"],
+        "lenguaje": ["ladrillo", "colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T21:29:14.468457"
+    },
+    {
+      "id": "sim-145",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T21:31:11.371135"
+    },
+    {
+      "id": "sim-255",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "mercado", "cafes"],
+        "plaza": ["juegos", "cultura", "rio"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-02T22:36:26.729252"
+    },
+    {
+      "id": "sim-078",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal"],
+        "plaza": ["juegos", "gimnasio", "verde"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T02:32:32.339133"
+    },
+    {
+      "id": "sim-052",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["jardin"],
+        "plaza": ["rio"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-03T22:06:44.836946"
+    },
+    {
+      "id": "sim-163",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado"],
+        "plaza": ["juegos", "cultura"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T03:14:44.482599"
+    },
+    {
+      "id": "sim-024",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["cultura"],
+        "lenguaje": ["colorido", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T10:05:43.812231"
+    },
+    {
+      "id": "sim-218",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["salud"],
+        "plaza": ["verde", "cultura", "juegos"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T15:41:33.824791"
+    },
+    {
+      "id": "sim-187",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "cafes", "mercado"],
+        "plaza": ["campesino", "cultura"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T16:51:45.090962"
+    },
+    {
+      "id": "sim-303",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado"],
+        "plaza": ["verde", "juegos", "rio"],
+        "lenguaje": ["verde", "moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T20:53:51.918268"
+    },
+    {
+      "id": "sim-270",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["jardin", "vecinal", "salud"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["industrial", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T21:04:54.060436"
+    },
+    {
+      "id": "sim-112",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "cafes", "mercado"],
+        "plaza": ["verde"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T21:40:41.847547"
+    },
+    {
+      "id": "sim-228",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["mercado", "jardin"],
+        "plaza": ["juegos", "verde"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-04T22:02:59.968859"
+    },
+    {
+      "id": "sim-156",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "cafes"],
+        "plaza": ["verde"],
+        "lenguaje": ["verde", "moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T00:31:19.425957"
+    },
+    {
+      "id": "sim-113",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["mercado"],
+        "plaza": ["verde", "campesino", "juegos"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T01:53:18.574373"
+    },
+    {
+      "id": "sim-053",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado"],
+        "plaza": ["rio", "campesino", "gimnasio"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T20:13:42.589744"
+    },
+    {
+      "id": "sim-135",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "mercado", "salud"],
+        "plaza": ["juegos"],
+        "lenguaje": ["verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T20:48:31.282257"
+    },
+    {
+      "id": "sim-036",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado"],
+        "plaza": ["gimnasio", "verde", "rio"],
+        "lenguaje": ["colorido", "verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T20:49:07.595787"
+    },
+    {
+      "id": "sim-126",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["salud", "vecinal", "jardin"],
+        "plaza": ["campesino"],
+        "lenguaje": ["verde", "ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T21:29:20.779179"
+    },
+    {
+      "id": "sim-115",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["cafes", "vecinal", "jardin"],
+        "plaza": ["juegos", "campesino"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T21:52:28.124112"
+    },
+    {
+      "id": "sim-158",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["verde", "industrial"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T22:22:42.075608"
+    },
+    {
+      "id": "sim-030",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal"],
+        "plaza": ["campesino"],
+        "lenguaje": ["colorido", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-05T22:46:25.100393"
+    },
+    {
+      "id": "sim-184",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "mercado", "vecinal"],
+        "plaza": ["campesino", "verde", "cultura"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T08:34:17.357092"
+    },
+    {
+      "id": "sim-074",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "jardin", "mercado"],
+        "plaza": ["verde", "rio", "cultura"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T18:17:53.269838"
+    },
+    {
+      "id": "sim-258",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["jardin", "mercado", "vecinal"],
+        "plaza": ["rio", "verde"],
+        "lenguaje": ["moderno", "verde"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:05:53.742432"
+    },
+    {
+      "id": "sim-150",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["jardin", "salud"],
+        "plaza": ["cultura", "juegos", "verde"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:11:39.751153"
+    },
+    {
+      "id": "sim-110",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["campesino", "verde", "cultura"],
+        "lenguaje": ["industrial", "verde"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:26:14.221070"
+    },
+    {
+      "id": "sim-091",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["jardin", "mercado", "salud"],
+        "plaza": ["campesino", "juegos"],
+        "lenguaje": ["colorido"],
+        "sombra": 3,
+        "preocupaciones": {
+          "text": "Con el hotel van a subir los arriendos y los que vivimos en arriendo no tenemos dónde ir.",
+          "position": [-74.0662031, 4.6032193]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:51:53.455614"
+    },
+    {
+      "id": "sim-295",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado", "salud"],
+        "plaza": ["verde", "juegos"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T19:57:04.684795"
+    },
+    {
+      "id": "sim-244",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "mercado", "vecinal"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T21:15:28.929569"
+    },
+    {
+      "id": "sim-138",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "salud", "cafes"],
+        "plaza": ["verde", "juegos", "campesino"],
+        "lenguaje": ["moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T21:23:19.208701"
+    },
+    {
+      "id": "sim-299",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "vecinal", "cafes"],
+        "plaza": ["verde", "campesino", "juegos"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T21:37:54.029351"
+    },
+    {
+      "id": "sim-072",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["jardin", "salud"],
+        "plaza": ["verde"],
+        "lenguaje": ["industrial", "moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T21:50:40.333445"
+    },
+    {
+      "id": "sim-133",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes", "salud"],
+        "plaza": ["campesino"],
+        "lenguaje": ["colorido", "verde"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T22:11:21.567279"
+    },
+    {
+      "id": "sim-089",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "primerpiso": ["cafes", "salud", "mercado"],
+        "plaza": ["verde", "cultura"],
+        "lenguaje": ["moderno", "colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-06T22:53:26.375310"
+    },
+    {
+      "id": "sim-065",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["salud", "mercado"],
+        "plaza": ["rio", "verde"],
+        "lenguaje": ["verde"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T01:03:00.467434"
+    },
+    {
+      "id": "sim-050",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["salud"],
+        "plaza": ["cultura", "verde", "campesino"],
+        "lenguaje": ["verde"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T02:32:04.142762"
+    },
+    {
+      "id": "sim-267",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "jardin", "salud"],
+        "plaza": ["gimnasio", "juegos"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T02:56:52.347006"
+    },
+    {
+      "id": "sim-002",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado", "jardin"],
+        "plaza": ["verde", "campesino", "juegos"],
+        "lenguaje": ["moderno", "colorido"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T05:35:59.733033"
+    },
+    {
+      "id": "sim-254",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["jardin"],
+        "plaza": ["cultura", "gimnasio", "rio"],
+        "lenguaje": ["verde"],
+        "ideas": {
+          "text": "Un escenario cultural en la plaza para conciertos y ferias del barrio.",
+          "position": [-74.0661024, 4.6035898]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T06:30:55.191632"
+    },
+    {
+      "id": "sim-215",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["gimnasio", "rio"],
+        "lenguaje": ["industrial", "colorido"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T09:38:08.282193"
+    },
+    {
+      "id": "sim-290",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["jardin", "vecinal", "salud"],
+        "plaza": ["verde", "campesino", "gimnasio"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T09:45:29.543600"
+    },
+    {
+      "id": "sim-242",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["salud", "jardin"],
+        "plaza": ["campesino", "juegos", "verde"],
+        "lenguaje": ["verde", "ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T11:44:00.309752"
+    },
+    {
+      "id": "sim-286",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal", "cafes"],
+        "plaza": ["verde"],
+        "lenguaje": ["colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T13:39:54.027840"
+    },
+    {
+      "id": "sim-041",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "cafes"],
+        "plaza": ["rio", "campesino", "gimnasio"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T14:33:14.990293"
+    },
+    {
+      "id": "sim-274",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["salud", "mercado"],
+        "plaza": ["verde", "juegos"],
+        "lenguaje": ["verde", "colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T14:55:07.869153"
+    },
+    {
+      "id": "sim-159",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal"],
+        "plaza": ["rio", "verde"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T15:47:11.693670"
+    },
+    {
+      "id": "sim-085",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["salud"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T16:28:21.114962"
+    },
+    {
+      "id": "sim-084",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "cafes", "jardin"],
+        "plaza": ["cultura", "verde", "campesino"],
+        "lenguaje": ["moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T17:31:43.240760"
+    },
+    {
+      "id": "sim-081",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "jardin"],
+        "plaza": ["rio", "gimnasio", "cultura"],
+        "lenguaje": ["colorido"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T18:23:59.779646"
+    },
+    {
+      "id": "sim-237",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["verde", "rio", "campesino"],
+        "lenguaje": ["verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:00:53.348329"
+    },
+    {
+      "id": "sim-288",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "jardin"],
+        "plaza": ["verde", "campesino"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:06:23.048373"
+    },
+    {
+      "id": "sim-304",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "primerpiso": ["mercado", "vecinal", "jardin"],
+        "plaza": ["juegos", "gimnasio"],
+        "lenguaje": ["verde", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:07:28.949209"
+    },
+    {
+      "id": "sim-301",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["cafes"],
+        "plaza": ["gimnasio", "verde", "campesino"],
+        "lenguaje": ["moderno", "industrial"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:08:37.006440"
+    },
+    {
+      "id": "sim-014",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["jardin"],
+        "plaza": ["rio", "verde"],
+        "lenguaje": ["colorido", "moderno"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:12:10.368181"
+    },
+    {
+      "id": "sim-247",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal"],
+        "plaza": ["cultura"],
+        "lenguaje": ["verde", "colorido"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:12:38.478316"
+    },
+    {
+      "id": "sim-096",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "mercado", "salud"],
+        "plaza": ["campesino", "cultura"],
+        "lenguaje": ["industrial", "verde"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:21:47.490391"
+    },
+    {
+      "id": "sim-269",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "mercado", "jardin"],
+        "plaza": ["campesino", "juegos", "verde"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:41:56.931715"
+    },
+    {
+      "id": "sim-229",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "salud", "vecinal"],
+        "plaza": ["verde", "juegos"],
+        "lenguaje": ["verde"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:44:33.775000"
+    },
+    {
+      "id": "sim-305",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "salud"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["verde"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T19:45:56.246762"
+    },
+    {
+      "id": "sim-029",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "vecinal", "jardin"],
+        "plaza": ["campesino", "cultura"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T20:00:23.178017"
+    },
+    {
+      "id": "sim-212",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "salud"],
+        "plaza": ["rio"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T20:35:24.390594"
+    },
+    {
+      "id": "sim-118",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "otra",
+        "primerpiso": ["cafes"],
+        "plaza": ["cultura"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T20:52:37.748360"
+    },
+    {
+      "id": "sim-192",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "otra",
+        "primerpiso": ["salud"],
+        "plaza": ["verde"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T20:57:55.820625"
+    },
+    {
+      "id": "sim-143",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "jardin", "salud"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:09:27.590693"
+    },
+    {
+      "id": "sim-193",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "jardin", "salud"],
+        "plaza": ["juegos", "cultura"],
+        "lenguaje": ["colorido", "ladrillo"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:09:55.227821"
+    },
+    {
+      "id": "sim-226",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud"],
+        "plaza": ["verde", "rio", "campesino"],
+        "lenguaje": ["colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:22:30.552213"
+    },
+    {
+      "id": "sim-063",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "salud"],
+        "plaza": ["gimnasio", "rio", "verde"],
+        "lenguaje": ["colorido", "ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:31:20.589527"
+    },
+    {
+      "id": "sim-026",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:38:58.663582"
+    },
+    {
+      "id": "sim-008",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["mercado"],
+        "plaza": ["campesino", "verde"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:51:18.432323"
+    },
+    {
+      "id": "sim-183",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal", "salud"],
+        "plaza": ["juegos", "campesino", "cultura"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:51:45.299396"
+    },
+    {
+      "id": "sim-217",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "salud", "jardin"],
+        "plaza": ["juegos", "rio", "gimnasio"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T21:54:43.635616"
+    },
+    {
+      "id": "sim-246",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes"],
+        "plaza": ["verde", "campesino", "gimnasio"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T22:02:52.836924"
+    },
+    {
+      "id": "sim-219",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["cafes"],
+        "plaza": ["gimnasio", "verde"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T22:14:00.249965"
+    },
+    {
+      "id": "sim-233",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud"],
+        "plaza": ["rio", "verde", "campesino"],
+        "lenguaje": ["ladrillo", "industrial"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T22:22:37.339123"
+    },
+    {
+      "id": "sim-186",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado"],
+        "plaza": ["juegos", "verde", "rio"],
+        "lenguaje": ["verde", "ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T22:35:30.950880"
+    },
+    {
+      "id": "sim-294",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "mercado", "salud"],
+        "plaza": ["rio", "campesino"],
+        "lenguaje": ["colorido", "verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T22:39:53.449444"
+    },
+    {
+      "id": "sim-080",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["salud"],
+        "plaza": ["verde", "juegos", "gimnasio"],
+        "lenguaje": ["verde", "moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T22:46:54.070914"
+    },
+    {
+      "id": "sim-048",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado"],
+        "plaza": ["campesino", "verde", "gimnasio"],
+        "lenguaje": ["verde", "industrial"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T23:03:43.041854"
+    },
+    {
+      "id": "sim-132",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "vecinal", "cafes"],
+        "plaza": ["cultura", "juegos", "campesino"],
+        "lenguaje": ["verde"],
+        "preocupaciones": {
+          "text": "Si la universidad pone sus propios cafés, nuestros negocios pierden a sus clientes.",
+          "position": [-74.0650969, 4.6035059]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-07T23:54:30.924285"
+    },
+    {
+      "id": "sim-043",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado", "vecinal"],
+        "plaza": ["juegos", "verde"],
+        "lenguaje": ["moderno", "verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T02:13:38.286104"
+    },
+    {
+      "id": "sim-023",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "vecinal", "mercado"],
+        "plaza": ["rio"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T02:21:45.214187"
+    },
+    {
+      "id": "sim-176",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "cafes", "jardin"],
+        "plaza": ["rio", "cultura"],
+        "lenguaje": ["colorido", "ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T02:26:47.997532"
+    },
+    {
+      "id": "sim-302",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado", "cafes"],
+        "plaza": ["gimnasio", "campesino", "verde"],
+        "lenguaje": ["verde"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T09:34:40.218405"
+    },
+    {
+      "id": "sim-202",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["vecinal"],
+        "plaza": ["juegos"],
+        "lenguaje": ["ladrillo", "moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T10:06:07.906889"
+    },
+    {
+      "id": "sim-284",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["rio"],
+        "lenguaje": ["verde"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T16:24:13.663639"
+    },
+    {
+      "id": "sim-088",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "vecinal", "cafes"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T16:24:23.733547"
+    },
+    {
+      "id": "sim-200",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "salud", "vecinal"],
+        "plaza": ["juegos", "cultura", "campesino"],
+        "lenguaje": ["ladrillo", "colorido"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:03:02.410106"
+    },
+    {
+      "id": "sim-125",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "vecinal"],
+        "plaza": ["gimnasio", "rio", "cultura"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:13:43.919022"
+    },
+    {
+      "id": "sim-222",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "cafes", "salud"],
+        "plaza": ["verde"],
+        "lenguaje": ["verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:15:52.525566"
+    },
+    {
+      "id": "sim-109",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "vecinal", "cafes"],
+        "plaza": ["campesino", "verde", "cultura"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:36:56.622305"
+    },
+    {
+      "id": "sim-064",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "mercado", "jardin"],
+        "plaza": ["campesino", "gimnasio", "cultura"],
+        "lenguaje": ["moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:53:56.440175"
+    },
+    {
+      "id": "sim-107",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "cafes", "jardin"],
+        "plaza": ["juegos"],
+        "lenguaje": ["ladrillo", "colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:56:21.347202"
+    },
+    {
+      "id": "sim-234",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "jardin", "vecinal"],
+        "plaza": ["cultura"],
+        "lenguaje": ["colorido", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T19:59:27.629440"
+    },
+    {
+      "id": "sim-262",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado"],
+        "plaza": ["juegos"],
+        "lenguaje": ["colorido", "industrial"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:07:26.578058"
+    },
+    {
+      "id": "sim-009",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "vecinal"],
+        "plaza": ["verde"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:31:48.484974"
+    },
+    {
+      "id": "sim-230",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["salud", "cafes"],
+        "plaza": ["cultura", "verde", "rio"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:43:16.663553"
+    },
+    {
+      "id": "sim-181",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "cafes", "jardin"],
+        "plaza": ["rio"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:47:39.685075"
+    },
+    {
+      "id": "sim-243",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["salud", "jardin", "vecinal"],
+        "plaza": ["verde", "campesino"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:48:29.331591"
+    },
+    {
+      "id": "sim-025",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "cafes"],
+        "plaza": ["juegos"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T20:58:26.807602"
+    },
+    {
+      "id": "sim-175",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["gimnasio", "rio", "campesino"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T21:04:25.452083"
+    },
+    {
+      "id": "sim-045",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["verde", "colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T21:16:17.420566"
+    },
+    {
+      "id": "sim-122",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "cafes"],
+        "plaza": ["juegos", "verde", "campesino"],
+        "lenguaje": ["verde", "ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T21:24:36.416910"
+    },
+    {
+      "id": "sim-172",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "vecinal"],
+        "plaza": ["verde", "juegos", "gimnasio"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T21:37:52.091571"
+    },
+    {
+      "id": "sim-292",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["jardin"],
+        "plaza": ["verde", "cultura", "rio"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T21:38:44.617588"
+    },
+    {
+      "id": "sim-207",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "primerpiso": ["cafes"],
+        "plaza": ["gimnasio", "campesino"],
+        "lenguaje": ["verde", "industrial"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T21:42:41.783600"
+    },
+    {
+      "id": "sim-054",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["verde", "cultura"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T22:12:51.558904"
+    },
+    {
+      "id": "sim-279",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "salud", "cafes"],
+        "plaza": ["rio"],
+        "lenguaje": ["colorido", "industrial"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T22:41:30.392959"
+    },
+    {
+      "id": "sim-071",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "salud", "vecinal"],
+        "plaza": ["campesino", "cultura"],
+        "lenguaje": ["ladrillo", "industrial"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T22:42:41.977393"
+    },
+    {
+      "id": "sim-047",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "salud", "vecinal"],
+        "plaza": ["juegos", "campesino"],
+        "lenguaje": ["verde", "moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T22:44:36.386627"
+    },
+    {
+      "id": "sim-100",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["verde", "campesino", "gimnasio"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-08T23:13:21.605815"
+    },
+    {
+      "id": "sim-022",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado"],
+        "plaza": ["cultura", "campesino", "verde"],
+        "lenguaje": ["moderno", "colorido"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T02:00:08.902672"
+    },
+    {
+      "id": "sim-095",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes"],
+        "plaza": ["campesino"],
+        "lenguaje": ["industrial"],
+        "sombra": 4,
+        "preocupaciones": {
+          "text": "Si cierran la carrera 1 durante la obra, mi tienda no aguanta dos años sin clientes.",
+          "position": [-74.0666043, 4.603395]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T02:37:16.530392"
+    },
+    {
+      "id": "sim-225",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["verde"],
+        "lenguaje": ["moderno", "verde"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T02:56:41.640696"
+    },
+    {
+      "id": "sim-221",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "salud", "vecinal"],
+        "plaza": ["verde", "rio", "campesino"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T03:11:08.958897"
+    },
+    {
+      "id": "sim-191",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["verde"],
+        "lenguaje": ["verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T03:36:06.869661"
+    },
+    {
+      "id": "sim-179",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "salud", "vecinal"],
+        "plaza": ["cultura", "gimnasio", "verde"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T06:37:43.298077"
+    },
+    {
+      "id": "sim-307",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["rio", "juegos", "campesino"],
+        "lenguaje": ["industrial", "verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T11:41:52.369644"
+    },
+    {
+      "id": "sim-164",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes", "mercado"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["moderno", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T15:40:56.922131"
+    },
+    {
+      "id": "sim-291",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "jardin", "mercado"],
+        "plaza": ["cultura", "verde", "campesino"],
+        "lenguaje": ["moderno", "colorido"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T15:42:56.582083"
+    },
+    {
+      "id": "sim-012",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado"],
+        "plaza": ["juegos", "verde", "cultura"],
+        "lenguaje": ["verde", "moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T18:19:24.590076"
+    },
+    {
+      "id": "sim-264",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "salud"],
+        "plaza": ["verde"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T18:57:30.968805"
+    },
+    {
+      "id": "sim-056",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "jardin"],
+        "plaza": ["campesino", "gimnasio", "cultura"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:01:59.485274"
+    },
+    {
+      "id": "sim-278",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["gimnasio", "cultura"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:05:10.464368"
+    },
+    {
+      "id": "sim-005",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "vecinal"],
+        "plaza": ["verde", "campesino", "juegos"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:11:00.128354"
+    },
+    {
+      "id": "sim-276",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["jardin", "vecinal", "mercado"],
+        "plaza": ["juegos", "verde", "rio"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 5,
+        "preocupaciones": {
+          "text": "¿Dónde van a parquear los huéspedes del hotel? Ya no hay cupos en el barrio.",
+          "position": [-74.0661839, 4.6042195]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:12:01.079630"
+    },
+    {
+      "id": "sim-162",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "jardin", "mercado"],
+        "plaza": ["gimnasio", "cultura", "verde"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:16:47.293270"
+    },
+    {
+      "id": "sim-104",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "jardin"],
+        "plaza": ["campesino", "juegos"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:18:16.531094"
+    },
+    {
+      "id": "sim-097",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["verde", "gimnasio"],
+        "lenguaje": ["industrial", "colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:30:47.468820"
+    },
+    {
+      "id": "sim-117",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["mercado"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T19:52:15.412570"
+    },
+    {
+      "id": "sim-058",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["vecinal"],
+        "plaza": ["rio", "campesino", "verde"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:17:13.144540"
+    },
+    {
+      "id": "sim-114",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["salud", "vecinal", "mercado"],
+        "plaza": ["verde", "rio", "juegos"],
+        "lenguaje": ["ladrillo", "industrial"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:22:18.343678"
+    },
+    {
+      "id": "sim-298",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "salud"],
+        "plaza": ["juegos", "gimnasio"],
+        "lenguaje": ["verde"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:28:40.502279"
+    },
+    {
+      "id": "sim-124",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "jardin", "mercado"],
+        "plaza": ["juegos", "gimnasio", "campesino"],
+        "lenguaje": ["moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:38:43.381270"
+    },
+    {
+      "id": "sim-083",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["salud", "mercado", "vecinal"],
+        "plaza": ["campesino"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:40:24.602420"
+    },
+    {
+      "id": "sim-282",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado", "vecinal"],
+        "plaza": ["campesino", "verde", "cultura"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na",
+        "ideas": {
+          "text": "Aprovechar la pendiente para terrazas verdes que se vean desde la Circunvalar.",
+          "position": [-74.0667256, 4.6056666]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:47:12.682572"
+    },
+    {
+      "id": "sim-062",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "vecinal", "jardin"],
+        "plaza": ["juegos", "verde", "campesino"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:47:15.472002"
+    },
+    {
+      "id": "sim-055",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "vecinal", "salud"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:48:40.195780"
+    },
+    {
+      "id": "sim-289",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "jardin", "cafes"],
+        "plaza": ["campesino", "rio", "juegos"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:48:47.817688"
+    },
+    {
+      "id": "sim-268",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin"],
+        "plaza": ["verde", "cultura", "juegos"],
+        "lenguaje": ["ladrillo", "colorido"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:51:11.697160"
+    },
+    {
+      "id": "sim-263",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "jardin", "vecinal"],
+        "plaza": ["campesino", "verde", "rio"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 3,
+        "ideas": {
+          "text": "Que la plataforma tenga locales pequeños para los comerciantes que ya están aquí, a precio justo.",
+          "position": [-74.0671111, 4.6046797]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:51:56.356832"
+    },
+    {
+      "id": "sim-171",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud"],
+        "plaza": ["cultura", "campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T20:59:35.708236"
+    },
+    {
+      "id": "sim-153",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "salud", "mercado"],
+        "plaza": ["gimnasio", "cultura"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:03:18.883244"
+    },
+    {
+      "id": "sim-260",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "cafes", "mercado"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:06:45.522340"
+    },
+    {
+      "id": "sim-068",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["cultura", "juegos"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "ideas": {
+          "text": "Recuperar el río San Francisco con un sendero entre la plaza y la avenida Jiménez.",
+          "position": [-74.0647933, 4.6033799]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:12:26.733906"
+    },
+    {
+      "id": "sim-157",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "salud"],
+        "plaza": ["campesino", "verde"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:15:33.684723"
+    },
+    {
+      "id": "sim-252",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "cafes"],
+        "plaza": ["campesino", "verde", "juegos"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:17:17.111426"
+    },
+    {
+      "id": "sim-281",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado"],
+        "plaza": ["cultura", "campesino", "verde"],
+        "lenguaje": ["industrial", "ladrillo"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:34:12.236849"
+    },
+    {
+      "id": "sim-006",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["salud"],
+        "plaza": ["verde"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:39:09.798592"
+    },
+    {
+      "id": "sim-203",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "salud"],
+        "plaza": ["rio", "verde"],
+        "lenguaje": ["verde", "moderno"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:40:29.534972"
+    },
+    {
+      "id": "sim-121",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal", "jardin"],
+        "plaza": ["juegos"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T21:51:17.204187"
+    },
+    {
+      "id": "sim-275",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado"],
+        "plaza": ["cultura", "rio", "verde"],
+        "lenguaje": ["colorido", "industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:18:12.329528"
+    },
+    {
+      "id": "sim-057",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "mercado"],
+        "plaza": ["rio", "gimnasio"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:18:24.695819"
+    },
+    {
+      "id": "sim-256",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "salud", "cafes"],
+        "plaza": ["campesino", "cultura", "gimnasio"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:18:53.901288"
+    },
+    {
+      "id": "sim-003",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "vecinal", "cafes"],
+        "plaza": ["cultura", "verde", "rio"],
+        "lenguaje": ["industrial", "colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:27:07.607380"
+    },
+    {
+      "id": "sim-131",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "mercado"],
+        "plaza": ["juegos", "cultura", "verde"],
+        "lenguaje": ["verde"],
+        "reemplazo": "parcial",
+        "preocupaciones": {
+          "text": "El reemplazo es para propietarios. ¿Qué pasa con los que arrendamos aquí hace años?",
+          "position": [-74.0657279, 4.6057895]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:42:48.525448"
+    },
+    {
+      "id": "sim-253",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "mercado"],
+        "plaza": ["cultura", "gimnasio"],
+        "lenguaje": ["colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:47:39.185780"
+    },
+    {
+      "id": "sim-042",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "cafes"],
+        "plaza": ["campesino", "gimnasio", "cultura"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:50:47.155959"
+    },
+    {
+      "id": "sim-106",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["vecinal"],
+        "plaza": ["campesino", "cultura"],
+        "lenguaje": ["moderno", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:50:48.110213"
+    },
+    {
+      "id": "sim-205",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "mercado"],
+        "plaza": ["cultura", "verde", "gimnasio"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:52:08.191413"
+    },
+    {
+      "id": "sim-232",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes"],
+        "plaza": ["juegos"],
+        "lenguaje": ["verde"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-09T22:57:21.978568"
+    },
+    {
+      "id": "sim-189",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["jardin"],
+        "plaza": ["verde", "juegos"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T04:52:28.347192"
+    },
+    {
+      "id": "sim-108",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes", "salud"],
+        "plaza": ["campesino", "verde", "gimnasio"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T05:34:04.090747"
+    },
+    {
+      "id": "sim-017",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "jardin"],
+        "plaza": ["juegos", "gimnasio", "rio"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "si",
+        "preocupaciones": {
+          "text": "Los tres edificios de la etapa 2 tienen familias; ¿a dónde van mientras construyen?",
+          "position": [-74.0661007, 4.6057668]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T06:16:28.605292"
+    },
+    {
+      "id": "sim-015",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["salud", "mercado", "vecinal"],
+        "plaza": ["campesino", "cultura"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T06:21:23.657698"
+    },
+    {
+      "id": "sim-141",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["jardin"],
+        "plaza": ["juegos", "cultura", "verde"],
+        "lenguaje": ["industrial", "ladrillo"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T07:06:36.447661"
+    },
+    {
+      "id": "sim-154",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "jardin", "cafes"],
+        "plaza": ["rio", "campesino", "cultura"],
+        "lenguaje": ["industrial", "verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T08:48:15.118672"
+    },
+    {
+      "id": "sim-308",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes"],
+        "plaza": ["verde", "rio"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T09:57:26.702795"
+    },
+    {
+      "id": "sim-245",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "cafes", "mercado"],
+        "plaza": ["campesino", "juegos", "cultura"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T10:53:14.641482"
+    },
+    {
+      "id": "sim-137",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["cafes"],
+        "plaza": ["verde", "cultura", "gimnasio"],
+        "lenguaje": ["industrial", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T13:56:48.153621"
+    },
+    {
+      "id": "sim-211",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["jardin"],
+        "plaza": ["juegos", "verde", "gimnasio"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "no",
+        "ideas": {
+          "text": "Que parte de la etapa 2 sea vivienda en arriendo a precio regulado para quienes ya vivimos aquí.",
+          "position": [-74.0650865, 4.6050332]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T15:49:25.761453"
+    },
+    {
+      "id": "sim-007",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["mercado", "vecinal"],
+        "plaza": ["verde", "rio", "cultura"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T16:44:58.845472"
+    },
+    {
+      "id": "sim-194",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["mercado", "cafes", "jardin"],
+        "plaza": ["rio", "verde", "cultura"],
+        "lenguaje": ["industrial", "colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T17:23:50.163106"
+    },
+    {
+      "id": "sim-010",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "cafes"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T17:39:33.551247"
+    },
+    {
+      "id": "sim-061",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["rio"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T17:57:53.779048"
+    },
+    {
+      "id": "sim-231",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["mercado", "vecinal", "cafes"],
+        "plaza": ["gimnasio", "campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:00:39.996493"
+    },
+    {
+      "id": "sim-046",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "salud", "mercado"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 5,
+        "ideas": {
+          "text": "Que la torre de reemplazo se construya primero y nos muestren el apartamento antes de firmar.",
+          "position": [-74.0666234, 4.6044523]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:09:14.208446"
+    },
+    {
+      "id": "sim-127",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes", "mercado"],
+        "plaza": ["campesino", "gimnasio", "cultura"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:14:25.837546"
+    },
+    {
+      "id": "sim-027",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "jardin", "cafes"],
+        "plaza": ["juegos", "campesino"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:26:55.013180"
+    },
+    {
+      "id": "sim-066",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "jardin", "vecinal"],
+        "plaza": ["verde", "juegos", "campesino"],
+        "lenguaje": ["ladrillo", "colorido"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T19:28:16.452096"
+    },
+    {
+      "id": "sim-060",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "otra",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["rio", "campesino"],
+        "lenguaje": ["verde", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T20:00:43.060216"
+    },
+    {
+      "id": "sim-031",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["rio", "juegos"],
+        "lenguaje": ["colorido", "verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T20:28:19.541920"
+    },
+    {
+      "id": "sim-300",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado"],
+        "plaza": ["rio", "campesino"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T20:46:13.576815"
+    },
+    {
+      "id": "sim-208",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["salud", "jardin"],
+        "plaza": ["gimnasio"],
+        "lenguaje": ["verde", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:09:36.617344"
+    },
+    {
+      "id": "sim-272",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["jardin", "salud"],
+        "plaza": ["juegos", "verde", "campesino"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:09:43.667345"
+    },
+    {
+      "id": "sim-297",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "vecinal", "salud"],
+        "plaza": ["gimnasio", "cultura"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:23:45.582601"
+    },
+    {
+      "id": "sim-004",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "salud"],
+        "plaza": ["campesino", "gimnasio"],
+        "lenguaje": ["verde"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:25:16.195942"
+    },
+    {
+      "id": "sim-310",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "cafes", "mercado"],
+        "plaza": ["verde"],
+        "lenguaje": ["verde", "ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:27:07.631344"
+    },
+    {
+      "id": "sim-090",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "salud"],
+        "plaza": ["cultura", "rio", "campesino"],
+        "lenguaje": ["colorido", "ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:28:59.870111"
+    },
+    {
+      "id": "sim-105",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "jardin", "mercado"],
+        "plaza": ["rio", "verde", "cultura"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T21:47:28.022260"
+    },
+    {
+      "id": "sim-001",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["jardin", "vecinal", "mercado"],
+        "plaza": ["cultura", "campesino", "verde"],
+        "lenguaje": ["verde", "ladrillo"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:16:56.461699"
+    },
+    {
+      "id": "sim-051",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["salud", "mercado", "jardin"],
+        "plaza": ["campesino"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:31:38.129715"
+    },
+    {
+      "id": "sim-033",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "mercado", "salud"],
+        "plaza": ["campesino", "rio"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:32:25.778409"
+    },
+    {
+      "id": "sim-035",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["rio", "juegos", "cultura"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:46:24.731768"
+    },
+    {
+      "id": "sim-201",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["salud", "mercado", "vecinal"],
+        "plaza": ["juegos"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-10T22:54:14.848400"
+    },
+    {
+      "id": "sim-086",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["gimnasio", "verde", "rio"],
+        "lenguaje": ["moderno", "industrial"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T11:59:26.666915"
+    },
+    {
+      "id": "sim-196",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "vecinal", "salud"],
+        "plaza": ["campesino", "verde"],
+        "lenguaje": ["ladrillo"],
+        "sombra": 1
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T15:14:32.827197"
+    },
+    {
+      "id": "sim-266",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "salud", "jardin"],
+        "plaza": ["juegos"],
+        "lenguaje": ["verde"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T19:54:06.300251"
+    },
+    {
+      "id": "sim-070",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "primerpiso": ["salud", "cafes"],
+        "plaza": ["gimnasio", "cultura"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T20:21:31.904622"
+    },
+    {
+      "id": "sim-204",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "salud", "jardin"],
+        "plaza": ["campesino", "gimnasio", "verde"],
+        "lenguaje": ["colorido"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-11T21:46:28.072461"
+    },
+    {
+      "id": "sim-076",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "vecinal", "mercado"],
+        "plaza": ["cultura", "juegos", "verde"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T17:57:58.238874"
+    },
+    {
+      "id": "sim-206",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["salud", "cafes"],
+        "plaza": ["cultura", "verde", "campesino"],
+        "lenguaje": ["industrial"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T19:36:30.266901"
+    },
+    {
+      "id": "sim-077",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "salud"],
+        "plaza": ["verde", "rio"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "si",
+        "ideas": {
+          "text": "Locales en el primer piso hacia la carrera 2 para los negocios que hoy están en la manzana.",
+          "position": [-74.0656261, 4.6055793]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T20:34:38.743105"
+    },
+    {
+      "id": "sim-098",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal"],
+        "plaza": ["campesino", "juegos", "rio"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:04:10.883344"
+    },
+    {
+      "id": "sim-128",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["verde", "gimnasio", "rio"],
+        "lenguaje": ["colorido", "verde"],
+        "sombra": 1
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:31:21.225795"
+    },
+    {
+      "id": "sim-067",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "mercado", "salud"],
+        "plaza": ["verde", "juegos", "campesino"],
+        "lenguaje": ["ladrillo", "verde"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T21:50:01.590486"
+    },
+    {
+      "id": "sim-011",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal", "cafes"],
+        "plaza": ["campesino", "rio", "cultura"],
+        "lenguaje": ["moderno"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-12T22:32:58.029752"
+    },
+    {
+      "id": "sim-116",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "salud", "jardin"],
+        "plaza": ["gimnasio", "cultura", "campesino"],
+        "lenguaje": ["ladrillo", "verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T04:30:07.460339"
+    },
+    {
+      "id": "sim-013",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "si",
+        "primerpiso": ["mercado", "vecinal"],
+        "plaza": ["verde", "cultura", "rio"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T06:07:15.689528"
+    },
+    {
+      "id": "sim-019",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "jardin", "vecinal"],
+        "plaza": ["verde", "cultura", "rio"],
+        "lenguaje": ["verde"],
+        "reemplazo": "no",
+        "preocupaciones": {
+          "text": "Llevo 40 años en Las Aguas. Necesito saber en qué piso y con qué área queda mi apartamento de reemplazo.",
+          "position": [-74.0658919, 4.6049259]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T19:17:47.197818"
+    },
+    {
+      "id": "sim-216",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes", "salud"],
+        "plaza": ["juegos"],
+        "lenguaje": ["verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T20:43:54.777596"
+    },
+    {
+      "id": "sim-160",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "jardin"],
+        "plaza": ["gimnasio", "cultura", "campesino"],
+        "lenguaje": ["verde", "colorido"],
+        "sombra": 2,
+        "ideas": {
+          "text": "La plazoleta sobre la carrera 1 puede ser un lugar para quedarse, con sombra de árboles y bancas.",
+          "position": [-74.0664837, 4.6044426]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:02:45.395906"
+    },
+    {
+      "id": "sim-136",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "si",
+        "primerpiso": ["cafes", "mercado", "jardin"],
+        "plaza": ["verde", "rio", "gimnasio"],
+        "lenguaje": ["colorido", "moderno"],
+        "sombra": 2
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T21:51:56.404789"
+    },
+    {
+      "id": "sim-168",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "jardin", "vecinal"],
+        "plaza": ["juegos", "verde", "rio"],
+        "lenguaje": ["ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T23:05:08.420076"
+    },
+    {
+      "id": "sim-103",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "jardin"],
+        "plaza": ["rio"],
+        "lenguaje": ["ladrillo", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-13T23:44:00.574854"
+    },
+    {
+      "id": "sim-213",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["vecinal", "jardin", "cafes"],
+        "plaza": ["verde", "campesino", "juegos"],
+        "lenguaje": ["colorido"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T09:03:35.003592"
+    },
+    {
+      "id": "sim-059",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "vecinal"],
+        "plaza": ["cultura", "campesino", "gimnasio"],
+        "lenguaje": ["colorido", "verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T15:43:56.329360"
+    },
+    {
+      "id": "sim-169",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "salud"],
+        "plaza": ["campesino", "rio", "verde"],
+        "lenguaje": ["colorido"],
+        "sombra": 5
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T21:53:16.080401"
+    },
+    {
+      "id": "sim-280",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes"],
+        "plaza": ["rio", "campesino", "verde"],
+        "lenguaje": ["industrial", "verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T22:19:01.784574"
+    },
+    {
+      "id": "sim-018",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "jardin", "vecinal"],
+        "plaza": ["verde"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T22:30:58.743660"
+    },
+    {
+      "id": "sim-174",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["cafes", "jardin", "vecinal"],
+        "plaza": ["cultura", "juegos"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-14T22:59:00.894902"
+    },
+    {
+      "id": "sim-251",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "estudiante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal", "cafes"],
+        "plaza": ["cultura", "gimnasio", "rio"],
+        "lenguaje": ["verde"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T01:51:29.898454"
+    },
+    {
+      "id": "sim-236",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "cafes"],
+        "plaza": ["verde", "rio", "juegos"],
+        "lenguaje": ["moderno"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T19:00:16.574600"
+    },
+    {
+      "id": "sim-178",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "cafes"],
+        "plaza": ["cultura", "campesino", "juegos"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T19:52:44.391346"
+    },
+    {
+      "id": "sim-287",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["salud", "mercado", "jardin"],
+        "plaza": ["juegos"],
+        "lenguaje": ["moderno"],
+        "sombra": 4
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T19:55:23.024823"
+    },
+    {
+      "id": "sim-149",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "jardin"],
+        "plaza": ["campesino", "juegos", "cultura"],
+        "lenguaje": ["verde", "moderno"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T20:12:22.702130"
+    },
+    {
+      "id": "sim-241",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "comerciante",
+        "talleres": "horario",
+        "primerpiso": ["vecinal"],
+        "plaza": ["campesino", "juegos", "cultura"],
+        "lenguaje": ["moderno", "ladrillo"],
+        "reemplazo": "no"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T21:46:24.634824"
+    },
+    {
+      "id": "sim-259",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "jardin", "salud"],
+        "plaza": ["campesino", "verde", "gimnasio"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-15T22:56:35.230546"
+    },
+    {
+      "id": "sim-265",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "horario",
+        "primerpiso": ["mercado", "vecinal", "jardin"],
+        "plaza": ["juegos"],
+        "lenguaje": ["verde"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T06:08:15.831768"
+    },
+    {
+      "id": "sim-210",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "arrendatario",
+        "talleres": "otra",
+        "primerpiso": ["mercado", "jardin", "cafes"],
+        "plaza": ["rio", "gimnasio", "campesino"],
+        "lenguaje": ["verde"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T09:05:24.726167"
+    },
+    {
+      "id": "sim-028",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "si",
+        "primerpiso": ["vecinal"],
+        "plaza": ["rio", "gimnasio", "verde"],
+        "lenguaje": ["ladrillo", "moderno"],
+        "reemplazo": "si"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T19:21:17.447516"
+    },
+    {
+      "id": "sim-101",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "salud", "vecinal"],
+        "plaza": ["juegos"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-16T22:35:53.722034"
+    },
+    {
+      "id": "sim-020",
+      "plot": "uau1",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "primerpiso": ["vecinal", "mercado", "jardin"],
+        "plaza": ["verde", "rio", "cultura"],
+        "lenguaje": ["colorido"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-17T22:04:40.106549"
+    },
+    {
+      "id": "sim-240",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "si",
+        "primerpiso": ["vecinal", "mercado"],
+        "plaza": ["cultura", "verde", "rio"],
+        "lenguaje": ["colorido", "industrial"],
+        "sombra": 3
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T07:29:55.147366"
+    },
+    {
+      "id": "sim-129",
+      "plot": "uau3",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "otra",
+        "primerpiso": ["cafes"],
+        "plaza": ["verde", "cultura"],
+        "lenguaje": ["ladrillo"]
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T19:17:32.931596"
+    },
+    {
+      "id": "sim-248",
+      "plot": "uau2",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "horario",
+        "primerpiso": ["cafes", "mercado", "salud"],
+        "plaza": ["campesino", "juegos", "verde"],
+        "lenguaje": ["moderno", "verde"],
+        "sombra": 2,
+        "preocupaciones": {
+          "text": "Ojalá la plataforma no sea un muro cerrado hacia la calle; que tenga vida en el primer piso.",
+          "position": [-74.0668221, 4.6045022]
+        }
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T20:15:34.756918"
+    },
+    {
+      "id": "sim-224",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "propietario",
+        "talleres": "nosabia",
+        "primerpiso": ["jardin", "vecinal", "cafes"],
+        "plaza": ["juegos", "campesino", "rio"],
+        "lenguaje": ["verde"],
+        "reemplazo": "parcial"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-18T21:50:50.202570"
+    },
+    {
+      "id": "sim-173",
+      "plot": "uau5",
+      "answers": {
+        "relacion": "visitante",
+        "talleres": "nosabia",
+        "primerpiso": ["mercado", "cafes", "vecinal"],
+        "plaza": ["cultura", "verde"],
+        "lenguaje": ["industrial", "moderno"],
+        "reemplazo": "na"
+      },
+      "simulated": true,
+      "createdAt": "2026-10-19T22:58:51.453548"
+    }
+  ]
+}

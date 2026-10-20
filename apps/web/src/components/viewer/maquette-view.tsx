@@ -1,10 +1,19 @@
 "use client";
 
+import { BarChart3 } from "lucide-react";
 import dynamic from "next/dynamic";
 import { Fragment, useMemo, useState } from "react";
 import { type BuildingInfo, infoRows } from "@/lib/buildings";
+import {
+  type Answer,
+  comments as commentsOf,
+  type Participation,
+  questionsFor,
+  type Response,
+} from "@/lib/participation";
 import type { Proposal, Site } from "@/lib/site";
 import type { LayerId } from "./cesium-viewer";
+import { type Duration, questionsForDuration, ResultsPanel, SurveyPanel } from "./participation";
 
 const CesiumViewer = dynamic(() => import("./cesium-viewer").then((m) => m.CesiumViewer), {
   ssr: false,
@@ -28,7 +37,13 @@ const LAYER_LABELS: [LayerId, string][] = [
  * column on the right with pill buttons and a yellow accent. Options sites compare alternatives
  * for one lot; masterplan sites list plots with a stage filter and a plot card.
  */
-export function MaquetteView({ site }: { site: Site }) {
+export function MaquetteView({
+  site,
+  participation = null,
+}: {
+  site: Site;
+  participation?: Participation | null;
+}) {
   const masterplan = site.kind === "masterplan";
   const [active, setActive] = useState<string[]>(
     masterplan ? site.proposals.map((p) => p.id) : [site.proposals[0].id],
@@ -56,11 +71,55 @@ export function MaquetteView({ site }: { site: Site }) {
     return ids;
   }, [site]);
   const [layers, setLayers] = useState<Partial<Record<LayerId, boolean>>>({});
+  // Participation: survey on the right, results on the left, comments as pins.
+  const [mode, setMode] = useState<"explore" | "survey" | "results">("explore");
+  const [duration, setDuration] = useState<Duration>("10");
+  const [mine, setMine] = useState<Response[]>([]);
+  const [picking, setPicking] = useState<string | null>(null);
+  const [picked, setPicked] = useState<Record<string, [number, number]>>({});
+  const [selectedComment, setSelectedComment] = useState<string | null>(null);
+  const responses = useMemo(
+    () => [...(participation?.responses ?? []), ...mine],
+    [participation, mine],
+  );
+  const pins = useMemo(() => {
+    if (!participation) return [];
+    const showAll = mode === "results";
+    return commentsOf(participation.survey, responses)
+      .filter((c) => c.position && (showAll || !c.simulated))
+      .filter((c) => mode !== "results" || !plotId || c.plot === plotId)
+      .map((c) => ({ id: c.id, position: c.position as [number, number], kind: c.kind }));
+  }, [participation, responses, mode, plotId]);
+  const startSurvey = (id: string, d: Duration) => {
+    setPlotId(id);
+    setDuration(d);
+    setPicked({});
+    setPicking(null);
+    setMode("survey");
+  };
+  const submit = (answers: Record<string, Answer>) => {
+    if (!plotId) return;
+    setMine((m) => [
+      ...m,
+      {
+        id: `me-${Date.now()}`,
+        plot: plotId,
+        answers,
+        simulated: false,
+        createdAt: new Date().toISOString(),
+      },
+    ]);
+  };
 
   const plot = plotId ? site.proposals.find((p) => p.id === plotId) : undefined;
-  const shown = masterplan
-    ? site.proposals.filter((p) => !stage || p.stage === stage).map((p) => p.id)
-    : active;
+  // Memoised so the viewer only redraws plots when the selection really changes.
+  const shownKey = masterplan
+    ? site.proposals
+        .filter((p) => !stage || p.stage === stage)
+        .map((p) => p.id)
+        .join(",")
+    : active.join(",");
+  const shown = useMemo(() => (shownKey ? shownKey.split(",") : []), [shownKey]);
 
   const toggle = (id: string) =>
     setActive((a) => (a.includes(id) ? a.filter((x) => x !== id) : [...a, id]));
@@ -89,6 +148,17 @@ export function MaquetteView({ site }: { site: Site }) {
         focusPlot={focus}
         layers={layers}
         phase={maxPhase > 0 ? phase : null}
+        pins={pins}
+        selectedPin={selectedComment}
+        onSelectPin={(id) => {
+          setSelectedComment(id);
+          setMode("results");
+        }}
+        pickPoint={picking !== null}
+        onPickPoint={(p) => {
+          if (picking) setPicked((x) => ({ ...x, [picking]: p }));
+          setPicking(null);
+        }}
       />
 
       {/* Brand card */}
@@ -100,6 +170,24 @@ export function MaquetteView({ site }: { site: Site }) {
             <p className="text-[11px] text-neutral-500">Maqueta digital</p>
           </div>
         </div>
+        {participation && (
+          <button
+            type="button"
+            onClick={() => setMode(mode === "results" ? "explore" : "results")}
+            aria-pressed={mode === "results"}
+            title="Resultados de la participación"
+            className={`mt-3 flex items-center gap-1.5 rounded-full px-3 py-1 text-[12px] font-semibold ${
+              mode === "results" ? "bg-neutral-900 text-white" : "bg-[#ffe14d]"
+            }`}
+          >
+            <BarChart3 className="size-4" /> resultados
+          </button>
+        )}
+        {participation?.simulated && (
+          <p className="mt-2 text-[10px] font-semibold text-[#7a6600]">
+            aportes simulados para la demostración
+          </p>
+        )}
         {masterplan && (
           <p className="mt-3 text-[11px] leading-snug text-neutral-500">
             <span className="font-semibold text-neutral-700">{site.name}</span>
@@ -109,18 +197,52 @@ export function MaquetteView({ site }: { site: Site }) {
       </div>
 
       {/* Left card: a plot, or an existing building */}
-      {(plot || selected) && (
-        <div className="absolute left-4 top-36 max-h-[calc(100dvh-10rem)] w-64 overflow-y-auto rounded-2xl [scrollbar-width:none]">
-          {plot ? (
+      {(plot || selected || (mode === "results" && participation)) && (
+        <div className="absolute left-4 top-44 max-h-[calc(100dvh-12rem)] w-72 overflow-y-auto rounded-2xl [scrollbar-width:none]">
+          {mode === "results" && participation ? (
+            <ResultsPanel
+              survey={participation.survey}
+              responses={responses}
+              plot={plot ?? null}
+              simulated={participation.simulated}
+              onClose={() => setMode("explore")}
+              selectedComment={selectedComment}
+              onSelectComment={setSelectedComment}
+            />
+          ) : plot ? (
             <PlotCard
               plot={plot}
               phase={maxPhase > 0 ? phase : null}
               onClose={() => setPlotId(null)}
+              participation={participation !== null}
+              onParticipate={(d) => startSurvey(plot.id, d)}
+              onResults={() => setMode("results")}
+              responses={responses.filter((r) => r.plot === plot.id).length}
             />
           ) : selected ? (
             <BuildingCard building={selected} onClose={() => setSelected(null)} />
           ) : null}
         </div>
+      )}
+
+      {mode === "survey" && participation && plot && (
+        <SurveyPanel
+          key={`${plot.id}-${duration}`}
+          survey={participation.survey}
+          questions={questionsForDuration(questionsFor(participation.survey, plot.id), duration)}
+          plot={plot}
+          picking={picking}
+          pickedPoint={picked}
+          onStartPick={(q) => setPicking(q)}
+          onSubmit={submit}
+          onClose={() => {
+            setMode("explore");
+            setPicking(null);
+          }}
+          onShowResults={() => setMode("results")}
+          hour={hour}
+          onHour={setHour}
+        />
       )}
 
       {/* Control column */}
@@ -286,17 +408,35 @@ export function MaquetteView({ site }: { site: Site }) {
           </div>
         </Panel>
 
-        <Panel title="participación">
-          <div className="flex flex-col gap-1.5">
-            <Pill tone="grey" disabled>
-              dejar un comentario
+        {participation ? (
+          <Panel title="participación">
+            <p className="text-[12px] leading-snug text-neutral-600">
+              <span className="font-semibold tabular-nums text-neutral-900">
+                {responses.length}
+              </span>{" "}
+              aportes. Elige un lote para participar o mira los resultados.
+            </p>
+            <Pill
+              tone="yellow"
+              className="mt-2 w-full justify-center"
+              onClick={() => setMode("results")}
+            >
+              ver resultados
             </Pill>
-            <Pill tone="grey" disabled>
-              {masterplan ? "priorizar un lote" : "votar por una opción"}
-            </Pill>
-          </div>
-          <p className="mt-2 text-[11px] text-neutral-500">Próximamente.</p>
-        </Panel>
+          </Panel>
+        ) : (
+          <Panel title="participación">
+            <div className="flex flex-col gap-1.5">
+              <Pill tone="grey" disabled>
+                dejar un comentario
+              </Pill>
+              <Pill tone="grey" disabled>
+                {masterplan ? "priorizar un lote" : "votar por una opción"}
+              </Pill>
+            </div>
+            <p className="mt-2 text-[11px] text-neutral-500">Próximamente.</p>
+          </Panel>
+        )}
       </div>
 
       <p className="absolute bottom-2 left-4 max-w-[60%] text-[10px] text-neutral-500">
@@ -312,10 +452,18 @@ function PlotCard({
   plot,
   phase,
   onClose,
+  participation = false,
+  onParticipate,
+  onResults,
+  responses = 0,
 }: {
   plot: Proposal;
   phase: number | null;
   onClose: () => void;
+  participation?: boolean;
+  onParticipate?: (d: Duration) => void;
+  onResults?: () => void;
+  responses?: number;
 }) {
   const rows: [string, string | undefined][] = [
     ["barrio", plot.barrio],
@@ -382,15 +530,30 @@ function PlotCard({
         <span className="text-[#c9ad00]">• </span>participación
         <span className="text-[#c9ad00]"> •</span>
       </h3>
-      <p className="text-[11px] text-neutral-600">módulo de participación: abierto</p>
-      <div className="mt-1.5 flex flex-col gap-1.5">
-        <Pill tone="yellow" className="justify-center" disabled>
-          comentar este lote
-        </Pill>
-        <Pill tone="yellow" className="justify-center" disabled>
-          ver aportes de la comunidad
-        </Pill>
-      </div>
+      <p className="text-[11px] text-neutral-600">
+        módulo de participación: {participation ? "abierto" : "próximamente"}
+        {participation && ` · ${responses} aportes`}
+      </p>
+      {participation && (
+        <>
+          <p className="mt-1.5 text-[11px] text-neutral-600">¿Cuánto tiempo tienes?</p>
+          <div className="mt-1 grid grid-cols-3 gap-1.5">
+            {(["2", "5", "10"] as Duration[]).map((d) => (
+              <Pill
+                key={d}
+                tone="yellow"
+                className="justify-center"
+                onClick={() => onParticipate?.(d)}
+              >
+                {d === "10" ? "10 min+" : `${d} min`}
+              </Pill>
+            ))}
+          </div>
+          <Pill tone="grey" className="mt-1.5 w-full justify-center" onClick={onResults}>
+            ver aportes de este lote
+          </Pill>
+        </>
+      )}
       <p className="mt-2 text-[10px] text-neutral-400">
         Simulación independiente con datos públicos; no es el diseño oficial.
       </p>
