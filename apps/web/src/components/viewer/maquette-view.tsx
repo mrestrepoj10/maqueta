@@ -228,7 +228,7 @@ export function MaquetteView({
 
       {mode === "survey" && participation && plot && (
         <SurveyPanel
-          key={`${plot.id}-${duration}`}
+          key={`${masterplan ? plot.id : "lote"}-${duration}`}
           survey={participation.survey}
           questions={questionsForDuration(questionsFor(participation.survey, plot.id), duration)}
           plot={plot}
@@ -245,7 +245,10 @@ export function MaquetteView({
           onHour={setHour}
           onPreviewOption={(id) => {
             if (masterplan) return;
-            if (site.proposals.some((p) => p.id === id)) setActive([id]);
+            if (site.proposals.some((p) => p.id === id)) {
+              setActive([id]);
+              setPlotId(id);
+            }
             else if (id === "ninguna") setActive([]);
           }}
         />
