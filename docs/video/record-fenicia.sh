@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 export AGENT_BROWSER_NAMESPACE=maqueta AGENT_BROWSER_SESSION=maqueta
+. "$(dirname "$0")/lib.sh"
 # Draft demo recording for Fenicia participation (agent-browser). The 3D is slow on this VM,
 # so the page is warmed up before recording starts.
 set -u
-URL="https://maqueta-ecru.vercel.app/fenicia/maquette"
+URL="https://maqueta-ecru.vercel.app/fenicia/maquette?lite"
 OUT="$1"
-C='const c=(t)=>{const b=[...document.querySelectorAll("button")].find(x=>x.textContent.trim().includes(t));if(b)b.click();return b?1:0};'
+
 ev(){ timeout 60 agent-browser eval "(()=>{$C return $1})()" >/dev/null 2>&1; sleep "${2:-2}"; }
 timeout 60 agent-browser set viewport 1280 720 >/dev/null 2>&1
 timeout 300 agent-browser open "$URL" >/dev/null 2>&1
